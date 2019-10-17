@@ -1,0 +1,30 @@
+version: 2
+jobs:
+  build:
+    branches:
+      only:
+        - master
+        - "10.0"
+    docker:
+      - image: circleci/python:2.7.13-jessie-browsers
+    working_directory: ~/saturn
+    steps:
+      - checkout
+      - setup_remote_docker:
+          docker_layer_caching: true
+      - run:
+          name: install dependancy
+          command: |
+            echo $HOME
+            mkdir -p $HOME/saturn/build
+      - run:
+          name: build deb
+          command: |
+            pip install --user pexpect
+            cd ./setup
+            python ./package.py -b ~/saturn/build --no-testing --no-rpm --no-tarball --no-windows -p ./
+      - run:
+          name: build docker image
+          command: |
+            docker login -u $DOCKER_USER -p $DOCKER_PWD
+            sh ./build_docker.sh
