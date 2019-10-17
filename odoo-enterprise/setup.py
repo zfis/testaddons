@@ -192,7 +192,7 @@ setup(
         'pyparsing == 2.1.10',
         'Python-Chart == 1.39',
         'python-stdnum == 1.9',
-        'PyYAML == 3.12',
+        'PyYAML == 5.1',
         'scipy == 1.0.1',
         'six == 1.10.0',
         'urllib3 == 1.22',
