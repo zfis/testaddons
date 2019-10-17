@@ -197,7 +197,7 @@ setup(
         'six == 1.10.0',
         'urllib3 == 1.22',
         'validators == 0.12.1',
-        'Werkzeug == 0.11.11',
+        'Werkzeug == 0.15.3',
         'XlsxWriter == 0.9.3',
         'simplejson == 3.14.0',
         'celery == 4.2.1',
