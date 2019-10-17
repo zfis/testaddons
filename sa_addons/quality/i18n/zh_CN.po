@@ -1,0 +1,1049 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * quality
+# 
+# Translators:
+# Jeffery CHEN <jeffery9@gmail.com>, 2016
+# liAnGjiA <liangjia@qq.com>, 2016
+# Ted Wang <feiyuwang2012@gmail.com>, 2016
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-10-10 09:14+0000\n"
+"PO-Revision-Date: 2016-10-10 09:14+0000\n"
+"Last-Translator: Ted Wang <feiyuwang2012@gmail.com>, 2016\n"
+"Language-Team: Chinese (China) (https://www.transifex.com/odoo/teams/41243/zh_CN/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. module: quality
+#: model:ir.model.fields,field_description:quality.field_quality_alert_team_alert_count
+#: model:ir.model.fields,field_description:quality.field_quality_check_alert_count
+msgid "# Quality Alerts"
+msgstr "# 质量警报"
+
+#. module: quality
+#: model:ir.model.fields,field_description:quality.field_quality_alert_team_check_count
+msgid "# Quality Checks"
+msgstr "# 质量检查"
+
+#. module: quality
+#: model:ir.ui.view,arch_db:quality.quality_point_view_form
+msgid "% of the operation"
+msgstr "% 作业"
+
+#. module: quality
+#: model:ir.ui.view,arch_db:quality.quality_alert_team_view_kanban
+msgid "<i class=\"fa fa-envelope-o\"/>&amp;nbsp;"
+msgstr "<i class=\"fa fa-envelope-o\"/>&amp;nbsp;"
+
+#. module: quality
+#: model:ir.ui.view,arch_db:quality.quality_point_view_form
+msgid ""
+"<span attrs=\"{'invisible': [('measure_frequency_type', '=', "
+"'all')]}\">Every </span>"
+msgstr ""
+
+#. module: quality
+#: model:ir.ui.view,arch_db:quality.quality_alert_view_form
+msgid "<span class=\"o_stat_text\">Quality Check</span>"
+msgstr "<span class=\"o_stat_text\">质量检查</span>"
+
+#. module: quality
+#: model:ir.ui.view,arch_db:quality.quality_alert_team_view_kanban
+msgid "<span>Quality Alerts</span>"
+msgstr "<span>质量警报</span>"
+
+#. module: quality
+#: model:ir.ui.view,arch_db:quality.quality_point_view_form
+msgid "<span>from </span>"
+msgstr "<span>从</span>"
+
+#. module: quality
+#: model:ir.ui.view,arch_db:quality.quality_point_view_form
+msgid "<span>to </span>"
+msgstr "<span>到</span>"
+
+#. module: quality
+#: model:ir.model.fields,help:quality.field_quality_alert_team_alias_defaults
+msgid ""
+"A Python dictionary that will be evaluated to provide default values when "
+"creating new records for this alias."
+msgstr "当创建别名的新记录时，一个Python字典被提供作为默认值"
+
+#. module: quality
+#: model:ir.ui.view,arch_db:quality.quality_alert_team_view_form
+msgid "Accept Emails From"
+msgstr "接收邮件来自"
+
+#. module: quality
+#: model:ir.model.fields,field_description:quality.field_quality_point_active
+msgid "Active"
+msgstr "有效"
+
+#. module: quality
+#: model:ir.model.fields,field_description:quality.field_quality_alert_stage_done
+msgid "Alert Processed"
+msgstr "警报已处理"
+
+#. module: quality
+#: model:ir.ui.view,arch_db:quality.quality_check_view_form
+msgid "Alert(s)"
+msgstr "警报"
+
+#. module: quality
+#: model:ir.model.fields,field_description:quality.field_quality_check_alert_ids
+#: model:ir.ui.menu,name:quality.menu_quality_alerts
+msgid "Alerts"
+msgstr "警报"
+
+#. module: quality
+#: model:ir.model.fields,field_description:quality.field_quality_alert_team_alias_id
+msgid "Alias"
+msgstr "别名"
+
+#. module: quality
+#: model:ir.model.fields,field_description:quality.field_quality_alert_team_alias_contact
+msgid "Alias Contact Security"
+msgstr "别名联系人安全"
+
+#. module: quality
+#: model:ir.model.fields,field_description:quality.field_quality_alert_team_alias_name
+msgid "Alias Name"
+msgstr "别名"
+
+#. module: quality
+#: model:ir.model.fields,field_description:quality.field_quality_alert_team_alias_domain
+msgid "Alias domain"
+msgstr "别名网域"
+
+#. module: quality
+#: model:ir.model.fields,field_description:quality.field_quality_alert_team_alias_model_id
+msgid "Aliased Model"
+msgstr "别名模型"
+
+#. module: quality
+#: selection:sa.quality.point,measure_frequency_type:0
+msgid "All Operations"
+msgstr "所有作业"
+
+#. module: quality
+#: model:ir.ui.view,arch_db:quality.quality_point_view_search
+msgid "Archived"
+msgstr "归档"
+
+#. module: quality
+#: model:ir.ui.view,arch_db:quality.quality_check_view_form_small
+msgid "Cancel"
+msgstr "取消"
+
+#. module: quality
+#: model:ir.model.fields,field_description:quality.field_quality_alert_check_id
+msgid "Check"
+msgstr "检查"
+
+#. module: quality
+#: model:ir.model.fields,field_description:quality.field_quality_point_check_count
+msgid "Check count"
+msgstr "检查个数"
+
+#. module: quality
+#: model:ir.ui.view,arch_db:quality.quality_check_view_tree
+msgid "Checked By"
+msgstr "检查人"
+
+#. module: quality
+#: model:ir.ui.view,arch_db:quality.quality_check_view_tree
+msgid "Checked Date"
+msgstr "检查日期"
+
+#. module: quality
+#: model:ir.model.fields,field_description:quality.field_stock_picking_check_ids
+msgid "Checks"
+msgstr "检查"
+
+#. module: quality
+#: model:ir.ui.view,arch_db:quality.quality_alert_team_view_kanban
+msgid "Checks In Progress"
+msgstr "进行中的检查"
+
+#. module: quality
+#: model:ir.actions.act_window,help:quality.quality_point_action
+msgid "Click here to add a new Quality Control Points"
+msgstr "点击这儿添加一个新的质量控制点."
+
+#. module: quality
+#: model:ir.model.fields,field_description:quality.field_quality_alert_team_color
+msgid "Color"
+msgstr "颜色"
+
+#. module: quality
+#: model:ir.model.fields,field_description:quality.field_quality_tag_color
+msgid "Color Index"
+msgstr "颜色索引"
+
+#. module: quality
+#: model:ir.model.fields,field_description:quality.field_quality_alert_company_id
+#: model:ir.model.fields,field_description:quality.field_quality_alert_team_company_id
+#: model:ir.model.fields,field_description:quality.field_quality_check_company_id
+#: model:ir.model.fields,field_description:quality.field_quality_point_company_id
+msgid "Company"
+msgstr "公司"
+
+#. module: quality
+#: model:ir.ui.menu,name:quality.menu_quality_configuration
+msgid "Configuration"
+msgstr "配置"
+
+#. module: quality
+#: model:ir.model.fields,field_description:quality.field_quality_check_control_date
+msgid "Control Date"
+msgstr "控制日期"
+
+#. module: quality
+#: model:ir.ui.view,arch_db:quality.quality_point_view_form
+msgid "Control Frequency"
+msgstr "控制频率"
+
+#. module: quality
+#: model:ir.ui.view,arch_db:quality.quality_check_view_form
+msgid "Control Person"
+msgstr "控制人"
+
+#. module: quality
+#: model:ir.model.fields,field_description:quality.field_quality_check_point_id
+msgid "Control Point"
+msgstr "控制点"
+
+#. module: quality
+#: model:ir.ui.menu,name:quality.menu_quality_control_points
+msgid "Control Points"
+msgstr "控制点"
+
+#. module: quality
+#: model:ir.ui.view,arch_db:quality.quality_point_view_form
+msgid "Control Type"
+msgstr "控制类型"
+
+#. module: quality
+#: model:ir.model.fields,field_description:quality.field_quality_alert_action_corrective
+msgid "Corrective Action"
+msgstr "纠正行动"
+
+#. module: quality
+#: model:ir.ui.view,arch_db:quality.quality_alert_view_form
+msgid "Corrective Actions"
+msgstr "纠正行动"
+
+#. module: quality
+#: model:ir.model.fields,field_description:quality.field_quality_alert_create_uid
+#: model:ir.model.fields,field_description:quality.field_quality_alert_stage_create_uid
+#: model:ir.model.fields,field_description:quality.field_quality_alert_team_create_uid
+#: model:ir.model.fields,field_description:quality.field_quality_check_create_uid
+#: model:ir.model.fields,field_description:quality.field_quality_point_create_uid
+#: model:ir.model.fields,field_description:quality.field_quality_reason_create_uid
+#: model:ir.model.fields,field_description:quality.field_quality_tag_create_uid
+msgid "Created by"
+msgstr "创建人"
+
+#. module: quality
+#: model:ir.model.fields,field_description:quality.field_quality_alert_create_date
+#: model:ir.model.fields,field_description:quality.field_quality_alert_stage_create_date
+#: model:ir.model.fields,field_description:quality.field_quality_alert_team_create_date
+#: model:ir.model.fields,field_description:quality.field_quality_check_create_date
+#: model:ir.model.fields,field_description:quality.field_quality_point_create_date
+#: model:ir.model.fields,field_description:quality.field_quality_reason_create_date
+#: model:ir.model.fields,field_description:quality.field_quality_tag_create_date
+msgid "Created on"
+msgstr "创建时间"
+
+#. module: quality
+#: model:ir.ui.view,arch_db:quality.quality_alert_view_search
+msgid "Creation Date"
+msgstr "创建日期"
+
+#. module: quality
+#: model:ir.ui.menu,name:quality.menu_quality_dashboard
+msgid "Dashboard"
+msgstr "仪表板"
+
+#. module: quality
+#: model:ir.model.fields,field_description:quality.field_quality_alert_date_assign
+msgid "Date Assigned"
+msgstr "指派的日期"
+
+#. module: quality
+#: model:ir.model.fields,field_description:quality.field_quality_alert_date_close
+msgid "Date Closed"
+msgstr "关闭日期"
+
+#. module: quality
+#: selection:sa.quality.point,measure_frequency_unit:0
+msgid "Day(s)"
+msgstr "天"
+
+#. module: quality
+#: model:ir.model.fields,field_description:quality.field_quality_alert_team_alias_defaults
+msgid "Default Values"
+msgstr "默认值"
+
+#. module: quality
+#: model:ir.ui.view,arch_db:quality.quality_alert_view_form
+msgid "Describe the corrective actions you did..."
+msgstr "说明你做过的纠正行动..."
+
+#. module: quality
+#: model:ir.ui.view,arch_db:quality.quality_alert_view_form
+msgid "Describe the preventive actions you did..."
+msgstr "说明你做过的预防行动..."
+
+#. module: quality
+#: model:ir.ui.view,arch_db:quality.quality_point_view_form
+msgid "Describe the quality check to do..."
+msgstr "说明要做的质量检查..."
+
+#. module: quality
+#: model:ir.ui.view,arch_db:quality.quality_point_view_form
+msgid "Describe why you need to perform this quality check..."
+msgstr "说明为什么你需要执行此质量检查..."
+
+#. module: quality
+#: model:ir.model.fields,field_description:quality.field_quality_alert_description
+#: model:ir.ui.view,arch_db:quality.quality_alert_view_form
+msgid "Description"
+msgstr "说明"
+
+#. module: quality
+#: model:ir.ui.view,arch_db:quality.quality_alert_view_form
+msgid "Description of the issue..."
+msgstr "问题的说明..."
+
+#. module: quality
+#: model:ir.model.fields,field_description:quality.field_quality_alert_display_name
+#: model:ir.model.fields,field_description:quality.field_quality_alert_stage_display_name
+#: model:ir.model.fields,field_description:quality.field_quality_alert_team_display_name
+#: model:ir.model.fields,field_description:quality.field_quality_check_display_name
+#: model:ir.model.fields,field_description:quality.field_quality_point_display_name
+#: model:ir.model.fields,field_description:quality.field_quality_reason_display_name
+#: model:ir.model.fields,field_description:quality.field_quality_tag_display_name
+msgid "Display Name"
+msgstr "显示名称"
+
+#. module: quality
+#: model:ir.ui.view,arch_db:quality.quality_alert_view_search
+msgid "Done"
+msgstr "完成"
+
+#. module: quality
+#: model:ir.ui.view,arch_db:quality.quality_alert_team_view_form
+msgid "Email Alias"
+msgstr "Email别名"
+
+#. module: quality
+#: model:ir.ui.view,arch_db:quality.quality_check_view_form
+#: model:ir.ui.view,arch_db:quality.quality_check_view_form_small
+#: selection:sa.quality.check,measure_success:0
+msgid "Fail"
+msgstr "失败"
+
+#. module: quality
+#: model:ir.ui.view,arch_db:quality.quality_check_view_search
+#: selection:sa.quality.check,quality_state:0
+msgid "Failed"
+msgstr "失败的"
+
+#. module: quality
+#: model:ir.model.fields,field_description:quality.field_quality_alert_stage_folded
+msgid "Folded"
+msgstr "收拢的"
+
+#. module: quality
+#: model:ir.model.fields,field_description:quality.field_quality_point_measure_frequency_type
+#: model:ir.model.fields,field_description:quality.field_quality_point_measure_frequency_unit_value
+msgid "Frequency"
+msgstr "频率"
+
+#. module: quality
+#: model:ir.ui.view,arch_db:quality.quality_alert_view_search
+#: model:ir.ui.view,arch_db:quality.quality_check_view_search
+msgid "Group By"
+msgstr "分组"
+
+#. module: quality
+#: model:ir.module.category,description:quality.module_category_quality
+msgid "Helps you manage your quality alerts and quality checks."
+msgstr "帮你管理质量警告和质量检查."
+
+#. module: quality
+#: selection:sa.quality.alert,priority:0
+msgid "High"
+msgstr "高"
+
+#. module: quality
+#: model:ir.model.fields,field_description:quality.field_quality_alert_id
+#: model:ir.model.fields,field_description:quality.field_quality_alert_stage_id
+#: model:ir.model.fields,field_description:quality.field_quality_alert_team_id
+#: model:ir.model.fields,field_description:quality.field_quality_check_id
+#: model:ir.model.fields,field_description:quality.field_quality_point_id
+#: model:ir.model.fields,field_description:quality.field_quality_reason_id
+#: model:ir.model.fields,field_description:quality.field_quality_tag_id
+msgid "ID"
+msgstr "ID"
+
+#. module: quality
+#: model:ir.model.fields,help:quality.field_quality_alert_team_alias_parent_thread_id
+msgid ""
+"ID of the parent record holding the alias (example: project holding the task"
+" creation alias)"
+msgstr "上级记录ID支持别名(例如:项目支持任务创建别名)"
+
+#. module: quality
+#: model:ir.ui.view,arch_db:quality.quality_check_view_search
+msgid "In Progress"
+msgstr "进行中"
+
+#. module: quality
+#: model:ir.ui.view,arch_db:quality.quality_alert_view_search
+msgid "In progress"
+msgstr "进行中"
+
+#. module: quality
+#: model:ir.model.fields,field_description:quality.field_quality_alert___last_update
+#: model:ir.model.fields,field_description:quality.field_quality_alert_stage___last_update
+#: model:ir.model.fields,field_description:quality.field_quality_alert_team___last_update
+#: model:ir.model.fields,field_description:quality.field_quality_check___last_update
+#: model:ir.model.fields,field_description:quality.field_quality_point___last_update
+#: model:ir.model.fields,field_description:quality.field_quality_reason___last_update
+#: model:ir.model.fields,field_description:quality.field_quality_tag___last_update
+msgid "Last Modified on"
+msgstr "最后修改日"
+
+#. module: quality
+#: model:ir.model.fields,field_description:quality.field_quality_alert_stage_write_uid
+#: model:ir.model.fields,field_description:quality.field_quality_alert_team_write_uid
+#: model:ir.model.fields,field_description:quality.field_quality_alert_write_uid
+#: model:ir.model.fields,field_description:quality.field_quality_check_write_uid
+#: model:ir.model.fields,field_description:quality.field_quality_point_write_uid
+#: model:ir.model.fields,field_description:quality.field_quality_reason_write_uid
+#: model:ir.model.fields,field_description:quality.field_quality_tag_write_uid
+msgid "Last Updated by"
+msgstr "最后更新人"
+
+#. module: quality
+#: model:ir.model.fields,field_description:quality.field_quality_alert_stage_write_date
+#: model:ir.model.fields,field_description:quality.field_quality_alert_team_write_date
+#: model:ir.model.fields,field_description:quality.field_quality_alert_write_date
+#: model:ir.model.fields,field_description:quality.field_quality_check_write_date
+#: model:ir.model.fields,field_description:quality.field_quality_point_write_date
+#: model:ir.model.fields,field_description:quality.field_quality_reason_write_date
+#: model:ir.model.fields,field_description:quality.field_quality_tag_write_date
+msgid "Last Updated on"
+msgstr "最后更新时间"
+
+#. module: quality
+#: model:ir.model.fields,field_description:quality.field_quality_alert_lot_id
+#: model:ir.model.fields,field_description:quality.field_quality_check_lot_id
+msgid "Lot"
+msgstr "批次"
+
+#. module: quality
+#: selection:sa.quality.alert,priority:0
+msgid "Low"
+msgstr "低"
+
+#. module: quality
+#: model:ir.ui.view,arch_db:quality.quality_check_view_form
+msgid "Make Alert"
+msgstr "发出警报"
+
+#. module: quality
+#: model:res.groups,name:quality.group_quality_manager
+msgid "Manager"
+msgstr "管理员"
+
+#. module: quality
+#: model:ir.model.fields,field_description:quality.field_quality_point_tolerance_max
+msgid "Max Tolerance"
+msgstr "最大偏差"
+
+#. module: quality
+#: model:ir.model.fields,field_description:quality.field_quality_check_measure
+#: selection:sa.quality.point,test_type:0
+msgid "Measure"
+msgstr "测量"
+
+#. module: quality
+#: model:ir.model.fields,field_description:quality.field_quality_check_measure_success
+msgid "Measure Success"
+msgstr "测量成功"
+
+#. module: quality
+#: model:ir.model.fields,field_description:quality.field_quality_point_measure_frequency_unit
+msgid "Measure frequency unit"
+msgstr "测量频率单位"
+
+#. module: quality
+#: model:ir.model.fields,field_description:quality.field_quality_point_tolerance_min
+msgid "Min Tolerance"
+msgstr "最小偏差"
+
+#. module: quality
+#: model:ir.ui.view,arch_db:quality.quality_alert_view_form
+msgid "Miscellaneous"
+msgstr "杂项"
+
+#. module: quality
+#: selection:sa.quality.point,measure_frequency_unit:0
+msgid "Month(s)"
+msgstr "月"
+
+#. module: quality
+#: model:ir.ui.view,arch_db:quality.quality_alert_team_view_kanban
+msgid "More <i class=\"fa fa-caret-down\"/>"
+msgstr "更多 <i class=\"fa fa-caret-down\"/>"
+
+#. module: quality
+#: model:ir.ui.view,arch_db:quality.quality_alert_view_search
+msgid "My Alerts"
+msgstr "我的警报"
+
+#. module: quality
+#: model:ir.model.fields,field_description:quality.field_quality_alert_name
+#: model:ir.model.fields,field_description:quality.field_quality_alert_stage_name
+#: model:ir.model.fields,field_description:quality.field_quality_alert_team_name
+#: model:ir.model.fields,field_description:quality.field_quality_check_name
+#: model:ir.model.fields,field_description:quality.field_quality_reason_name
+#: model:ir.model.fields,field_description:quality.field_quality_tag_name
+msgid "Name"
+msgstr "名字"
+
+#. module: quality
+#: code:addons/quality/models/quality.py:22
+#: code:addons/quality/models/quality.py:79
+#: code:addons/quality/models/quality.py:80
+#: code:addons/quality/models/quality.py:189
+#: code:addons/quality/models/quality.py:243
+#: code:addons/quality/models/quality.py:244
+#: code:addons/quality/models/quality.py:324
+#: code:addons/quality/models/quality.py:358
+#: code:addons/quality/models/quality.py:359
+#, python-format
+msgid "New"
+msgstr "新建"
+
+#. module: quality
+#: selection:sa.quality.check,measure_success:0
+msgid "No measure"
+msgstr "没有测量"
+
+#. module: quality
+#: model:ir.actions.act_window,help:quality.quality_alert_action_report
+msgid "No quality alerts."
+msgstr "没有质量警报."
+
+#. module: quality
+#: model:ir.actions.act_window,help:quality.quality_check_action_report
+msgid "No quality checks."
+msgstr "没有质量检查."
+
+#. module: quality
+#: model:ir.model.fields,field_description:quality.field_quality_point_norm
+msgid "Norm"
+msgstr "正常"
+
+#. module: quality
+#: selection:sa.quality.alert,priority:0
+msgid "Normal"
+msgstr "一般"
+
+#. module: quality
+#: model:ir.model.fields,field_description:quality.field_quality_check_note
+#: model:ir.model.fields,field_description:quality.field_quality_point_note
+#: model:ir.model.fields,field_description:quality.field_quality_point_reason
+msgid "Note"
+msgstr "备注"
+
+#. module: quality
+#: model:ir.ui.view,arch_db:quality.quality_check_view_form
+#: model:ir.ui.view,arch_db:quality.quality_point_view_form
+msgid "Notes"
+msgstr "备注"
+
+#. module: quality
+#: model:ir.model.fields,field_description:quality.field_quality_check_picking_id
+#: model:ir.ui.view,arch_db:quality.quality_point_view_form
+msgid "Operation"
+msgstr "作业"
+
+#. module: quality
+#: model:ir.model.fields,help:quality.field_quality_alert_team_alias_force_thread_id
+msgid ""
+"Optional ID of a thread (record) to which all incoming messages will be "
+"attached, even if they did not reply to it. If set, this will disable the "
+"creation of new records completely."
+msgstr "所有的收件都将附上一条线程（记录）选配的ID，即使它们不曾回复过它。如果设置了，这个将完全阻止新记录的创建。"
+
+#. module: quality
+#: model:ir.model.fields,field_description:quality.field_quality_alert_team_alias_user_id
+msgid "Owner"
+msgstr "所有者"
+
+#. module: quality
+#: model:ir.model.fields,field_description:quality.field_quality_alert_team_alias_parent_model_id
+msgid "Parent Model"
+msgstr "上级模型"
+
+#. module: quality
+#: model:ir.model.fields,field_description:quality.field_quality_alert_team_alias_parent_thread_id
+msgid "Parent Record Thread ID"
+msgstr "上级记录线程ID"
+
+#. module: quality
+#: model:ir.model.fields,help:quality.field_quality_alert_team_alias_parent_model_id
+msgid ""
+"Parent model holding the alias. The model holding the alias reference is not"
+" necessarily the model given by alias_model_id (example: project "
+"(parent_model) and task (model))"
+msgstr ""
+"父级模型拥有别名。拥有别名参照的模型不必是alias_model_id给出的模型 (example: project(parent_model) and"
+" task (model))"
+
+#. module: quality
+#: model:ir.ui.view,arch_db:quality.quality_check_view_form
+#: model:ir.ui.view,arch_db:quality.quality_check_view_form_small
+#: selection:sa.quality.check,measure_success:0
+msgid "Pass"
+msgstr "通过"
+
+#. module: quality
+#: selection:sa.quality.point,test_type:0
+msgid "Pass - Fail"
+msgstr "通过 - 失败"
+
+#. module: quality
+#: model:ir.ui.view,arch_db:quality.quality_check_view_search
+#: selection:sa.quality.check,quality_state:0
+msgid "Passed"
+msgstr "通过的"
+
+#. module: quality
+#: model:ir.model.fields,field_description:quality.field_stock_picking_check_todo
+msgid "Pending checks"
+msgstr "等待中的检查"
+
+#. module: quality
+#: model:ir.model.fields,field_description:quality.field_quality_point_measure_frequency_value
+msgid "Percentage"
+msgstr "百分比"
+
+#. module: quality
+#: selection:sa.quality.point,measure_frequency_type:0
+msgid "Periodically"
+msgstr "周期性"
+
+#. module: quality
+#: model:ir.model.fields,field_description:quality.field_quality_point_picking_type_id
+msgid "Picking Type"
+msgstr "拣货类型"
+
+#. module: quality
+#: model:ir.model.fields,help:quality.field_quality_alert_team_alias_contact
+msgid ""
+"Policy to post a message on the document using the mailgateway.\n"
+"- everyone: everyone can post\n"
+"- partners: only authenticated partners\n"
+"- followers: only followers of the related document or members of following channels\n"
+msgstr ""
+"政策是通过邮件网关在文档上提交一个消息\n"
+"- everyone: 任何人都可以提交\n"
+"- partners: 只有认证过的合作伙伴\n"
+"- followers: 只有相关文件或下列频道成员的跟随者\n"
+
+#. module: quality
+#: model:ir.model.fields,field_description:quality.field_quality_alert_action_preventive
+msgid "Preventive Action"
+msgstr "预防行动"
+
+#. module: quality
+#: model:ir.ui.view,arch_db:quality.quality_alert_view_form
+msgid "Preventive Actions"
+msgstr "预防行动"
+
+#. module: quality
+#: model:ir.model.fields,field_description:quality.field_quality_alert_priority
+msgid "Priority"
+msgstr "优先级"
+
+#. module: quality
+#: model:ir.model.fields,field_description:quality.field_quality_alert_product_tmpl_id
+#: model:ir.model.fields,field_description:quality.field_quality_check_product_id
+#: model:ir.model.fields,field_description:quality.field_quality_point_product_tmpl_id
+msgid "Product"
+msgstr "产品"
+
+#. module: quality
+#: model:ir.model.fields,field_description:quality.field_quality_alert_product_id
+#: model:ir.model.fields,field_description:quality.field_quality_point_product_id
+msgid "Product Variant"
+msgstr "产品变体"
+
+#. module: quality
+#: model:ir.ui.view,arch_db:quality.quality_alert_team_view_form
+msgid "Project Name"
+msgstr "项目名称"
+
+#. module: quality
+#: model:ir.module.category,name:quality.module_category_quality
+#: model:ir.ui.menu,name:quality.menu_quality_root
+msgid "Quality"
+msgstr "质量"
+
+#. module: quality
+#: code:addons/quality/models/quality.py:282
+#: code:addons/quality/models/quality.py:295
+#: model:ir.model,name:quality.model_sa_quality_alert
+#: model:ir.ui.view,arch_db:quality.quality_alert_view_calendar
+#, python-format
+msgid "Quality Alert"
+msgstr "质量警报"
+
+#. module: quality
+#: model:ir.ui.view,arch_db:quality.quality_alert_view_graph
+#: model:ir.ui.view,arch_db:quality.quality_alert_view_pivot
+msgid "Quality Alert Analysis"
+msgstr "质量警报分析"
+
+#. module: quality
+#: model:ir.model,name:quality.model_sa_quality_alert_stage
+msgid "Quality Alert Stage"
+msgstr "质量警报阶段"
+
+#. module: quality
+#: model:ir.actions.act_window,name:quality.quality_alert_stage_action
+#: model:ir.ui.menu,name:quality.menu_quality_config_alert_stage
+msgid "Quality Alert Stages"
+msgstr "质量警报阶段"
+
+#. module: quality
+#: model:ir.model,name:quality.model_sa_quality_alert_team
+msgid "Quality Alert Team"
+msgstr "质量警报团队"
+
+#. module: quality
+#: model:ir.ui.menu,name:quality.menu_quality_config_alert_team
+msgid "Quality Alert Teams"
+msgstr "质量警报团队"
+
+#. module: quality
+#: model:ir.actions.act_window,help:quality.quality_alert_stage_action
+msgid ""
+"Quality Alert stages define the different steps a quality alert should go "
+"through."
+msgstr ""
+
+#. module: quality
+#: model:ir.actions.act_window,name:quality.quality_alert_action_check
+#: model:ir.actions.act_window,name:quality.quality_alert_action_report
+#: model:ir.actions.act_window,name:quality.quality_alert_action_team
+#: model:ir.ui.menu,name:quality.menu_quality_alert
+#: model:ir.ui.menu,name:quality.menu_quality_alert_report
+msgid "Quality Alerts"
+msgstr "质量警报"
+
+#. module: quality
+#: model:ir.actions.act_window,help:quality.quality_alert_action_check
+msgid "Quality Alerts can be created. I know this is difficult to believe."
+msgstr ""
+
+#. module: quality
+#: code:addons/quality/models/quality.py:369
+#: model:ir.model,name:quality.model_sa_quality_check
+#, python-format
+msgid "Quality Check"
+msgstr "质量检查"
+
+#. module: quality
+#: model:ir.ui.view,arch_db:quality.quality_check_view_graph
+#: model:ir.ui.view,arch_db:quality.quality_check_view_pivot
+msgid "Quality Check Analysis"
+msgstr "质量检查分析"
+
+#. module: quality
+#: model:ir.actions.act_window,help:quality.quality_check_action_main
+#: model:ir.actions.act_window,help:quality.quality_check_action_team
+msgid "Quality Check is the execution of a quality control in some point"
+msgstr ""
+
+#. module: quality
+#: model:ir.actions.act_window,name:quality.quality_check_action_main
+#: model:ir.actions.act_window,name:quality.quality_check_action_picking
+#: model:ir.actions.act_window,name:quality.quality_check_action_report
+#: model:ir.actions.act_window,name:quality.quality_check_action_small
+#: model:ir.actions.act_window,name:quality.quality_check_action_team
+#: model:ir.ui.menu,name:quality.menu_quality_check_report
+#: model:ir.ui.menu,name:quality.menu_quality_checks
+#: model:ir.ui.view,arch_db:quality.quality_check_view_form_small
+#: model:ir.ui.view,arch_db:quality.quality_point_view_form
+#: model:ir.ui.view,arch_db:quality.stock_picking_view_form_inherit_quality
+msgid "Quality Checks"
+msgstr "质量检查"
+
+#. module: quality
+#: model:ir.actions.act_window,name:quality.quality_check_action_spc
+msgid "Quality Checks SPC"
+msgstr "质量检查SPC"
+
+#. module: quality
+#: model:ir.ui.menu,name:quality.menu_quality_control
+msgid "Quality Control"
+msgstr "质量管理"
+
+#. module: quality
+#: model:ir.actions.act_window,name:quality.quality_point_action
+msgid "Quality Control Points"
+msgstr "质量控制点"
+
+#. module: quality
+#: model:ir.actions.act_window,help:quality.quality_point_action
+msgid ""
+"Quality Control Points are places in your logistics process\n"
+"                where you want to do quality control."
+msgstr ""
+
+#. module: quality
+#: model:ir.ui.menu,name:quality.menu_quality_controls
+msgid "Quality Controls"
+msgstr "质量控制"
+
+#. module: quality
+#: model:ir.actions.act_window,name:quality.quality_alert_team_action
+msgid "Quality Dashboard"
+msgstr "质量仪表板"
+
+#. module: quality
+#: model:ir.model,name:quality.model_sa_quality_point
+msgid "Quality Point"
+msgstr "质量点"
+
+#. module: quality
+#: model:ir.model,name:quality.model_sa_quality_reason
+msgid "Quality Reason"
+msgstr "质量原因"
+
+#. module: quality
+#: model:ir.model,name:quality.model_sa_quality_tag
+msgid "Quality Tag"
+msgstr "质量标签"
+
+#. module: quality
+#: model:ir.actions.act_window,name:quality.quality_alert_team_action_config
+msgid "Quality Teams"
+msgstr "质量团队"
+
+#. module: quality
+#: model:ir.actions.act_window,help:quality.quality_alert_team_action
+msgid ""
+"Quality Teams group the different quality alerts/checks\n"
+"                according to the roles (teams) that need them."
+msgstr ""
+
+#. module: quality
+#: selection:sa.quality.point,measure_frequency_type:0
+msgid "Randomly"
+msgstr "随机的"
+
+#. module: quality
+#: model:ir.ui.view,arch_db:quality.quality_point_view_form
+msgid "Reason"
+msgstr "原因"
+
+#. module: quality
+#: model:ir.model.fields,field_description:quality.field_quality_alert_team_alias_force_thread_id
+msgid "Record Thread ID"
+msgstr "记录线程ID"
+
+#. module: quality
+#: model:ir.model.fields,field_description:quality.field_quality_point_name
+msgid "Reference"
+msgstr "参照"
+
+#. module: quality
+#: model:ir.ui.menu,name:quality.menu_quality_reporting
+msgid "Reporting"
+msgstr "报告"
+
+#. module: quality
+#: model:ir.model.fields,field_description:quality.field_quality_alert_user_id
+#: model:ir.model.fields,field_description:quality.field_quality_check_user_id
+#: model:ir.model.fields,field_description:quality.field_quality_point_user_id
+#: model:ir.ui.view,arch_db:quality.quality_alert_view_search
+msgid "Responsible"
+msgstr "负责人"
+
+#. module: quality
+#: model:ir.model.fields,field_description:quality.field_quality_alert_reason_id
+#: model:ir.ui.view,arch_db:quality.quality_alert_view_search
+msgid "Root Cause"
+msgstr "根本原因"
+
+#. module: quality
+#: model:ir.ui.view,arch_db:quality.quality_point_view_form
+msgid "SPC"
+msgstr "SPC"
+
+#. module: quality
+#: model:ir.model.fields,field_description:quality.field_quality_alert_stage_sequence
+#: model:ir.model.fields,field_description:quality.field_quality_alert_team_sequence
+msgid "Sequence"
+msgstr "序号"
+
+#. module: quality
+#: model:ir.ui.view,arch_db:quality.quality_alert_team_view_kanban
+msgid "Settings"
+msgstr "设置"
+
+#. module: quality
+#: model:ir.model.fields,field_description:quality.field_quality_alert_stage_id_9329
+#: model:ir.ui.view,arch_db:quality.quality_alert_view_search
+msgid "Stage"
+msgstr "阶段"
+
+#. module: quality
+#: model:ir.ui.view,arch_db:quality.quality_check_view_search
+msgid "State"
+msgstr "状态"
+
+#. module: quality
+#: model:ir.model.fields,field_description:quality.field_quality_check_quality_state
+msgid "Status"
+msgstr "状态"
+
+#. module: quality
+#: model:ir.model,name:quality.model_stock_move
+msgid "Stock Move"
+msgstr "库存移动"
+
+#. module: quality
+#: model:ir.model.fields,field_description:quality.field_quality_alert_tag_ids
+msgid "Tags"
+msgstr "标签"
+
+#. module: quality
+#: model:ir.model.fields,field_description:quality.field_quality_alert_team_id_9307
+#: model:ir.model.fields,field_description:quality.field_quality_check_team_id
+#: model:ir.model.fields,field_description:quality.field_quality_point_team_id
+msgid "Team"
+msgstr "团队"
+
+#. module: quality
+#: model:ir.ui.view,arch_db:quality.quality_alert_team_view_tree
+msgid "Teams"
+msgstr "团队"
+
+#. module: quality
+#: model:ir.model.fields,field_description:quality.field_quality_check_test_type
+#: model:ir.model.fields,field_description:quality.field_quality_point_test_type
+msgid "Test Type"
+msgstr "测试类型"
+
+#. module: quality
+#: model:ir.model.fields,help:quality.field_quality_alert_team_alias_model_id
+msgid ""
+"The model (Odoo Document Kind) to which this alias corresponds. Any incoming"
+" email that does not reply to an existing record will cause the creation of "
+"a new record of this model (e.g. a Project Task)"
+msgstr ""
+"相应于这个别名对应的模型(Odoo单据种类)。任何一封不属于对某个已存在的记录的到来邮件，将导致此模型中新记录的创建(例如，一个新的项目任务)。"
+
+#. module: quality
+#: model:ir.model.fields,help:quality.field_quality_alert_team_alias_name
+msgid ""
+"The name of the email alias, e.g. 'jobs' if you want to catch emails for "
+"<jobs@example.odoo.com>"
+msgstr "邮件别名的名称，例如，如果你要收取 <jobs@example.odoo.com> 的电子邮件,别名就要被设为：\"jobs\""
+
+#. module: quality
+#: model:ir.model.fields,help:quality.field_quality_alert_team_alias_user_id
+msgid ""
+"The owner of records created upon receiving emails on this alias. If this "
+"field is not set the system will attempt to find the right owner based on "
+"the sender (From) address, or will use the Administrator account if no "
+"system user is found for that address."
+msgstr ""
+"基于此别名接收到的邮件，创建记录的所有人。若此字段没有设置，系统将试图根据发送者(From)地址来查找正确的所有者，如果对于那个地址没有系统用户被发现，将使用系统管理员账户。"
+
+#. module: quality
+#: model:res.groups,comment:quality.group_quality_manager
+msgid "The quality manager manages the quality process"
+msgstr "质检管理员管理质检过程"
+
+#. module: quality
+#: model:res.groups,comment:quality.group_quality_user
+msgid "The quality user uses the quality process"
+msgstr "质检用户使用质检过程"
+
+#. module: quality
+#: model:ir.model.fields,field_description:quality.field_quality_point_title
+msgid "Title"
+msgstr "称谓"
+
+#. module: quality
+#: selection:sa.quality.check,quality_state:0
+msgid "To do"
+msgstr "待办"
+
+#. module: quality
+#: model:ir.ui.view,arch_db:quality.quality_point_view_form
+msgid "Tolerance"
+msgstr "偏差"
+
+#. module: quality
+#: model:ir.model,name:quality.model_stock_picking
+msgid "Transfer"
+msgstr "调拨"
+
+#. module: quality
+#: model:ir.model.fields,field_description:quality.field_quality_check_norm_unit
+#: model:ir.model.fields,field_description:quality.field_quality_point_norm_unit
+msgid "Unit of Measure"
+msgstr "计量单位"
+
+#. module: quality
+#: model:ir.model.fields,help:quality.field_quality_tag_color
+msgid "Used in the kanban view"
+msgstr "用在看板视图"
+
+#. module: quality
+#: model:res.groups,name:quality.group_quality_user
+msgid "User"
+msgstr "用户"
+
+#. module: quality
+#: model:ir.ui.view,arch_db:quality.quality_check_view_form_small
+msgid "Validate"
+msgstr "验证"
+
+#. module: quality
+#: model:ir.model.fields,field_description:quality.field_quality_alert_partner_id
+msgid "Vendor"
+msgstr "供应商"
+
+#. module: quality
+#: selection:sa.quality.alert,priority:0
+msgid "Very High"
+msgstr "非常高"
+
+#. module: quality
+#: selection:sa.quality.point,measure_frequency_unit:0
+msgid "Week(s)"
+msgstr "周"
+
+#. module: quality
+#: code:addons/quality/models/stock_move.py:48
+#, python-format
+msgid "You still need to do the quality checks!"
+msgstr "你还是需要做质量检查!"

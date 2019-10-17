@@ -1,0 +1,12 @@
+<odoo>
+    <template id="assets_darkroom" name="web_widget_darkroom Assets" inherit_id="web.assets_backend">
+        <xpath expr="//script[last()]" position="after">
+            <!--<script src="/web_image_editor/static/lib/jqueryUI_touch_punch/jquery.ui.touch-punch.min.js"/>-->
+            <script src="/web_image_editor/static/lib/interact/interact.min.js"/>
+            <!--<script src="https://cdn.jsdelivr.net/npm/interactjs@1.3.4/dist/interact.min.js"></script>-->
+            <link href="/web_image_editor/static/src/less/darkroom.less" rel="stylesheet" type="text/less"/>
+            <script src="/web_image_editor/static/src/js/widget_darkroom_modal.js"/>
+            <script src="/web_image_editor/static/src/js/image_editor.js"/>
+        </xpath>
+    </template>
+</odoo>

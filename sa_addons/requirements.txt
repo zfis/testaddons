@@ -1,0 +1,10 @@
+pyecharts==0.5.11
+pyecharts-snapshot==0.1.10
+scipy
+validators
+minio
+pandas
+scipy
+numpy
+boltons
+requests

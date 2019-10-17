@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="sa_job_form_view" model="ir.ui.view">
+            <field name="name">sa_job_form_view</field>
+            <field name="model">controller.job</field>
+            <field name="arch" type="xml">
+                <form string="Job">
+                      <sheet string="Controller Job">
+                        <div class="oe_button_box" name="button_box">
+                            <button class="oe_stat_button" type="object" name="toggle_active" icon="fa-archive">
+                                <field name="active" widget="boolean_button"
+                                options='{"terminology": "archive"}'/>
+                            </button>
+                        </div>
+                          <group>
+                            <group string="Job">
+                                <field name="name"/>
+                            </group>
+                            <group string="Setting">
+                                <field name="code"/>
+                            </group>
+                        </group>
+                          <notebook>
+                            <page name="description_page" string="Description">
+                                <field name="description" type="html"/>
+                                <div class="oe_clear"/>
+                            </page>
+                          </notebook>
+                      </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="sa_job_tree_view" model="ir.ui.view">
+            <field name="name">sa_job_tree_view</field>
+            <field name="model">controller.job</field>
+            <field name="arch" type="xml">
+                <tree string="Job">
+                    <field name="name"/>
+                    <field name="code"/>
+                    <!--<field name="strategy"/>-->
+                </tree>
+            </field>
+        </record>
+
+        <record id="sa_job_form_action" model="ir.actions.act_window">
+            <field name="name">Controller Job</field>
+            <field name="res_model">controller.job</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="sa_menu_job_action"
+            action="sa_job_form_action"
+            parent="menu_bom_form"
+            sequence="30"/>
+    </data>
+</odoo>
+

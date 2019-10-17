@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="mrp_workcenter_view_kanban_inherit_panel" model="ir.ui.view">
+        <field name="name">mrp.workcenter.view.kanban.inherit.panel</field>
+        <field name="model">mrp.workcenter</field>
+        <field name="inherit_id" ref="mrp.mrp_workcenter_kanban"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='o_wo']" position="inside">
+                <button class="btn btn-default fa fa-tablet" name="%(mrp_workorder.mrp_workorder_action_tablet)d" type="action"
+                    title="Tablet view to process work orders at the work center"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

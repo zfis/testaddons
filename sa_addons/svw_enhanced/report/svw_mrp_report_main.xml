@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <report
+            string="PIN Production Order"
+            id="action_report_vin_production_order"
+            model="mrp.production"
+            name="svw_enhanced.report_mrporder_pin"
+            file="svw_enhanced.report.mrp_production_pin_template"
+            report_type="qweb-pdf"
+        />
+
+    </data>
+</odoo>

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Work Sections -->
+        <record id="sa_mrp_worksegment_tree_view" model="ir.ui.view">
+            <field name="name">sa_mrp_worksegment_tree_view</field>
+            <field name="model">mrp.worksection</field>
+            <field name="arch" type="xml">
+                <tree string="Work Section">
+                    <field name="code"/>
+                    <field name="name"/>
+                    <field name="active" invisible="1"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="sa_mrp_worksegment_form_view" model="ir.ui.view">
+            <field name="name">sa_mrp_worksegment_form_view</field>
+            <field name="model">mrp.worksection</field>
+            <field name="arch" type="xml">
+                <form string="Work Section">
+                    <sheet>
+                        <field name="workcenter_count" invisible="1" />
+                        <div class="oe_button_box" name="button_box">
+                            <button class="oe_stat_button" name="toggle_active" type="object" icon="fa-archive">
+                                <field name="active" widget="boolean_button"
+                                    options='{"terminology": "archive"}'/>
+                            </button>
+                            <button name="%(mrp.mrp_workcenter_action)d" type="action" class="oe_stat_button" icon="fa-list"
+                                       context="{'default_worksegment_id':active_id, 'search_default_worksegment_id': active_id}">
+                                <field string="Work Centers" name="workcenter_count" widget="statinfo"/>
+                            </button>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="name" string="Work Section Name" required="1"/>
+                            </group>
+                            <group>
+                                <field name="code" required="1"/>
+                            </group>
+                            <group>
+                                <field name="workassembly_id" widget="selection" required="1"/>
+                            </group>
+                            <group string="Work Centers">
+                                <field name="workcenter_ids" widget="one2many_list" colspan="4" nolabel="1" mode="tree" attrs="{'invisible': [('workcenter_count','=',0)]}" >
+                                    <tree create="false" delete="false">
+                                        <field name="name"/>
+                                        <field name="code"/>
+                                    </tree>
+                                </field>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="sa_view_mrp_worksegment_search" model="ir.ui.view">
+            <field name="name">sa_view_mrp_worksegment_search</field>
+            <field name="model">mrp.worksection</field>
+            <field name="arch" type="xml">
+                <search string="Search for mrp worksegment">
+                    <field name="workassembly_id" />
+                    <field name="name" string="Mrp Worksegment" filter_domain="['|',('name','ilike',self),('code','ilike',self)]"/>
+                    <filter string="Archived" domain="[('active','=',False)]"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="sa_mrp_worksegment_action" model="ir.actions.act_window">
+            <field name="name">Work Sections</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">mrp.worksection</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="sa_view_mrp_worksegment_search"/>
+            <field name="view_ids"
+               eval="[(5, 0, 0),
+                      (0, 0, {'view_mode': 'tree', 'view_id': ref('sa_mrp_worksegment_tree_view')}),
+                      (0, 0, {'view_mode': 'form', 'view_id': ref('sa_mrp_worksegment_form_view')})]"/>
+        </record>
+
+        <record id="sa_mrp_workassembly_form_view" model="ir.ui.view">
+            <field name="name">sa_mrp_workassembly_form_view</field>
+            <field name="model">mrp.assemblyline</field>
+            <field name="arch" type="xml">
+                <form string="Work Assembly Line">
+                    <sheet>
+                        <field name="worksegment_count" invisible="1" />
+                        <div class="oe_button_box" name="button_box">
+                            <button class="oe_stat_button" name="toggle_active" type="object" icon="fa-archive" groups="base.group_erp_manager">
+                                <field name="active" widget="boolean_button"
+                                    options='{"terminology": "archive"}'/>
+                            </button>
+                            <button name="%(sa_mrp_worksegment_action)d" type="action" class="oe_stat_button" icon="fa-list"
+                                       context="{'default_workassembly_id':active_id, 'search_default_workassembly_id': active_id}">
+                                <field string="Work Sections" name="worksegment_count" widget="statinfo"/>
+                            </button>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="name" string="Assembly Line Name" required="1"/>
+                            </group>
+                            <group>
+                                <field name="code" required="1"/>
+                            </group>
+                        </group>
+                        <group string="Sections">
+                            <field name="worksegment_ids" widget="one2many_list" colspan="4" nolabel="1" mode="tree" attrs="{'invisible': [('worksegment_count','=',0)]}" >
+                                <tree create="false" delete="false">
+                                    <field name="name"/>
+                                    <field name="code"/>
+                                </tree>
+                            </field>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="sa_view_mrp_workassembly_search" model="ir.ui.view">
+            <field name="name">sa_view_mrp_workassembly_search</field>
+            <field name="model">mrp.assemblyline</field>
+            <field name="arch" type="xml">
+                <search string="Search for mrp Assembly Line">
+                    <field name="name" string="Mrp Assembly Line" filter_domain="['|',('name','ilike',self),('code','ilike',self)]"/>
+                    <filter string="Archived" domain="[('active','=',False)]"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="sa_mrp_workassembly_tree_view" model="ir.ui.view">
+            <field name="name">sa_mrp_workassembly_tree_view</field>
+            <field name="model">mrp.assemblyline</field>
+            <field name="arch" type="xml">
+                <tree string="Work Assembly Line">
+                    <field name="code"/>
+                    <field name="name"/>
+                    <field name="active" invisible="1"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="sa_mrp_workassembly_action" model="ir.actions.act_window">
+            <field name="name">Work Assembly Lines</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">mrp.assemblyline</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="sa_view_mrp_workassembly_search"/>
+            <field name="view_ids"
+               eval="[(5, 0, 0),
+                      (0, 0, {'view_mode': 'tree', 'view_id': ref('sa_mrp_workassembly_tree_view')}),
+                      (0, 0, {'view_mode': 'form', 'view_id': ref('sa_mrp_workassembly_form_view')})]"/>
+        </record>
+
+
+        <menuitem id="menu_mrp_worksegment_form_action"
+            action="sa_mrp_worksegment_action"
+            parent="menu_mrp_sa_setting"
+            sequence="20"/>
+
+        <menuitem id="menu_mrp_workassembly_form_action"
+            action="sa_mrp_workassembly_action"
+            parent="menu_mrp_sa_setting"
+            sequence="10"/>
+    </data>
+</odoo>

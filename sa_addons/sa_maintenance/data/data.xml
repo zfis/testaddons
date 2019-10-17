@@ -1,0 +1,36 @@
+<odoo>
+    <data>
+        <record forcecreate="True" id="decimal_maintenance" model="decimal.precision">
+            <field name="name">Maintenance Tests</field>
+            <field name="digits">2</field>
+        </record>
+            <record id="new_maintenance_request_email_template" model="mail.template">
+                <field name="name">New Maintenance Request</field>
+                <field name="email_from">${object.owner_user_id.email_formatted | safe}</field>
+                <field name="subject">${object.display_name}</field>
+                <field name="model_id" ref="sa_maintenance.model_maintenance_request"/>
+                <field name="email_to">${(object.technician_user_id != False and object.technician_user_id.email|safe)}</field>
+                <field name="partner_to">${object.technician_user_id and object.sudo().technician_user_id.email and object.sudo().technician_user_id.id or False}</field>
+                <field name="auto_delete" eval="False"/>
+                <field name="body_html" type="xml">
+        <div style="max-width:600px; height:auto; margin-left:30px;">
+            <div style="margin-left:30px;align=center;">
+                This is an automatic message:<br />
+                Dear ${object.sudo().technician_user_id.name or 'Madam, Sir'},
+            </div>
+            <div style="margin-left:30px;align=center;" width="60%">
+                Your request
+                % if object.access_token:
+                <a href="/maintenance/requests/${object.id}/${object.access_token}?db=${'dbname' in ctx and ctx['dbname'] or ''}">${object.name}</a>
+                % endif
+                has been received and is being reviewed by our ${object.maintenance_team_id.name or ''} team.
+                The reference of your maintenance request is ${object.id}.
+                <br />To add additional comments, reply to this email.
+            </div><br />
+            <span style="margin-left:30px;font-weight:normal;">Thank you </span>
+            <span style="margin-left:30px;font-weight:normal;">${object.maintenance_team_id.name or 'Maintenance'} Team.</span>
+        </div>
+                </field>
+    </record>
+    </data>
+</odoo>

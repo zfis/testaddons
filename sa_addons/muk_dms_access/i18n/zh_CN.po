@@ -1,0 +1,224 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* muk_dms_access
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0+e-20171123\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-04-11 06:53+0000\n"
+"PO-Revision-Date: 2018-04-11 06:53+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: muk_dms_access
+#: model:ir.model.fields,field_description:muk_dms_access.field_muk_dms_access_groups_perm_access
+#: model:ir.model.fields,field_description:muk_dms_access.field_muk_dms_access_perm_access
+#: model:ir.model.fields,field_description:muk_dms_access.field_muk_dms_directory_perm_access
+#: model:ir.model.fields,field_description:muk_dms_access.field_muk_dms_file_perm_access
+msgid "Access"
+msgstr "访问"
+
+#. module: muk_dms_access
+#: model:ir.actions.act_window,name:muk_dms_access.action_dms_groups
+#: model:ir.ui.menu,name:muk_dms_access.menu_dms_group
+msgid "Access Control"
+msgstr "访问控制"
+
+#. module: muk_dms_access
+#: model:ir.model,name:muk_dms_access.model_muk_dms_access_groups
+msgid "Access Groups"
+msgstr "访问组"
+
+#. module: muk_dms_access
+#: model:ir.model.fields,field_description:muk_dms_access.field_muk_dms_access_groups_additional_users
+#: model:ir.ui.view,arch_db:muk_dms_access.view_dms_groups_form
+msgid "Additional Users"
+msgstr "访问用户"
+
+#. module: muk_dms_access
+#: model:ir.model.fields,field_description:muk_dms_access.field_muk_dms_access_groups_child_groups
+msgid "Child Groups"
+msgstr "子群组"
+
+#. module: muk_dms_access
+#: model:ir.ui.view,arch_db:muk_dms_access.view_dms_directory_form
+#: model:ir.ui.view,arch_db:muk_dms_access.view_dms_file_form
+msgid "Complete Groups"
+msgstr "完整的组"
+
+#. module: muk_dms_access
+#: model:ir.model.fields,field_description:muk_dms_access.field_muk_dms_access_groups_perm_create
+msgid "Create"
+msgstr "创建"
+
+#. module: muk_dms_access
+#: model:ir.model.fields,field_description:muk_dms_access.field_muk_dms_access_groups_create_uid
+msgid "Created by"
+msgstr "创建人"
+
+#. module: muk_dms_access
+#: model:ir.model.fields,field_description:muk_dms_access.field_muk_dms_access_groups_create_date
+msgid "Created on"
+msgstr "创建时间"
+
+#. module: muk_dms_access
+#: model:ir.model.fields,field_description:muk_dms_access.field_muk_dms_access_groups_departments
+#: model:ir.ui.view,arch_db:muk_dms_access.view_dms_groups_form
+msgid "Departments"
+msgstr "部门"
+
+#. module: muk_dms_access
+#: model:ir.model.fields,field_description:muk_dms_access.field_muk_dms_access_groups_count_directories
+#: model:ir.model.fields,field_description:muk_dms_access.field_muk_dms_access_groups_directories
+#: model:ir.ui.view,arch_db:muk_dms_access.view_dms_groups_form
+msgid "Directories"
+msgstr "目录"
+
+#. module: muk_dms_access
+#: model:ir.model.fields,field_description:muk_dms_access.field_muk_dms_access_groups_display_name
+msgid "Display Name"
+msgstr "显示名称"
+
+#. module: muk_dms_access
+#: model:ir.model,name:muk_dms_access.model_muk_dms_file
+msgid "File"
+msgstr "文件"
+
+#. module: muk_dms_access
+#: model:ir.model.fields,field_description:muk_dms_access.field_muk_dms_access_groups_count_files
+#: model:ir.model.fields,field_description:muk_dms_access.field_muk_dms_access_groups_files
+#: model:ir.ui.view,arch_db:muk_dms_access.view_dms_groups_form
+msgid "Files"
+msgstr "文件"
+
+#. module: muk_dms_access
+#: model:ir.ui.view,arch_db:muk_dms_access.view_dms_groups_form
+msgid "Group"
+msgstr "群组"
+
+#. module: muk_dms_access
+#: model:ir.model.fields,field_description:muk_dms_access.field_muk_dms_access_groups_name
+msgid "Group Name"
+msgstr "群组名称"
+
+#. module: muk_dms_access
+#: model:ir.model.fields,field_description:muk_dms_access.field_hr_department_groups
+#: model:ir.model.fields,field_description:muk_dms_access.field_hr_job_groups
+#: model:ir.ui.view,arch_db:muk_dms_access.view_dms_directory_form
+#: model:ir.ui.view,arch_db:muk_dms_access.view_dms_file_form
+#: model:ir.ui.view,arch_db:muk_dms_access.view_dms_groups_tree
+msgid "Groups"
+msgstr "群组"
+
+#. module: muk_dms_access
+#: model:ir.model,name:muk_dms_access.model_hr_department
+msgid "Hr Department"
+msgstr "部门"
+
+#. module: muk_dms_access
+#: model:ir.model.fields,field_description:muk_dms_access.field_muk_dms_access_groups_id
+msgid "ID"
+msgstr "ID"
+
+#. module: muk_dms_access
+#: model:ir.model.fields,field_description:muk_dms_access.field_muk_dms_access_inherit_groups
+#: model:ir.model.fields,field_description:muk_dms_access.field_muk_dms_directory_inherit_groups
+#: model:ir.model.fields,field_description:muk_dms_access.field_muk_dms_file_inherit_groups
+msgid "Inherit Groups"
+msgstr "继承群组"
+
+#. module: muk_dms_access
+#: model:ir.model,name:muk_dms_access.model_hr_job
+msgid "Job Position"
+msgstr "工作岗位"
+
+#. module: muk_dms_access
+#: model:ir.model.fields,field_description:muk_dms_access.field_muk_dms_access_groups_jobs
+#: model:ir.ui.view,arch_db:muk_dms_access.view_dms_groups_form
+msgid "Jobs"
+msgstr "工作"
+
+#. module: muk_dms_access
+#: model:ir.model.fields,field_description:muk_dms_access.field_muk_dms_access_groups___last_update
+msgid "Last Modified on"
+msgstr "最后修改日"
+
+#. module: muk_dms_access
+#: model:ir.model.fields,field_description:muk_dms_access.field_muk_dms_access_groups_write_uid
+msgid "Last Updated by"
+msgstr "最后更新人"
+
+#. module: muk_dms_access
+#: model:ir.model.fields,field_description:muk_dms_access.field_muk_dms_access_groups_write_date
+msgid "Last Updated on"
+msgstr "最后更新时间"
+
+#. module: muk_dms_access
+#: model:ir.model.fields,field_description:muk_dms_access.field_muk_dms_access_groups_parent_left
+msgid "Left Parent"
+msgstr "左父项"
+
+#. module: muk_dms_access
+#: model:ir.model,name:muk_dms_access.model_muk_dms_access
+msgid "MuK Documents Access"
+msgstr "MuK 文档访问"
+
+#. module: muk_dms_access
+#: model:ir.model,name:muk_dms_access.model_muk_dms_directory
+msgid "MuK Documents Directory"
+msgstr "MuK 文档目录"
+
+#. module: muk_dms_access
+#: model:ir.model.fields,field_description:muk_dms_access.field_muk_dms_access_groups_parent_group
+msgid "Parent Group"
+msgstr "父群组"
+
+#. module: muk_dms_access
+#: model:ir.model.fields,field_description:muk_dms_access.field_muk_dms_access_groups_perm_read
+msgid "Read"
+msgstr "读取"
+
+#. module: muk_dms_access
+#: model:ir.model.fields,field_description:muk_dms_access.field_muk_dms_access_groups_parent_right
+msgid "Right Parent"
+msgstr "右父项"
+
+#. module: muk_dms_access
+#: model:ir.ui.view,arch_db:muk_dms_access.view_dms_groups_form
+msgid "Settings"
+msgstr "设置"
+
+#. module: muk_dms_access
+#: sql_constraint:muk_dms_access.groups:0
+msgid "The name of the group must be unique!"
+msgstr "群组名称必须唯一!"
+
+#. module: muk_dms_access
+#: code:addons/muk_dms_access/models/dms_base.py:107
+#: code:addons/muk_dms_access/models/dms_base.py:204
+#, python-format
+msgid "This operation is forbidden!"
+msgstr "此操作是被禁止的!"
+
+#. module: muk_dms_access
+#: model:ir.model.fields,field_description:muk_dms_access.field_muk_dms_access_groups_perm_unlink
+msgid "Unlink"
+msgstr "未链接"
+
+#. module: muk_dms_access
+#: model:ir.model.fields,field_description:muk_dms_access.field_muk_dms_access_groups_count_users
+#: model:ir.model.fields,field_description:muk_dms_access.field_muk_dms_access_groups_users
+#: model:ir.ui.view,arch_db:muk_dms_access.view_dms_groups_form
+msgid "Users"
+msgstr "用户"
+
+#. module: muk_dms_access
+#: model:ir.model.fields,field_description:muk_dms_access.field_muk_dms_access_groups_perm_write
+msgid "Write"
+msgstr "写入"
+

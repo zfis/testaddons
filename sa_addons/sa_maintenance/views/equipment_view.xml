@@ -1,0 +1,25 @@
+<odoo>
+  <data>
+    <record id="sa_maintenance_equipment_view_form_inherit_hr" model="ir.ui.view">
+        <field name="name">sa_maintenance_equipment_view_form_inherit_hr</field>
+        <field name="model">maintenance.equipment</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_view_form"/>
+        <field name="arch" type="xml">
+          <xpath expr="//page[last()]" position="after">
+            <page string="CheckPoints">
+                <field name="check_point_ids" nolabel="1" widget="one2many_list" mode="tree" context="{'default_equipment_id': active_id}">
+                    <tree string="Check Point Lines" editable="bottom">
+                        <field name="category_id" required="1"/>
+                        <field name="test_type" />
+                        <field name="description" />
+                        <field name="norm" />
+                        <field name="tolerance_min" />
+                        <field name="tolerance_max" />
+                    </tree>
+                </field>
+            </page>
+          </xpath>
+        </field>
+    </record>
+  </data>
+</odoo>

@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<odoo>
+    <template id="assets_backend" name="sa_mrp_maintenance_assets" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+            <link rel="stylesheet" href="/sa_maintenance/static/src/less/kanban_view.less"/>
+            <script type="text/javascript" src="/sa_maintenance/static/src/js/equipment_kanban_view.js" />
+            <script type="text/javascript" src="/sa_maintenance/static/src/js/equipment_kanban_record.js" />
+        </xpath>
+    </template>
+</odoo>

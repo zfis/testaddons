@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sa_mrp_workorder_view_form_inherit_mrp" model="ir.ui.view">
+        <field name="name">sa_mrp_workorder_view_form_inherit_mrp</field>
+        <field name="model">mrp.workorder</field>
+        <field name="inherit_id" ref="mrp.mrp_production_workcenter_form_view_inherit"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[last()]" position="after">
+                <page string="Consume Tracking" groups="mrp.group_mrp_manager">
+                    <field name="consu_bom_line_ids" >
+                        <tree create="0" delete="0">
+                            <field name="sequence" widget="handler"/>
+                            <field name="product_id" readonly="1"/>
+                            <field name="qty" readonly="1"/>
+                            <field name="program_id" readonly="1"/>
+                        </tree>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

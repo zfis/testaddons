@@ -1,0 +1,237 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * mrp_maintenance
+# 
+# Translators:
+# Fabien Pinckaers <fp@openerp.com>, 2016
+# Olivier Lenoir <olivier.lenoir@free.fr>, 2016
+# Martin Trigaux <mat@odoo.com>, 2016
+# Guilhaume Bordiau <github@guilhaume.fr>, 2016
+# Maxime Chambreuil <mchambreuil@ursainfosystems.com>, 2016
+# Sébastien Le Ray <sebastien-github@orniz.org>, 2017
+# Lucas Deliege <lud@openerp.com>, 2017
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-09-07 09:57+0000\n"
+"PO-Revision-Date: 2016-09-07 09:57+0000\n"
+"Last-Translator: Lucas Deliege <lud@openerp.com>, 2017\n"
+"Language-Team: French (https://www.transifex.com/odoo/teams/41243/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#. module: mrp_maintenance
+#: model:ir.ui.view,arch_db:mrp_maintenance.mrp_workorder_view_form_inherit_maintenance
+msgid "<span class=\"o_stat_text\">Maintenance Request</span>"
+msgstr "<span class=\"o_stat_text\">Demande de maintenance</span>"
+
+#. module: mrp_maintenance
+#: model:ir.ui.view,arch_db:mrp_maintenance.mrp_production_view_form_inherit_maintenance
+msgid "<span class=\"o_stat_text\">Maintenance</span>"
+msgstr "<span class=\"o_stat_text\">Maintenance</span>"
+
+#. module: mrp_maintenance
+#: model:ir.model.fields,help:mrp_maintenance.field_maintenance_equipment_estimated_next_failure
+msgid "Computed as Latest Failure Date + MTBF"
+msgstr "Date dernière panne + MTBF"
+
+#. module: mrp_maintenance
+#: model:maintenance.equipment,name:mrp_maintenance.equipment_furniture1
+msgid "Crosscut Saw: 8 ppi."
+msgstr ""
+
+#. module: mrp_maintenance
+#: model:maintenance.equipment,name:mrp_maintenance.equipment_furniture3
+msgid "Drill Machine"
+msgstr "Perceuse"
+
+#. module: mrp_maintenance
+#: model:ir.model,name:mrp_maintenance.model_maintenance_equipment
+#: model:ir.ui.view,arch_db:mrp_maintenance.mrp_workcenter_view_form_inherit_maintenance
+msgid "Equipment"
+msgstr "Équipement"
+
+#. module: mrp_maintenance
+#: model:ir.ui.view,arch_db:mrp_maintenance.mrp_workcenter_view_form_inherit_maintenance
+msgid "Equipments"
+msgstr "Équipements"
+
+#. module: mrp_maintenance
+#: model:ir.ui.view,arch_db:mrp_maintenance.mrp_workcenter_view_form_inherit_maintenance
+msgid "Est. Next Failure"
+msgstr "Estimation de la prochaine défaillance"
+
+#. module: mrp_maintenance
+#: model:ir.ui.view,arch_db:mrp_maintenance.maintenance_equipment_view_form_inherit_mrp
+msgid "Estimated Next Failure"
+msgstr "Estimation de la prochaine défaillance"
+
+#. module: mrp_maintenance
+#: model:ir.model.fields,field_description:mrp_maintenance.field_maintenance_equipment_estimated_next_failure
+msgid "Estimated time before next failure (in days)"
+msgstr "Estimation de temps avant la prochaine défaillance ( En jours)"
+
+#. module: mrp_maintenance
+#: model:ir.model.fields,field_description:mrp_maintenance.field_maintenance_equipment_expected_mtbf
+msgid "Expected MTBF"
+msgstr ""
+
+#. module: mrp_maintenance
+#: model:ir.model.fields,help:mrp_maintenance.field_maintenance_equipment_expected_mtbf
+#: model:ir.ui.view,arch_db:mrp_maintenance.maintenance_equipment_view_form_inherit_mrp
+msgid "Expected Mean Time Between Failure"
+msgstr ""
+
+#. module: mrp_maintenance
+#: model:maintenance.equipment.category,name:mrp_maintenance.equipment_furniture_tools
+msgid "Furniture Tools"
+msgstr ""
+
+#. module: mrp_maintenance
+#: model:ir.ui.view,arch_db:mrp_maintenance.maintenance_equipment_view_form_inherit_mrp
+msgid "Latest Failure"
+msgstr "Derniere défaillance"
+
+#. module: mrp_maintenance
+#: model:ir.model.fields,field_description:mrp_maintenance.field_maintenance_equipment_latest_failure_date
+msgid "Latest Failure Date"
+msgstr "Date de la dernière défaillance"
+
+#. module: mrp_maintenance
+#: model:ir.model.fields,field_description:mrp_maintenance.field_maintenance_equipment_mtbf
+msgid "MTBF"
+msgstr ""
+
+#. module: mrp_maintenance
+#: model:ir.model.fields,field_description:mrp_maintenance.field_maintenance_equipment_mttr
+msgid "MTTR"
+msgstr ""
+
+#. module: mrp_maintenance
+#: model:ir.ui.menu,name:mrp_maintenance.menu_equipment_dashboard
+msgid "Machines & Tools"
+msgstr "Machines & outils"
+
+#. module: mrp_maintenance
+#: model:ir.ui.view,arch_db:mrp_maintenance.mrp_workcenter_view_kanban_inherit_maintenance
+msgid "Maintenance"
+msgstr "Maintenance"
+
+#. module: mrp_maintenance
+#: model:ir.model.fields,field_description:mrp_maintenance.field_mrp_workcenter_equipment_ids
+msgid "Maintenance Equipment"
+msgstr "Equipement de maintenance"
+
+#. module: mrp_maintenance
+#: model:ir.ui.view,arch_db:mrp_maintenance.mrp_production_view_form_inherit_maintenance
+#: model:ir.ui.view,arch_db:mrp_maintenance.mrp_workorder_tablet_view_form_inherit_maintenance
+#: model:ir.ui.view,arch_db:mrp_maintenance.mrp_workorder_view_form_inherit_maintenance
+msgid "Maintenance Request"
+msgstr "Demande de maintenance"
+
+#. module: mrp_maintenance
+#: code:addons/mrp_maintenance/models/mrp_maintenance.py:96
+#: code:addons/mrp_maintenance/models/mrp_maintenance.py:126
+#: model:ir.actions.act_window,name:mrp_maintenance.maintenance_request_action_reports
+#: model:ir.model,name:mrp_maintenance.model_maintenance_request
+#: model:ir.ui.menu,name:mrp_maintenance.maintenance_request_reporting
+#, python-format
+msgid "Maintenance Requests"
+msgstr "Demandes de maintenance"
+
+#. module: mrp_maintenance
+#: model:ir.model.fields,field_description:mrp_maintenance.field_mrp_workorder_maintenance_request_count
+msgid "Maintenance request count"
+msgstr ""
+
+#. module: mrp_maintenance
+#: model:ir.model,name:mrp_maintenance.model_mrp_production
+#: model:ir.model.fields,field_description:mrp_maintenance.field_maintenance_request_production_id
+msgid "Manufacturing Order"
+msgstr "Ordre de fabrication"
+
+#. module: mrp_maintenance
+#: model:ir.ui.view,arch_db:mrp_maintenance.maintenance_equipment_view_form_inherit_mrp
+msgid "Mean Time Between Failure"
+msgstr "Temps moyen entre défaillances"
+
+#. module: mrp_maintenance
+#: model:ir.model.fields,help:mrp_maintenance.field_maintenance_equipment_mtbf
+msgid ""
+"Mean Time Between Failure, computed based on done corrective maintenances."
+msgstr ""
+
+#. module: mrp_maintenance
+#: model:ir.model.fields,help:mrp_maintenance.field_maintenance_equipment_mttr
+#: model:ir.ui.view,arch_db:mrp_maintenance.maintenance_equipment_view_form_inherit_mrp
+msgid "Mean Time To Repair"
+msgstr " Temps moyen jusqu'à la réparation"
+
+#. module: mrp_maintenance
+#: code:addons/mrp_maintenance/models/mrp_maintenance.py:83
+#: code:addons/mrp_maintenance/models/mrp_maintenance.py:144
+#, python-format
+msgid "New Maintenance Request"
+msgstr "Nouvelle demande de maintenance"
+
+#. module: mrp_maintenance
+#: model:ir.actions.act_window,help:mrp_maintenance.maintenance_request_action_reports
+msgid "No maintenance request."
+msgstr "Pas de demande de maintenance"
+
+#. module: mrp_maintenance
+#: model:ir.model.fields,field_description:mrp_maintenance.field_mrp_production_maintenance_count
+msgid "Number of maintenance requests"
+msgstr "Nombre de demandes de maintenance"
+
+#. module: mrp_maintenance
+#: model:ir.ui.menu,name:mrp_maintenance.maintenance_reporting
+msgid "Reporting"
+msgstr "Rapport"
+
+#. module: mrp_maintenance
+#: model:ir.model.fields,field_description:mrp_maintenance.field_mrp_production_request_ids
+msgid "Request ids"
+msgstr ""
+
+#. module: mrp_maintenance
+#: model:maintenance.equipment,name:mrp_maintenance.equipment_furniture2
+msgid "Scrub Plane"
+msgstr ""
+
+#. module: mrp_maintenance
+#: model:ir.model,name:mrp_maintenance.model_mrp_workcenter
+#: model:ir.model.fields,field_description:mrp_maintenance.field_maintenance_equipment_workcenter_id
+msgid "Work Center"
+msgstr "Poste de Travail"
+
+#. module: mrp_maintenance
+#: model:ir.ui.menu,name:mrp_maintenance.menu_workcenter_tree
+msgid "Work Centers"
+msgstr "Postes de Travail"
+
+#. module: mrp_maintenance
+#: model:ir.model,name:mrp_maintenance.model_mrp_workorder
+#: model:ir.model.fields,field_description:mrp_maintenance.field_maintenance_request_workorder_id
+msgid "Work Order"
+msgstr "Ordre de travail"
+
+#. module: mrp_maintenance
+#: model:ir.ui.view,arch_db:mrp_maintenance.maintenance_equipment_view_form_inherit_mrp
+msgid "WorkCenter"
+msgstr "Poste de Travail"
+
+#. module: mrp_maintenance
+#: model:ir.ui.view,arch_db:mrp_maintenance.maintenance_equipment_view_form_inherit_mrp
+msgid "days"
+msgstr "jours"
+
+#. module: mrp_maintenance
+#: code:addons/mrp_maintenance/models/mrp_maintenance.py:50
+#, python-format
+msgid "work centers"
+msgstr "postes de charge"

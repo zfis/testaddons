@@ -1,0 +1,379 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* wave
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0+e-20171123\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-06-18 02:49+0000\n"
+"PO-Revision-Date: 2018-06-18 02:49+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: wave
+#: model:ir.ui.view,arch_db:wave.view_minio_config_settings
+msgid "Address"
+msgstr "地址"
+
+#. module: wave
+#: model:ir.ui.view,arch_db:wave.view_minio_config_settings
+msgid "Apply"
+msgstr "应用"
+
+#. module: wave
+#: model:ir.model.fields,field_description:wave.field_wave_wave_assembly_line_id
+msgid "Assembly Line"
+msgstr "组装生产线"
+
+#. module: wave
+#: model:ir.ui.view,arch_db:wave.view_minio_config_settings
+msgid "Cancel"
+msgstr "取消"
+
+#. module: wave
+#: model:ir.ui.view,arch_db:wave.sa_view_wave_form
+msgid "Checked Time"
+msgstr "检测时间"
+
+#. module: wave
+#: model:ir.ui.menu,name:wave.menu_minio_settings
+msgid "Configuration"
+msgstr "配置"
+
+#. module: wave
+#: model:ir.model.fields,field_description:wave.field_operation_result_line_control_date
+msgid "Control Date"
+msgstr "控制日期"
+
+#. module: wave
+#: model:ir.model.fields,field_description:wave.field_minio_config_settings_create_uid
+#: model:ir.model.fields,field_description:wave.field_operation_result_line_create_uid
+#: model:ir.model.fields,field_description:wave.field_wave_compose_wave_create_uid
+#: model:ir.model.fields,field_description:wave.field_wave_wave_create_uid
+msgid "Created by"
+msgstr "创建人"
+
+#. module: wave
+#: model:ir.model.fields,field_description:wave.field_minio_config_settings_create_date
+#: model:ir.model.fields,field_description:wave.field_operation_result_line_create_date
+#: model:ir.model.fields,field_description:wave.field_wave_compose_wave_create_date
+#: model:ir.model.fields,field_description:wave.field_wave_wave_create_date
+msgid "Created on"
+msgstr "创建时间"
+
+#. module: wave
+#: model:ir.model.fields,field_description:wave.field_minio_config_settings_display_name
+#: model:ir.model.fields,field_description:wave.field_operation_result_line_display_name
+#: model:ir.model.fields,field_description:wave.field_wave_compose_wave_display_name
+#: model:ir.model.fields,field_description:wave.field_wave_wave_display_name
+msgid "Display Name"
+msgstr "显示名称"
+
+#. module: wave
+#: model:ir.model.fields,field_description:wave.field_minio_config_settings_id
+#: model:ir.model.fields,field_description:wave.field_operation_result_line_id
+#: model:ir.model.fields,field_description:wave.field_wave_compose_wave_id
+#: model:ir.model.fields,field_description:wave.field_wave_wave_id
+msgid "ID"
+msgstr "ID"
+
+#. module: wave
+#: model:ir.model.fields,field_description:wave.field_wave_wave_knr_code
+msgid "KNR"
+msgstr "KNR"
+
+#. module: wave
+#: model:ir.model.fields,field_description:wave.field_minio_config_settings___last_update
+#: model:ir.model.fields,field_description:wave.field_operation_result_line___last_update
+#: model:ir.model.fields,field_description:wave.field_wave_compose_wave___last_update
+#: model:ir.model.fields,field_description:wave.field_wave_wave___last_update
+msgid "Last Modified on"
+msgstr "最后修改日"
+
+#. module: wave
+#: model:ir.model.fields,field_description:wave.field_minio_config_settings_write_uid
+#: model:ir.model.fields,field_description:wave.field_operation_result_line_write_uid
+#: model:ir.model.fields,field_description:wave.field_wave_compose_wave_write_uid
+#: model:ir.model.fields,field_description:wave.field_wave_wave_write_uid
+msgid "Last Updated by"
+msgstr "最后更新人"
+
+#. module: wave
+#: model:ir.model.fields,field_description:wave.field_minio_config_settings_write_date
+#: model:ir.model.fields,field_description:wave.field_operation_result_line_write_date
+#: model:ir.model.fields,field_description:wave.field_wave_compose_wave_write_date
+#: model:ir.model.fields,field_description:wave.field_wave_wave_write_date
+msgid "Last Updated on"
+msgstr "最后更新时间"
+
+#. module: wave
+#: model:ir.ui.view,arch_db:wave.view_minio_config_settings
+msgid "MINIO Access"
+msgstr "MINIO Access"
+
+#. module: wave
+#: model:ir.actions.act_window,name:wave.action_minio_settings
+msgid "MINIO Settings"
+msgstr "对象存储服务设置"
+
+#. module: wave
+#: model:ir.ui.view,arch_db:wave.sa_view_wave_form
+msgid "Manufacture"
+msgstr "制造"
+
+#. module: wave
+#: model:ir.model.fields,field_description:wave.field_operation_result_line_measure_degree
+msgid "Measure Degree(grad)"
+msgstr "测量角度(度)"
+
+#. module: wave
+#: model:ir.model.fields,field_description:wave.field_operation_result_line_measure_result
+msgid "Measure Result"
+msgstr "测量结果"
+
+#. module: wave
+#: model:ir.model.fields,field_description:wave.field_operation_result_line_measure_t_don
+msgid "Measure Time Done(ms)"
+msgstr "作业花费时间(毫秒)"
+
+#. module: wave
+#: model:ir.model.fields,field_description:wave.field_operation_result_line_measure_torque
+msgid "Measure Torque(NM)"
+msgstr "测量扭矩(牛米)"
+
+#. module: wave
+#: model:ir.model.fields,field_description:wave.field_minio_config_settings_minio_url
+msgid "Minio URL"
+msgstr "对象存储 URL"
+
+#. module: wave
+#: model:ir.model.fields,field_description:wave.field_minio_config_settings_minio_access_key
+msgid "Minio access key"
+msgstr "对象存储 access key"
+
+#. module: wave
+#: model:ir.model.fields,field_description:wave.field_minio_config_settings_minio_bucket
+msgid "Minio bucket name"
+msgstr "对象存储 bucket name"
+
+#. module: wave
+#: model:ir.model.fields,field_description:wave.field_minio_config_settings_minio_secret_key
+msgid "Minio secret key"
+msgstr "对象存储 secret key"
+
+#. module: wave
+#: selection:operation.result.line,measure_result:0
+msgid "NOK"
+msgstr "NOK"
+
+#. module: wave
+#: model:ir.model.fields,field_description:wave.field_wave_wave_need_render
+msgid "Need render"
+msgstr "Need render"
+
+#. module: wave
+#: selection:operation.result.line,measure_result:0
+msgid "No measure"
+msgstr "未测量"
+
+#. module: wave
+#: selection:operation.result.line,measure_result:0
+msgid "OK"
+msgstr "OK"
+
+#. module: wave
+#: model:ir.ui.view,arch_db:wave.sa_view_wave_form
+msgid "Product"
+msgstr "产品"
+
+#. module: wave
+#: model:ir.ui.view,arch_db:wave.sa_view_wave_form
+msgid "Query"
+msgstr "查询"
+
+#. module: wave
+#: model:ir.model.fields,field_description:wave.field_wave_wave_query_date_from
+msgid "Query Date From"
+msgstr "从(日期)"
+
+#. module: wave
+#: model:ir.model.fields,field_description:wave.field_wave_wave_query_date_to
+msgid "Query Date to"
+msgstr "至(日期)"
+
+#. module: wave
+#: model:ir.model.fields,field_description:wave.field_wave_wave_limit
+msgid "Query Limit"
+msgstr "返回结果限制"
+
+#. module: wave
+#: model:ir.ui.view,arch_db:wave.sa_view_wave_form
+msgid "Query Parameters"
+msgstr "查询参数"
+
+#. module: wave
+#: model:ir.ui.view,arch_db:wave.sa_view_wave_form
+msgid "Result Lines"
+msgstr "结果行"
+
+#. module: wave
+#: model:ir.model.fields,field_description:wave.field_wave_wave_result_line_ids
+msgid "Result line ids"
+msgstr "Result line ids"
+
+#. module: wave
+#: model:ir.ui.view,arch_db:wave.sa_view_wave_form
+msgid "Results Information"
+msgstr "结果信息"
+
+#. module: wave
+#: model:ir.ui.view,arch_db:wave.sa_view_wave_form
+msgid "Scope"
+msgstr "曲线查看器"
+
+#. module: wave
+#: model:ir.model.fields,field_description:wave.field_operation_result_line_consu_product_id
+msgid "Screw"
+msgstr "螺栓"
+
+#. module: wave
+#: model:ir.model.fields,field_description:wave.field_wave_wave_screw_id
+msgid "Screw Type"
+msgstr "螺栓类型"
+
+#. module: wave
+#: model:ir.ui.view,arch_db:wave.view_minio_config_settings
+msgid "Settings MINIO bucket"
+msgstr "设置对象存储bucket"
+
+#. module: wave
+#: model:ir.ui.view,arch_db:wave.sa_view_wave_form
+msgid "Show WaveForm"
+msgstr "显示曲线"
+
+#. module: wave
+#: model:ir.actions.server,name:wave.operation_result_show_waveform
+msgid "Show Waveform"
+msgstr "显示曲线"
+
+#. module: wave
+#: model:ir.ui.view,arch_db:wave.sa_view_wave_form
+msgid "Time"
+msgstr "时间"
+
+#. module: wave
+#: model:ir.model.fields,field_description:wave.field_wave_wave_vin_code
+msgid "VIN"
+msgstr "VIN"
+
+#. module: wave
+#: model:ir.model.fields,field_description:wave.field_operation_result_line_product_id
+msgid "Vehicle"
+msgstr "车辆"
+
+#. module: wave
+#: model:ir.model.fields,field_description:wave.field_wave_wave_vehicle_id
+msgid "Vehicle Type"
+msgstr "车辆类型"
+
+#. module: wave
+#: model:ir.model,name:wave.model_wave_compose_wave
+msgid "Wave composition wizard"
+msgstr "Wave composition wizard"
+
+#. module: wave
+#: model:ir.ui.view,arch_db:wave.sa_view_wave_form
+msgid "WaveForm"
+msgstr "曲线查看"
+
+#. module: wave
+#: model:ir.actions.act_window,name:wave.action_wave_form
+#: model:ir.ui.menu,name:wave.menu_wave_form
+msgid "Waveform"
+msgstr "曲线查看"
+
+#. module: wave
+#: model:ir.model.fields,field_description:wave.field_operation_result_line_cur_objects
+msgid "Waveform Files"
+msgstr "曲线文件"
+
+#. module: wave
+#: code:addons/wave/models/result.py:31
+#: model:ir.actions.act_window,name:wave.action_result_wave_wizard
+#: model:ir.ui.menu,name:wave.menu_wave_scope_root
+#: model:ir.ui.view,arch_db:wave.spc_compose_wave_wizard_form
+#, python-format
+msgid "Waveform Scope"
+msgstr "曲线查看器"
+
+#. module: wave
+#: model:ir.model,name:wave.model_wave_wave
+msgid "Waveform scope wizard"
+msgstr "曲线查看导向"
+
+#. module: wave
+#: model:ir.model.fields,field_description:wave.field_wave_compose_wave_wave
+#: model:ir.model.fields,field_description:wave.field_wave_wave_wave
+msgid "Waves"
+msgstr "曲线"
+
+#. module: wave
+#: model:ir.model.fields,help:wave.field_operation_result_line_selected
+msgid "Whether add this result to create waveform"
+msgstr "是否将此结果的曲线显示"
+
+#. module: wave
+#: model:ir.model.fields,field_description:wave.field_operation_result_line_wizard_id
+msgid "Wizard id"
+msgstr "Wizard id"
+
+#. module: wave
+#: model:ir.model.fields,field_description:wave.field_wave_wave_segment_id
+msgid "Work Segment"
+msgstr "工段"
+
+#. module: wave
+#: model:ir.model.fields,field_description:wave.field_operation_result_line_workcenter_id
+msgid "Workcenter id"
+msgstr "工位ID"
+
+#. module: wave
+#: model:ir.model.fields,field_description:wave.field_operation_result_line_workorder_id
+msgid "Workorder id"
+msgstr "工单ID"
+
+#. module: wave
+#: model:ir.model.fields,help:wave.field_minio_config_settings_minio_bucket
+msgid "i.e. 'cunrong'"
+msgstr "i.e. 'cunrong'"
+
+#. module: wave
+#: model:ir.model,name:wave.model_minio_config_settings
+msgid "minio.config.settings"
+msgstr "minio.config.settings"
+
+#. module: wave
+#: model:ir.model,name:wave.model_operation_result
+msgid "operation.result"
+msgstr "operation.result"
+
+#. module: wave
+#: model:ir.model,name:wave.model_operation_result_line
+msgid "operation.result.line"
+msgstr "operation.result.line"
+
+#. module: wave
+#: model:ir.ui.view,arch_db:wave.view_minio_config_settings
+msgid "or"
+msgstr "或"
+
+#. module: wave
+#: model:ir.model.fields,field_description:wave.field_operation_result_line_selected
+msgid "select"
+msgstr "选择"
+

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <report auto="False"
+            string="Maintenance Sheet"
+            id="maintenance_sheet"
+            model="maintenance.request"
+            name="sa_maintenance.sheet_request"
+            file="sa_maintenance.sheet_request"
+            report_type="qweb-pdf"
+        />
+
+        <report auto="False"
+            string="Maintenance Report"
+            id="maintenance_request"
+            model="maintenance.request"
+            name="sa_maintenance.report_request"
+            file="sa_maintenance.report_request"
+            report_type="qweb-pdf"
+        />
+
+    </data>
+</odoo>

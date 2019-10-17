@@ -1,0 +1,263 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* svw_enhanced
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-09-30 03:20+0000\n"
+"PO-Revision-Date: 2019-09-30 03:20+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: svw_enhanced
+#: model:ir.ui.view,arch_db:svw_enhanced.report_mrporder_pin
+msgid "<strong>Barcode</strong>"
+msgstr "<strong>条码</strong>"
+
+#. module: svw_enhanced
+#: model:ir.ui.view,arch_db:svw_enhanced.report_mrporder_pin
+msgid "<strong>Destination Location</strong>"
+msgstr "<strong>目的位置</strong>"
+
+#. module: svw_enhanced
+#: model:ir.ui.view,arch_db:svw_enhanced.report_mrporder_pin
+msgid "<strong>Name</strong>"
+msgstr "<strong>名称</strong>"
+
+#. module: svw_enhanced
+#: model:ir.ui.view,arch_db:svw_enhanced.report_mrporder_pin
+msgid "<strong>No. Of Minutes</strong>"
+msgstr "<strong>分钟数</strong>"
+
+#. module: svw_enhanced
+#: model:ir.ui.view,arch_db:svw_enhanced.report_mrporder_pin
+msgid "<strong>Partner Ref:</strong><br/>"
+msgstr "<strong>业务伙伴参考:</strong><br/>"
+
+#. module: svw_enhanced
+#: model:ir.ui.view,arch_db:svw_enhanced.report_mrporder_pin
+msgid "<strong>Printing date:</strong><br/>"
+msgstr "<strong>打印日期:</strong><br/>"
+
+#. module: svw_enhanced
+#: model:ir.ui.view,arch_db:svw_enhanced.report_mrporder_pin
+msgid "<strong>Product:</strong><br/>"
+msgstr "<strong>产品:</strong><br/>"
+
+#. module: svw_enhanced
+#: model:ir.ui.view,arch_db:svw_enhanced.report_mrporder_pin
+msgid "<strong>Product</strong>"
+msgstr "<strong>产品</strong>"
+
+#. module: svw_enhanced
+#: model:ir.ui.view,arch_db:svw_enhanced.report_mrporder_pin
+msgid "<strong>Products to Consume</strong>"
+msgstr "<strong>待投料的产品</strong>"
+
+#. module: svw_enhanced
+#: model:ir.ui.view,arch_db:svw_enhanced.report_mrporder_pin
+msgid "<strong>Quantity:</strong><br/>"
+msgstr "<strong>数量:</strong><br/>"
+
+#. module: svw_enhanced
+#: model:ir.ui.view,arch_db:svw_enhanced.report_mrporder_pin
+msgid "<strong>Quantity</strong>"
+msgstr "<strong>数量</strong>"
+
+#. module: svw_enhanced
+#: model:ir.ui.view,arch_db:svw_enhanced.report_mrporder_pin
+msgid "<strong>SO Number:</strong><br/>"
+msgstr "<strong>销售订单号:</strong><br/>"
+
+#. module: svw_enhanced
+#: model:ir.ui.view,arch_db:svw_enhanced.report_mrporder_pin
+msgid "<strong>Scheduled Date:</strong><br/>"
+msgstr "<strong>计划日期:</strong><br/>"
+
+#. module: svw_enhanced
+#: model:ir.ui.view,arch_db:svw_enhanced.report_mrporder_pin
+msgid "<strong>Source Document:</strong><br/>"
+msgstr "<strong>原单据:</strong><br/>"
+
+#. module: svw_enhanced
+#: model:ir.ui.view,arch_db:svw_enhanced.report_mrporder_pin
+msgid "<strong>Source Location</strong>"
+msgstr "<strong>来源位置</strong>"
+
+#. module: svw_enhanced
+#: model:ir.ui.view,arch_db:svw_enhanced.report_mrporder_pin
+msgid "<strong>Work Orders</strong>"
+msgstr "<strong>工单</strong>"
+
+#. module: svw_enhanced
+#: model:ir.ui.view,arch_db:svw_enhanced.report_mrporder_pin
+msgid "<strong>WorkCenter</strong>"
+msgstr "<strong>工作中心</strong>"
+
+#. module: svw_enhanced
+#: model:ir.ui.view,arch_db:svw_enhanced.report_mrporder_pin
+msgid "Bill Of Material"
+msgstr "物料清单"
+
+#. module: svw_enhanced
+#: model:ir.model.fields,field_description:svw_enhanced.field_mrp_production_display_long_pin
+msgid "Display LongPIN"
+msgstr "LongPIN"
+
+#. module: svw_enhanced
+#: model:ir.model.fields,field_description:svw_enhanced.field_mrp_production_equipment_name
+msgid "Equipment Name"
+msgstr "设备名称"
+
+#. module: svw_enhanced
+#: model:ir.model.fields,field_description:svw_enhanced.field_mrp_production_factory_name
+msgid "Factory Name"
+msgstr "工厂代号"
+
+#. module: svw_enhanced
+#: code:addons/svw_enhanced/report/tighting_result_report.py:19
+#, python-format
+msgid "Form content is missing, this report cannot be printed."
+msgstr "表单内容确实，无法打印此报告."
+
+#. module: svw_enhanced
+#: model:ir.model.fields,field_description:svw_enhanced.field_mrp_workorder_sent
+msgid "Have sent to Masterpc"
+msgstr "已经发送至工位控制器"
+
+#. module: svw_enhanced
+#: model:ir.model.fields,field_description:svw_enhanced.field_mrp_production_knr
+#: model:ir.ui.view,arch_db:svw_enhanced.sa_svw_mrp_production_view_search_inherit
+msgid "KNR"
+msgstr "KNR"
+
+#. module: svw_enhanced
+#: model:ir.ui.view,arch_db:svw_enhanced.sa_svw_operation_result_view_search_inherit
+msgid "KNR/VIN"
+msgstr "KNR/VIN"
+
+#. module: svw_enhanced
+#: model:ir.model.fields,field_description:svw_enhanced.field_mrp_production_lnr
+msgid "Line Number"
+msgstr "Line Number"
+
+#. module: svw_enhanced
+#: model:ir.model.fields,field_description:svw_enhanced.field_mrp_production_long_pin
+msgid "LongPIN"
+msgstr "LongPIN"
+
+#. module: svw_enhanced
+#: model:ir.model,name:svw_enhanced.model_mrp_production
+msgid "Manufacturing Order"
+msgstr "工单"
+
+#. module: svw_enhanced
+#: sql_constraint:mrp.production:0
+msgid "Only one KNR per MO is allowed"
+msgstr "Only one KNR per MO is allowed"
+
+#. module: svw_enhanced
+#: sql_constraint:mrp.production:0
+msgid "Only one VIN per MO is allowed"
+msgstr "Only one VIN per MO is allowed"
+
+#. module: svw_enhanced
+#: model:ir.model.fields,field_description:svw_enhanced.field_mrp_wo_consu_result_ids
+#: model:ir.model.fields,field_description:svw_enhanced.field_mrp_workorder_result_ids
+msgid "Operation Results"
+msgstr "作业结果"
+
+#. module: svw_enhanced
+#: model:ir.model.fields,field_description:svw_enhanced.field_mrp_production_pin
+msgid "PIN"
+msgstr "PIN"
+
+#. module: svw_enhanced
+#: model:ir.ui.view,arch_db:svw_enhanced.report_mrporder_pin
+msgid "PIN # :"
+msgstr "PIN # :"
+
+#. module: svw_enhanced
+#: model:ir.actions.report.xml,name:svw_enhanced.action_report_vin_production_order
+msgid "PIN Production Order"
+msgstr "PIN"
+
+#. module: svw_enhanced
+#: model:ir.model.fields,field_description:svw_enhanced.field_mrp_production_pin_check_code
+msgid "PIN check Code"
+msgstr "PIN校验码"
+
+#. module: svw_enhanced
+#: model:ir.model.fields,field_description:svw_enhanced.field_mrp_production_production_routings
+msgid "Production Routings"
+msgstr "生产订单相关工艺路线集"
+
+#. module: svw_enhanced
+#: model:ir.ui.view,arch_db:svw_enhanced.sa_svw_mrp_workcenter_form_view_inherit
+msgid "QRK"
+msgstr "QRK"
+
+#. module: svw_enhanced
+#: model:ir.ui.view,arch_db:svw_enhanced.sa_mrp_workorder_view_form_inherit_mrp
+#: model:ir.ui.view,arch_db:svw_enhanced.sa_svw_mrp_production_form_inherit
+msgid "Results"
+msgstr "结果"
+
+#. module: svw_enhanced
+#: model:ir.ui.view,arch_db:svw_enhanced.sa_svw_mrp_production_form_inherit
+msgid "SPC"
+msgstr "过程控制分析"
+
+#. module: svw_enhanced
+#: model:ir.model.fields,field_description:svw_enhanced.field_mrp_production_vin
+#: model:ir.ui.view,arch_db:svw_enhanced.sa_svw_mrp_production_view_search_inherit
+msgid "VIN"
+msgstr "VIN"
+
+#. module: svw_enhanced
+#: model:ir.ui.view,arch_db:svw_enhanced.sa_svw_operation_result_view_search_inherit
+#: model:ir.ui.view,arch_db:svw_enhanced.sa_svw_sa_spc_form_tor_ang_inherit
+msgid "Vehicle"
+msgstr "车辆"
+
+#. module: svw_enhanced
+#: model:ir.ui.view,arch_db:svw_enhanced.sa_svw_sa_spc_form_tor_ang_inherit
+msgid "Vehicle Type Code"
+msgstr "车型代码"
+
+#. module: svw_enhanced
+#: model:ir.model,name:svw_enhanced.model_mrp_workorder
+msgid "Work Order"
+msgstr "工单"
+
+#. module: svw_enhanced
+#: model:ir.model.fields,field_description:svw_enhanced.field_mrp_workorder_worksheet_img
+msgid "Worksheet"
+msgstr "工作记录表"
+
+#. module: svw_enhanced
+#: model:ir.model.fields,field_description:svw_enhanced.field_mrp_production_year
+msgid "Year"
+msgstr "年"
+
+#. module: svw_enhanced
+#: model:ir.model,name:svw_enhanced.model_mrp_wo_consu
+msgid "mrp.wo.consu"
+msgstr "mrp.wo.consu"
+
+#. module: svw_enhanced
+#: model:ir.model,name:svw_enhanced.model_operation_result
+msgid "operation.result"
+msgstr "operation.result"
+
+#. module: svw_enhanced
+#: model:ir.model,name:svw_enhanced.model_report_spc_report_result_tighting
+msgid "report.spc.report_result_tighting"
+msgstr "report.spc.report_result_tighting"
+

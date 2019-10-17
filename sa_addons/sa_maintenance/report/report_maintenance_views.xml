@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="report_request_document">
+            <t t-call="report.html_container">
+                <t t-call="report.external_layout">
+                    <div class="page">
+                        <h2>
+                        维护报告
+                        </h2>
+                        <table class="table table-condensed">
+                            <thead>
+                                <tr>
+                                    <th><strong>日期</strong></th>
+                                    <th><strong>维护申请名称</strong></th>
+                                    <th><strong>设备名</strong></th>
+                                    <th><strong>操作者</strong></th>
+                                </tr>
+                            </thead>
+                            <td><span t-field="o.request_date"/></td>
+                            <td><span t-field="o.name"/></td>
+                            <td><span t-field="o.equipment_id.name"/></td>
+                            <td><span t-field="o.owner_user_id.name"/></td>
+                        <tbody>
+
+                        </tbody>
+                        </table>
+                        <table class="table table-condensed">
+                            <thead>
+                                <tr>
+                                    <th><strong>检测名称</strong></th>
+                                    <th><strong>描述</strong></th>
+                                    <th><strong>检测内容</strong></th>
+                                    <th><strong>检测结果</strong></th>
+                                </tr>
+                            </thead>
+
+                            <tr t-foreach="o.check_point_action_ids" t-as="point">
+                                <td><span t-field="point.category_id.name"/></td>
+                                <td><span t-field="point.description"/></td>
+
+                                <td t-if="point.test_type == 'measure'">
+                                    <table class="table table-condensed">
+                                        <thead>
+                                            <tr>
+                                                <th><strong>检测标准</strong></th>
+                                                <th><strong>测量值</strong></th>
+                                            </tr>
+                                        </thead>
+                                        <tr>
+                                            <td>
+                                                最小值: <span t-field="point.tolerance_min"/><br/>
+                                                最大值: <span t-field="point.tolerance_max"/><br/>
+                                                正常值: <span t-field="point.norm"/>
+                                            </td>
+                                            <td>
+                                                <span t-field="point.measure"/>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td t-else="">
+                                    <span t-field="point.description"/>
+                                </td>
+
+                                <td t-if="point.measure_success == 'pass'">
+                                    <span style="color: green;" t-field="point.measure_success"/>
+                                </td>
+                                <td t-else="">
+                                    <span style="color: red;" t-field="point.measure_success"/>
+                                </td>
+                            </tr>
+                            <tr><td></td></tr>
+                        </table>
+                    </div>
+                </t>
+             </t>
+        </template>
+
+        <template id="report_request">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="sa_maintenance.report_request_document" />
+            </t>
+        </template>
+
+    </data>
+</odoo>

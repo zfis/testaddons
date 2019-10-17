@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="ir.ui.view" id="mrp_workorder_view_form_tablet">
+        <field name="name">mrp.production.work.order.form.tablet</field>
+        <field name="model">mrp.workorder</field>
+        <field name="arch" type="xml">
+            <form string="Production Workcenter" delete="0" create="0">
+            <header>
+                <button name="button_finish" type="object" string="Finish Order" attrs="{'invisible': ['|', ('state', '!=', 'progress'), ('is_produced', '=', False)]}" class="btn-info"/>
+                <button name="button_start" type="object" string="Start Working" attrs="{'invisible': ['|', ('working_state', '=', 'blocked'), ('state', '!=', 'pending')]}"/>
+                <button name="button_start" type="object" string="Start Working" attrs="{'invisible': ['|', ('working_state', '=', 'blocked'), ('state', '!=', 'ready')]}" class="btn-success"/>
+                <button name="record_production" type="object" string="Done" class="btn-success" attrs="{'invisible': ['|', '|', ('working_state', '=', 'blocked'), ('state', '!=', 'progress'), ('is_user_working', '=', False)]}"/>
+                <button name="button_pending" type="object" string="Pause" class="btn-warning" attrs="{'invisible': ['|', '|', ('working_state', '=', 'blocked'), ('state', 'in', ('done', 'pending', 'ready', 'cancel')), ('is_user_working', '=', False)]}"/>
+                <button name="%(mrp.act_mrp_block_workcenter_wo)d" type="action" context="{'default_workcenter_id': workcenter_id}" string="Block" class="btn-danger" attrs="{'invisible': ['|', '|', ('working_state', '=', 'blocked'), ('state', 'in', ('done', 'pending', 'ready', 'cancel')), ('is_user_working', '=', False)]}"/>
+                <button name="button_unblock" type="object" string="Unblock" class="btn-danger" attrs="{'invisible': [('working_state', '!=', 'blocked')]}"/>
+                <button name="button_start" type="object" string="Continue Production" class="btn-warning" attrs="{'invisible': ['|', '|', ('working_state', '=', 'blocked'), ('is_user_working', '=', True), ('state', 'in', ('done', 'pending', 'ready', 'cancel'))]}"></button>
+                <button name="button_start" type="object" string="Continue Production" attrs="{'invisible': ['|', '|', ('production_state', '=', 'done'), ('working_state', '=', 'blocked'), ('state', '!=', 'done')]}"/>
+                <button name="button_scrap" type="object" string="Scrap" attrs="{'invisible': [('state', 'in', ('confirmed', 'cancel'))]}"/>
+                <field name="state" widget="statusbar" statusbar_visible="pending,ready,progress,done"/>
+                <field name="is_user_working" invisible="1"/>
+                <field name="working_state" invisible="1"/>
+                <field name="production_state" invisible="1"/>
+                <field name="workcenter_id" invisible="1"/>
+            </header>
+            <div class="oe_button_box" name="button_box">
+                <button class="oe_stat_button" name="action_see_move_scrap" type="object" icon="fa-arrows-v" attrs="{'invisible': [('scrap_count', '=', 0)]}">
+                    <div class="o_form_field o_stat_info">
+                        <span class="o_stat_value"><field name="scrap_count"/></span>
+                        <span class="o_stat_text">Scraps</span>
+                    </div>
+                </button>
+            </div>
+            <group>
+                <group>
+                    <field name="product_id" string="To Produce"/>
+                    <label for="qty_produced" string="Quantity Produced"/>
+                    <div class="o_row">
+                        <field name="qty_produced"/> /
+                        <field name="qty_production"/>
+                        <field name="product_uom_id"/>
+                        <field name="production_availability" nolabel="1" widget="bullet_state" options="{'classes': {'assigned': 'success', 'waiting': 'danger'}}" attrs="{'invisible': [('state', '=', 'done')]}"/>
+                    </div>
+                    <field name="is_produced" invisible="1"/>
+                </group>
+                <div class="alert alert-danger alert-dismissible text-left" role="alert" attrs="{'invisible': [('production_messages', '=', False)]}">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">x</a>
+                    <field name="production_messages" style="height: 50px;"/>
+                </div>
+            </group>
+            <notebook>
+            <page string="Work Instruction" attrs="{'invisible': [('worksheet', '=', False)]}">
+                <field name="worksheet" widget="pdf_viewer"/>
+            </page>
+            <page string="Current Production">
+                <group>
+                    <group>
+                        <field name="qty_producing" string="Current Qty" attrs="{'readonly': ['|', ('product_tracking', '=', 'serial'), ('state', 'in', ('done', 'cancel'))]}"/>
+                        <field name="final_lot_id" context="{'default_product_id': product_id}" attrs="{'invisible': [('product_tracking', '=', 'none')]}" groups="stock.group_production_lot"/>
+                        <field name="product_tracking" invisible="1"/>
+                    </group>
+                    <group>
+                        <label for="delay"/>
+                        <button style="pointer-events: none;" class="oe_inline label label-default">
+                            <field name="duration" widget="mrp_time_counter"/>
+                        </button>
+                    </group>
+                </group>
+                <field name="move_raw_ids" invisible="1"/>
+                <field name="active_move_lot_ids" attrs="{'invisible': [('active_move_lot_ids', '=', [])]}">
+                    <tree editable="bottom" create="0" delete="0">
+                        <field name="product_id"/>
+                        <field name="quantity" readonly="1"/>
+                        <field name="lot_id" context="{'default_product_id': product_id}"/>
+                        <field name="quantity_done"/>
+                        <field name="move_id" invisible="1"/>
+                        <field name="done_wo" invisible="1"/>
+                    </tree>
+                </field>
+            </page>
+            </notebook>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="mrp_workorder_action_tablet">
+        <field name="name">Work Orders</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">mrp.workorder</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">kanban,tree,form</field>
+        <field name="view_ids" eval="[(5, 0, 0),
+            (0, 0, {'view_mode': 'kanban', 'view_id': ref('mrp.workcenter_line_kanban')}),
+            (0, 0, {'view_mode': 'tree', 'view_id': ref('mrp.mrp_production_workcenter_tree_view_inherit')}),
+            (0, 0, {'view_mode': 'form', 'view_id': ref('mrp_workorder_view_form_tablet')})]"/>
+        <field name="target">fullscreen</field>
+        <field name="domain">[('state', 'not in', ['done', 'cancel', 'pending']), ('workcenter_id','=',active_id)]</field>
+        <field name="context">{'form_view_initial_mode': 'edit'}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Click to start a new work order.
+            </p><p>
+                Work Orders is the list of operations to be performed for each
+                manufacturing order. Once you start the first work order of a
+                manufacturing order, the manufacturing order is automatically
+                marked as started. Once you finish the latest operation of a
+                manufacturing order, the MO is automatically done and the related
+                products are produced.
+            </p>
+        </field>
+    </record>
+</odoo>

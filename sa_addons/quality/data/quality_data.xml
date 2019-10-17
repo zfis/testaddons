@@ -1,0 +1,123 @@
+<odoo>
+    <data noupdate="1">
+
+        <record forcecreate="True" id="decimal_quality" model="decimal.precision">
+            <field name="name">Quality Tests</field>
+            <field name="digits">2</field>
+        </record>
+
+        <record id="mail_alias_quality_alert" model="mail.alias">
+            <field name="alias_name">alert</field>
+            <field name="alias_model_id" ref="model_sa_quality_alert"/>
+            <field name="alias_user_id" ref="base.user_root"/>
+            <field name="alias_parent_model_id" ref="model_sa_quality_alert_team"/>
+        </record>
+        <record id="quality_alert_team0" model="sa.quality.alert.team">
+            <field name="name">Main Quality Team</field>
+            <field name="alias_id" ref="mail_alias_quality_alert"/>
+        </record>
+        <record id="quality_alert_stage_0" model="sa.quality.alert.stage">
+            <field name="name">New</field>
+        </record>
+        <record id="quality_alert_stage_1" model="sa.quality.alert.stage">
+            <field name="name">Confirmed</field>
+        </record>
+        <record id="quality_alert_stage_2" model="sa.quality.alert.stage">
+            <field name="name">Action Proposed</field>
+        </record>
+        <record id="quality_alert_stage_3" model="sa.quality.alert.stage">
+            <field name="name">Solved</field>
+            <field name="folded">True</field>
+            <field name="done">True</field>
+        </record>
+        <record id="sequence_quality_point" model="ir.sequence">
+            <field name="name">Quality Point</field>
+            <field name="code">sa.quality.point</field>
+            <field name="prefix">QCP</field>
+            <field name="padding">5</field>
+            <field name="number_next">1</field>
+            <field name="number_increment">1</field>
+        </record>
+        <record id="sequence_quality_check" model="ir.sequence">
+            <field name="name">Quality Check</field>
+            <field name="code">sa.quality.check</field>
+            <field name="prefix">QC</field>
+            <field name="padding">5</field>
+            <field name="number_next">1</field>
+            <field name="number_increment">1</field>
+        </record>
+        <record id="sequence_quality_alert" model="ir.sequence">
+            <field name="name">Quality Alert</field>
+            <field name="code">sa.quality.alert</field>
+            <field name="prefix">QA</field>
+            <field name="padding">5</field>
+            <field name="number_next">1</field>
+            <field name="number_increment">1</field>
+        </record>
+
+
+
+        <record id="reason_workcenter" model="sa.quality.reason">
+            <field name="name">Workcenter Failure</field>
+        </record>
+        <record id="reason_parts" model="sa.quality.reason">
+            <field name="name">Parts Quality</field>
+        </record>
+        <record id="reason_wo" model="sa.quality.reason">
+            <field name="name">Work Operation</field>
+        </record>
+        <record id="reason_other" model="sa.quality.reason">
+            <field name="name">Others</field>
+        </record>
+
+        <record id="test_type_register_consumed_materials" model="sa.quality.point.test_type">
+            <field name="name">Register Consumed Materials</field>
+            <field name="technical_name">register_consumed_materials</field>
+        </record>
+
+        <record id="test_type_register_byproducts" model="sa.quality.point.test_type">
+            <field name="name">Register By-products</field>
+            <field name="technical_name">register_byproducts</field>
+        </record>
+
+        <record id="test_type_print_label" model="sa.quality.point.test_type">
+            <field name="name">Print label</field>
+            <field name="technical_name">print_label</field>
+        </record>
+
+        <record id="test_type_passfail" model="sa.quality.point.test_type">
+            <field name="name">Pass - Fail</field>
+            <field name="technical_name">passfail</field>
+        </record>
+
+        <record id="test_type_measure" model="sa.quality.point.test_type">
+            <field name="name">Measure</field>
+            <field name="technical_name">measure</field>
+        </record>
+
+        <record id="test_type_text" model="sa.quality.point.test_type">
+            <field name="name">Text</field>
+            <field name="technical_name">text</field>
+        </record>
+        <record id="test_type_picture" model="sa.quality.point.test_type">
+            <field name="name">Take a Picture</field>
+            <field name="technical_name">picture</field>
+        </record>
+
+        <record id="test_type_video" model="sa.quality.point.test_type">
+            <field name="name">Show a Video</field>
+            <field name="technical_name">video</field>
+        </record>
+
+        <record id="test_type_tightening" model="sa.quality.point.test_type">
+            <field name="name">Tightening Work Step</field>
+            <field name="technical_name">tightening</field>
+        </record>
+
+        <record id="test_type_tightening_point" model="sa.quality.point.test_type">
+            <field name="name">Tightening Point</field>
+            <field name="technical_name">tightening_point</field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,50 @@
+<odoo>
+    <data>
+
+        <record id="product_search_form_view_sa" model="ir.ui.view">
+            <field name="name">product_search_form_view_sa</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="sa_base.product_search_form_view_sa"/>
+            <field name="arch" type="xml">
+                <xpath expr="//filter[@name='vehicle']" position="replace">
+                    <filter string="Carriage" name="carriage" domain="[('sa_type', '=', 'carriage')]"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="product_product_action_carriage" model="ir.actions.act_window">
+            <field name="name">Carriage</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">product.product</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="product_search_form_view_sa"/>
+            <field name="context">{'default_type':'product','default_tracking':
+                'none','default_sa_type':'carriage','search_default_carriage': 1}
+            </field>
+            <field name="view_ids"
+                   eval="[(5, 0, 0),
+                          (0, 0, {'view_mode': 'tree', 'view_id': ref('sa_base.sa_product_product_tree_view')}),
+                          (0, 0, {'view_mode': 'form', 'view_id': ref('sa_base.sa_product_normal_form_view')})]"/>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click to define a new carriage.
+                </p>
+                <p>
+                    You must define a product for everything you sell, whether it's
+                    a physical product, a consumable or a service you offer to
+                    customers.
+                </p>
+                <p>
+                    The product form contains information to simplify the sale
+                    process: price, notes in the quotation, accounting data,
+                    procurement methods, etc.
+                </p>
+            </field>
+        </record>
+
+        <menuitem id="sa_base.menu_mrp_vehicle_form"
+            name="Carriage"
+            action="tangche_enhanced.product_product_action_carriage"
+            parent="sa_base.menu_product_form"/>
+    </data>
+</odoo>

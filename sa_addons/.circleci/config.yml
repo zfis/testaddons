@@ -1,0 +1,32 @@
+# Python CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-python/ for more details
+#
+version: 2
+jobs:
+  build:
+    machine: true
+      # Specify service dependencies here if necessary
+      # CircleCI maintains a library of pre-built images
+      # documented at https://circleci.com/docs/2.0/circleci-images/
+      # - image: circleci/postgres:9.4
+
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+      # - setup_remote_docker:
+      #     docker_layer_caching: true
+      # - add_ssh_keys:
+      #     fingerprints:
+      #       - "c7:20:19:93:cd:c6:31:58:55:e4:8c:bb:44:06:87:85"
+      #       - "9b:7f:e5:b2:66:b6:84:71:94:2d:29:25:43:d5:24:4b"
+      - run:
+          name: docker build
+          command: |
+            git clone git@github.com:masami10/odoo-enterprise.git --branch yd-10.0 --single-branch odoo
+            git clone git@github.com:masami10/sa_addons.git --branch master --single-branch sa_addons
+            cd docker
+            docker build -f ./Dockerfile -t gubinempower/sa-backend:20180508 . --no-cache
+            docker login -u $DOCKERHUB_USER -p $DOCKERHUB_PWD
+            docker push gubinempower/sa-backend:20180508

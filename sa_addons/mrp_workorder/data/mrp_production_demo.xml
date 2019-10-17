@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <function model="mrp.production" name="button_plan" eval="[ref('mrp.mrp_production_1')]"/>
+    </data>
+</odoo>

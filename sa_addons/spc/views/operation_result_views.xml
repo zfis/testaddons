@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="operation_result_server_action" model="ir.actions.server">
+        <field name="name">Sent to FIS</field>
+        <field name="model_id" ref="spc.model_operation_result"/>
+        <field name="state">code</field>
+        <field name="code">records.sent_aiis()</field>
+    </record>
+
+    <record id="run_operation_result_action" model="ir.values">
+        <field name="model_id" ref="spc.model_operation_result" />
+        <field name="name">Sent to FIS</field>
+        <field name="key2">client_action_multi</field>
+        <field name="key">action</field>
+        <field name="model">operation.result</field>
+        <field name="value" eval="'ir.actions.server,' + str(ref('operation_result_server_action'))" />
+    </record>
+
+    <!-- OPERATION.RESULT -->
+   <record id="operation_result_view_form" model="ir.ui.view">
+        <field name="name">operation_result_view_form</field>
+        <field name="model">operation.result</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <field name="sent" invisible="1" />
+                    <button name="do_pass" type="object" class="btn-primary" attrs="{'invisible': [('quality_state', '!=', 'none')]}" string="Pass" groups="base.group_system"/>
+                    <button name="do_pass" type="object" attrs="{'invisible': [('quality_state', '!=', 'fail')]}" groups="base.group_system" string="Pass"/>
+                    <button name="do_fail" type="object" class="btn-primary" attrs="{'invisible': [('quality_state', '!=', 'none')]}" string="Fail" groups="base.group_system"/>
+                    <button name="do_fail" type="object" attrs="{'invisible': [('quality_state', '!=', 'pass')]}" groups="base.group_system" string="Fail"/>
+                    <button name="do_exception" type="object" class="btn-primary" attrs="{'invisible': [('quality_state', '!=', 'none')]}" string="Except" groups="base.group_system"/>
+                    <button name="sent_aiis" type="object"  attrs="{'invisible': [('quality_state', 'in', ['none', 'exception'])]}" class="oe_highlight" groups="base.group_no_one" string="Send to AIIS"/>
+                    <field name="quality_state" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <group string="Setting Info">
+                        <group string="Product">
+                            <field name="product_id"/>
+                            <field name="track_no"/>
+                            <field name="consu_bom_line_id" groups="base.group_no_one" />
+                            <field name="consu_product_id" />
+                        </group>
+                        <group string="Manufacturing Info">
+                            <field name="time" string="Order Date" />
+                            <field name="production_id"/>
+                            <field name="workcenter_id" />
+                            <field name="assembly_line_id" />
+                            <field name="tool_id" />
+                            <field name="operation_point_id" />
+                        </group>
+                        <group>
+                            <field name="qcp_id" />
+                            <field name="pset_strategy" />
+                        </group>
+                        <group string="Degree">
+                            <field name="pset_w_max"/>
+                            <field name="pset_w_min" />
+                            <field name="pset_w_threshold"/>
+                            <field name="pset_w_target" />
+                        </group>
+                        <group string="Torque">
+                            <field name="pset_m_max"/>
+                            <field name="pset_m_min" />
+                            <field name="pset_m_threshold"/>
+                            <field name="pset_m_target" />
+                        </group>
+                    </group>
+                    <group string="Result">
+                        <field name="control_date" string="Checked Time"/>
+                        <field name="op_time" />
+                        <field name="cur_objects" />
+                        <field name="measure_result" />
+                        <field name="measure_torque"/>
+                        <field name="measure_degree"/>
+                        <field name="measure_t_don" />
+                        <field name="tightening_id" />
+                        <field name="one_time_pass" groups="base.group_no_one"/>
+                        <field name="final_pass" groups="base.group_no_one"/>
+                        <field name="lacking" groups="base.group_no_one" />
+                    </group>
+                    <group>
+                        <field name="exception_reason" attrs="{'invisible': [('quality_state', '!=', 'exception')]}"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+      <record id="operation_result_view_kanban" model="ir.ui.view">
+        <field name="name">operation_result_view_kanban</field>
+        <field name="model">operation.result</field>
+        <field name="arch" type="xml">
+            <kanban class="o_kanban_small_column" default_order="quality_state asc">
+                <field name="name"/>
+                <field name="user_id"/>
+                <field name="time"/>
+                <field name="product_id"/>
+                <field name="quality_state"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div t-attf-class="oe_kanban_card oe_kanban_global_click">
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <strong><span><t t-esc="record.name.value"/></span></strong>
+                                </div>
+                                <div class="col-xs-6">
+                                    <strong><span t-attf-class="pull-right text-right label #{['none'].indexOf(record.quality_state.raw_value) > -1 ? 'label-default' : ['fail'].indexOf(record.quality_state.raw_value) > -1 ? 'label-danger' :['exception'].indexOf(record.quality_state.raw_value) > -1 ? 'label-warning' : ['done'].indexOf(record.quality_state.raw_value) > -1 ? 'label-primary' : 'label-success'}"><t t-esc="record.quality_state.value"/></span></strong>
+                                </div>
+                            </div>
+                            <div class="row text-muted">
+                                <div class="col-xs-8">
+                                    <span><t t-esc="record.product_id.value"/></span>
+                                </div>
+                                <!--<div class="col-xs-4">-->
+                                    <!--<span><t t-esc="record.lot_id.value"/></span>-->
+                                <!--</div>-->
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="operation_result_view_tree" model="ir.ui.view">
+        <field name="name">operation_result_view_tree</field>
+        <field name="model">operation.result</field>
+        <field name="arch" type="xml">
+            <tree default_order="quality_state asc" decoration-muted="quality_state == 'none'" decoration-success="quality_state == 'pass'" decoration-danger="quality_state == 'fail'" decoration-warning="quality_state == 'exception'"  create="0" edit="0">
+                <field name="product_id"/>
+                <field name="production_id" />
+                <field name="track_no"/>
+                <field name="consu_product_id" />
+                <field name="workcenter_id" />
+                <field name="tool_id" />
+                <field name="control_date" string="Checked Time"/>
+                <field name="measure_torque" avg="Avg. Torque" />
+                <field name="measure_degree" avg="Avg. Degree" />
+                <field name="measure_t_don" avg="Avg. Operation Duration" />
+                <field name="measure_result" />
+                <field name="tightening_id" />
+                <field name="quality_state" groups="base.group_no_one"/>
+                <field name="batch"/>
+                <field name="program_id"/>
+                <field name="job"/>
+                <field name="sent" groups="base.group_no_one"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="operation_result_view_graph" model="ir.ui.view">
+        <field name="name">operation_result_view_graph</field>
+        <field name="model">operation.result</field>
+        <field name="arch" type="xml">
+            <graph string="Quality Check Analysis">
+                <field name="control_date" type="col" interval="quarter"/>
+                <field name="measure_result" type="row"/>
+            </graph>
+        </field>
+    </record>
+
+    <record id="operation_result_view_pivot" model="ir.ui.view">
+         <field name="name">operation_result_view_pivot</field>
+         <field name="model">operation.result</field>
+         <field name="arch" type="xml">
+             <pivot string="Quality Check Analysis">
+                 <field name="control_date" type="col" interval="day"/>
+                 <field name="product_id" type="row"/>
+                 <field name="consu_product_id" type="row" />
+                 <field name="tool_id" />
+             </pivot>
+         </field>
+    </record>
+
+    <record id="operation_result_view_search" model="ir.ui.view">
+        <field name="name">operation_result_view_search</field>
+        <field name="model">operation.result</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" string="Track Number" filter_domain="[('track_no','ilike',self)]"/>
+                <field name="product_id" filter_domain="['|', ('product_id.name','ilike',self),('product_id.default_code','ilike',self)]"/>
+                <field name="consu_product_id" filter_domain="['|', ('consu_product_id.name','ilike',self), ('consu_product_id.default_code','ilike',self)]"/>
+                <field name="workorder_id" string="Operation"/>
+                <field name="workcenter_id" string="Work Center"/>
+                <field name="tool_id" string="Tightening Tool" widget="selection"/>
+                <field name="qcp_id" string="Quality Check Point"/>
+                <field name="production_id" string="Manufacturing Production"/>
+                <field name="quality_state"/>
+                <separator/>
+                <filter string="In Progress" domain="[('quality_state', '=', 'none')]" name="progress"/>
+                <filter string="Passed" domain="[('quality_state', '=', 'pass')]" name="passed"/>
+                <filter string="Failed" domain="[('quality_state', '=', 'fail')]" name="failed"/>
+                <separator/>
+                <filter string="OK" domain="[('measure_result', '=', 'ok')]" name="ok"/>
+                <filter string="NOK" domain="[('measure_result', '=', 'nok')]" name="nok"/>
+                <filter string="Loose" domain="[('measure_result', '=', 'lsn')]" name="lsn"/>
+                <filter string="Forced Release" domain="[('measure_result', '=', 'ak2')]" name="ak2"/>
+                <separator/>
+                <filter string="Data Lacking" domain="[('lacking', '=', 'lack')]" name="lacking"/>
+                <filter string="Date Using" domain="[('lacking', '=', 'normal')]" name="using"/>
+                <separator/>
+                <filter string="Not Send" domain="[('sent', '=', False)]" name="sent"/>
+                <separator/>
+                <filter name="today" string="Today" domain="[('control_date', '&gt;=', datetime.datetime.now().replace(hour=0, minute=0, second=0)),('control_date', '&lt;=', datetime.datetime.now().replace(hour=23, minute=59, second=59))]" />
+                <filter name="month" string="Current Month" domain="[('control_date','&gt;=', context_today().strftime('%Y-%m-1')),('control_date','&lt;', (context_today() + relativedelta(months=1)).strftime('%Y-%m-1') )]"/>
+                <filter name="year" string="This Year" domain="[('control_date','&gt;=', context_today().strftime('%Y-1-1')),('control_date','&lt;', (context_today() + relativedelta(years=1)).strftime('%Y-1-1') )]"/>
+                <filter name="last_year" string="Last Year" domain="[('control_date','&gt;=', (context_today() - relativedelta(years=1)).strftime('%Y-1-1')),('control_date','&lt;', context_today().strftime('%Y-1-1') )]"/>
+                <group expand="1" string="Group By">
+                    <filter string="Result" context="{'group_by': 'measure_result'}"/>
+                    <filter string="Tightening Point" context="{'group_by': 'operation_point_id'}"/>
+                    <filter string="Finished Product" name="group_by_finished_product" context="{'group_by': 'product_id'}"/>
+                    <filter string="Screw" name="group_by_screw" context="{'group_by': 'consu_product_id'}"/>
+                    <filter string="WorkCenter" name="group_by_workcenter" context="{'group_by': 'workcenter_id'}"/>
+                    <filter string="One Time Pass" context="{'group_by': 'one_time_pass'}"/>
+                    <filter string="Final Pass" context="{'group_by': 'final_pass'}"/>
+                    <filter string="Data Lacking" context="{'group_by': 'lacking'}" name="group_by_lacking"/>
+                    <filter string="Tightening Tool(Gun/Wrench)" context="{'group_by': 'tool_id'}" name="group_by_tool"/>
+                    <separator/>
+                    <filter string="Tightening Date Day" context="{'group_by': 'control_date:day'}"/>
+                    <filter string="Tightening Date Week" context="{'group_by': 'control_date:week'}"/>
+                    <filter string="Tightening Date Month" context="{'group_by': 'control_date:month'}"/>
+                    <filter string="Tightening Date Quarter" context="{'group_by': 'control_date:quarter'}"/>
+                    <filter string="Tightening Date Year" context="{'group_by': 'control_date:year'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="operation_result_action_main" model="ir.actions.act_window">
+        <field name="name">Operation Result</field>
+        <field name="res_model">operation.result</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form,kanban,pivot,graph</field>
+        <!--<field name="context">{'search_default_ok': 1,'search_default_nok': 1}</field>-->
+        <field name="help" type="html">
+            <p>
+              Operation Result is the execution of a quality control in some point
+            </p>
+        </field>
+    </record>
+
+    <record id="quality_check_action_spc" model="ir.actions.act_window">
+        <field name="name">Result Checks SPC</field>
+        <field name="res_model">operation.result</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">graph</field>
+        <!--<field name="domain">[('measure_result', 'in', ['ok', 'nok'])]</field>-->
+        <field name="view_id" ref="operation_result_view_graph"/>
+    </record>
+
+    <menuitem
+        id="menu_operation_result"
+        name="Operation Results"
+        action="operation_result_action_main"
+        parent="menu_spc_scope_root"
+        sequence="10"/>
+
+</odoo>

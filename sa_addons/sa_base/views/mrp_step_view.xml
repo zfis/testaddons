@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <!-- Routings Workcenter -->
+
+
+    <record id="sa_mrp_step_form_view" model="ir.ui.view">
+            <field name="name">sa_mrp_step_form_view</field>
+            <field name="model">mrp.step</field>
+            <field name="arch" type="xml">
+                <form string="Step">
+                    <xpath expr="//sheet[1]" position="before">
+                    <field name="category_name" invisible="1"/>
+                    </xpath>
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button class="oe_stat_button" name="delete_child_step" type="object" icon="fa-list-alt">
+                                <field string="Delete Child Step" name="child_step_count" widget="statinfo" />
+                            </button>
+                            <button class="oe_stat_button" name="toggle_active" type="object" icon="fa-archive" groups="base.group_system">
+                                <field name="active" widget="boolean_button"
+                                    options='{"terminology": "archive"}'/>
+                            </button>
+                        </div>
+                        <div class="oe_title">
+                            <h1>
+                                <field name="code" required="1" readonly="False" string="Step Code"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="step_name" string="Step Name"/>
+                                <field name="category_id" options="{&quot;no_open&quot;: True}"/>
+                            </group>
+                            <group>
+                                <field name="op_job_id" string="JOB" attrs="{'invisible': [('category_name', '!=', '拧紧作业指导JOB')]}"/>
+                                <field name="direction" string="Direction" readonly="1"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="工艺路线图片">
+                                <field name="worksheet_img" widget="imageEditor" required="1"/>
+                            </page>
+                            <page string="工艺文件">
+                                <field name="worksheet" widget="pdf_viewer"/>
+                            </page>
+                            <page string="物料清单" attrs="{'invisible': [('category_name', '!=', '获取物料')]}">
+                                <field name="material_ids" widget="one2many_list" colspan="4" nolabel="1" mode="tree" context="{'default_up_step_id':active_id, 'search_operation_ids': [active_id]}">
+                                    <tree string="Material Ids" editable="bottom" delete="true">
+                                        <field name="sequence" widget="handle"/>
+                                        <field name="sequence" readonly="1"/>
+                                        <field name="id" readonly="1" groups="base.group_no_one"/>
+                                        <!--<field name="name" string="Description" />-->
+                                        <field name="product_id" required="1"/>
+                                        <field name="product_qty"/>
+                                    </tree>
+                                 </field>
+                            </page>
+                            <page string="Operation Points"  attrs="{'invisible': [('category_name', '!=', '拧紧作业指导JOB'),('category_name', '!=', '拧紧作业指导Pset')]}">
+                                 <field name="operation_point_ids" widget="one2many_list" colspan="4" nolabel="1" mode="tree" context="{'default_up_step_id':active_id, 'search_operation_ids': [active_id]}">
+                                    <tree string="Operation Points" editable="bottom" delete="true">
+                                        <field name="sequence" widget="handle"/>
+                                        <field name="sequence" readonly="1"/>
+                                        <field name="id" readonly="1" groups="base.group_no_one"/>
+                                        <!--<field name="name" string="Description" />-->
+                                        <field name="product_id" required="1" context="{'default_type': 'product'}" domain="[('sa_type', '=', 'screw')]" options="{'no_create_edit': True,'no_open': True}"/>
+                                        <field name="product_qty"/>
+                                        <field name="program_id" options="{'no_create_edit': True,'no_open': True}"/>
+                                        <field name="max_redo_times" />
+                                        <field name="x_offset"/>
+                                        <field name="y_offset"/>
+                                        <field name="active" invisible="1"/>
+                                        <field name="is_key"/>
+                                        <field name="group_id" domain="[('step_id', '=', context.get('search_operation_ids', []))]" options="{'no_create_edit': True,'no_open': True}"/>
+                                        <field name="group_sequence" groups="base.group_no_one"/>
+                                    </tree>
+                                    <form string="Operation Points">
+                                        <group>
+                                            <field name="sequence" readonly="1"/>
+                                            <field name="product_id"/>
+                                            <field name="product_qty"/>
+                                            <field name="max_redo_times" />
+                                            <field name="program_id" />
+                                            <field name="x_offset"/>
+                                            <field name="y_offset"/>
+                                        </group>
+                                    </form>
+                                 </field>
+                            </page>
+                             <page string="Operation Points Group(multi-spindle)" attrs="{'invisible': [('category_name', '!=', '拧紧作业指导JOB'),('category_name', '!=', '拧紧作业指导Pset')]}">
+                                <field name="operation_point_group_ids" widget="one2many_list" colspan="4" nolabel="1" mode="tree" context="{'default_step_id':id, 'search_operation_ids': [id]}">
+                                    <tree string="Operation Points Group(multi-spindle)" editable="bottom" delete="true">
+                                        <field name="sequence" widget="handle"/>
+                                        <field name="name" />
+                                        <field name="key_num" />
+                                        <!--<field name="name" domain="[('operation_id', 'in', context.get('search_operation_ids', []))]" options="{'no_create_edit': True,'no_open': True}" widget="many2many_tags"/>-->
+                                    </tree>
+                                    <form string="Operation Points Group(multi-spindle)">
+                                        <group>
+                                            <field name="sequence" readonly="1"/>
+                                            <field name="name" />
+                                        </group>
+                                    </form>
+                                </field>
+                            </page>
+                            <page string="Description">
+                                <field name="note"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+    <record id="sa_mrp_step_tree_view" model="ir.ui.view">
+        <field name="name">sa_mrp_step_tree_view</field>
+        <field name="model">mrp.step</field>
+        <field name="arch" type="xml">
+            <tree string="Step">
+                <field name="code"/>
+                <field name="step_name" string="Step Name"/>
+                <field name="active" invisible="1"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="sa_mrp_step_search_view" model="ir.ui.view">
+        <field name="name">mrp.step.search</field>
+        <field name="model">mrp.step</field>
+        <field name="arch" type="xml">
+            <search string="Step">
+                <field name="name" string="Routing" filter_domain="['|',('name','ilike',self),('code','ilike',self)]"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="sa_mrp_step_action" model="ir.actions.act_window">
+        <field name="name">Steps</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">mrp.step</field>
+        <field name="view_mode">tree,form,kanban</field>
+        <field name="search_view_id" ref="sa_mrp_step_search_view"/>
+        <field name="domain">[('up_step_id', '=', False)]</field>
+        <field name="view_ids"
+               eval="[(5, 0, 0),
+                      (0, 0, {'view_mode': 'tree', 'view_id': ref('sa_mrp_step_tree_view')}),
+                      (0, 0, {'view_mode': 'form', 'view_id': ref('sa_mrp_step_form_view')}),
+                      (0, 0, {'view_mode': 'kanban'})]"/>
+        <field name="help" type="html">
+          <p class="oe_view_nocontent_create">
+            Click to create a new step.
+          </p><p>
+            Steps allow you to create and manage the manufacturing
+            operations that should be followed within your work centers in
+            order to produce a product.  They are attached to bills of
+            materials that will define the required raw materials.
+          </p>
+        </field>
+    </record>
+
+
+
+    <menuitem id="menu_mrp_step_form_action"
+            action="sa_mrp_step_action"
+            parent="menu_bom_form"
+            sequence="60"/>
+
+</odoo>

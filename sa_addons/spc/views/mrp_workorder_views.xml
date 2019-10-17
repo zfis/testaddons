@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sa_mrp_workorder_view_form_inherit_mrp" model="ir.ui.view">
+        <field name="name">sa_mrp_workorder_view_form_inherit_mrp</field>
+        <field name="model">mrp.workorder</field>
+        <field name="inherit_id" ref="mrp.mrp_production_workcenter_form_view_inherit"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[last()]" position="after">
+                <page string="Results">
+                    <field name="result_ids" options="{'reload_on_button': True}" >
+                        <tree delete="0" create="0">
+                            <field name="consu_product_id" />
+                            <field name="workcenter_id" />
+                            <field name="control_date" />
+                            <field name="measure_torque" />
+                            <field name="measure_degree" />
+                            <field name="measure_result" />
+                        </tree>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

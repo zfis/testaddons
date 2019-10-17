@@ -1,0 +1,9 @@
+<odoo>
+  <data>
+      <delete model="ir.ui.menu" id="sa_base.sa_menu_program_action" />
+
+      <delete model="ir.ui.menu" id="sa_base.menu_mrp_routing_group_action" />
+
+      <delete model="ir.ui.menu" id="spc.menu_spc_vehicle" />
+  </data>
+</odoo>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+
+        <record id="sa_equipment_connection_tree_view" model="ir.ui.view">
+            <field name="name">sa_equipment_connection_tree_view</field>
+            <field name="model">maintenance.equipment.connection</field>
+            <field eval="1" name="priority"/>
+            <field name="arch" type="xml">
+                <tree string="Equipment Connection">
+                    <field name="display_name" />
+                    <field name="equipment_id" invisible="1"/>
+                    <field name="active" invisible="1"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="sa_equipment_connection_form_view" model="ir.ui.view">
+            <field name="name">sa_equipment_connection_form_view</field>
+            <field name="model">maintenance.equipment.connection</field>
+            <field name="arch" type="xml">
+                <form string="Equipment Connection">
+                    <!--<header>-->
+                        <!--<button name="button_check_healthz" type="object" string="Test Connection" icon="fa-television" class="oe_highlight" attrs="{'invisible': [('protocol', '!=', 'http')]}"/>-->
+                    <!--</header>-->
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button name="toggle_active" type="object"
+                                    class="oe_stat_button" icon="fa-archive"  groups="base.group_no_one">
+                                <field name="active" widget="boolean_button"
+                                    options='{"terminology": "archive"}'/>
+                            </button>
+                        </div>
+                        <div class="oe_title">
+                            <label class="oe_edit_only" for="name" string="Connection Name"/>
+                            <h1><field name="name" placeholder="Connection"/></h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="equipment_id" readonly="1"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="General Information" name="general_information">
+                                <group>
+                                    <group string="Protocol">
+                                        <field name="protocol" required="1"/>
+                                    </group>
+                                    <group name="group_general" attrs="{'invisible': [('protocol', '=', 'modbusrtu')]}">
+                                        <label for="ip" string="Address" />
+                                        <div>
+                                            <field name="ip" class="oe_inline" attrs="{'required':[('protocol','!=','modbusrtu')], 'invisible': [('protocol', '=', 'modbusrtu')]}" />:
+                                            <field name="port" class="oe_inline" nolabel="1" attrs="{'required':[('protocol','!=','modbusrtu')], 'invisible': [('protocol', '=', 'modbusrtu')]}"/>
+                                        </div>
+                                    </group>
+                                    <group>
+                                        <field name="tty" attrs="{'required':[('protocol','=','modbusrtu')], 'invisible': [('protocol','!=','modbusrtu')]}"/>
+                                    </group>
+                                    <group>
+                                        <field name="unitid" attrs="{'required':[('protocol','in',['modbustcp','modbusrtu'])], 'invisible': [('protocol','not in',['modbustcp','modbusrtu'])]}"/>
+                                    </group>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="sa_equipment_connection_search" model="ir.ui.view">
+            <field name="name">sa_equipment_connection_search</field>
+            <field name="model">maintenance.equipment.connection</field>
+            <field name="arch" type="xml">
+                <search string="Equipment Connection">
+                    <field name="name" string="Connection" filter_domain="['|','|',('ip','ilike',self),('tty','ilike',self),('protocol','ilike',self)]"/>
+                    <separator/>
+                    <field name="equipment_id"/>
+                    <separator/>
+                    <filter string="Archived" name="inactive" domain="[('active','=',False)]"/>
+                    <group expand="0" string="Group By">
+                        <filter string="Equipment" name="group_by_equipment" context="{'group_by':'equipment_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="sa_equipment_connection_action" model="ir.actions.act_window">
+            <field name="name">Connection</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">maintenance.equipment.connection</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="sa_equipment_connection_search"/>
+            <!--<field name="context">{'search_default_group_by_equipment': 1}</field>-->
+            <field name="view_ids"
+                   eval="[(5, 0, 0),
+                          (0, 0, {'view_mode': 'tree', 'view_id': ref('sa_equipment_connection_tree_view')}),
+                          (0, 0, {'view_mode': 'form', 'view_id': ref('sa_equipment_connection_form_view')})]"/>
+        </record>
+
+    </data>
+</odoo>

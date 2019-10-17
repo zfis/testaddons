@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data noupdate="1">
+
+    <!-- Equipment categories -->
+    <record id="step_get_material" model="mrp.step.category">
+        <field name="name">获取物料</field>
+        <field name="direction">请先获取物料</field>
+        <!--<field name="code">HMI</field>-->
+        <!--<field name="alias_id" ref="maintenance.mail_alias_equipment"/>-->
+    </record>
+    <record id="step_tightening_job" model="mrp.step.category">
+        <field name="name">拧紧作业指导JOB</field>
+        <field name="direction">请按照拧紧作业指导JOB的提示作业</field>
+        <!--<field name="code">Controller</field>-->
+        <!--<field name="alias_id" ref="maintenance.mail_alias_equipment"/>-->
+    </record>
+    <record id="step_tightening_pset" model="mrp.step.category">
+        <field name="name">拧紧作业指导Pset</field>
+        <field name="direction">请按照拧紧作业指导Pset的提示作业</field>
+        <!--<field name="code">Controller</field>-->
+        <!--<field name="alias_id" ref="maintenance.mail_alias_equipment"/>-->
+    </record>
+    <record id="step_scanner" model="mrp.step.category">
+        <field name="name">扫码</field>
+        <field name="direction">请扫描屏幕下方二维码</field>
+        <!--<field name="code">Gun</field>-->
+        <!--<field name="alias_id" ref="maintenance.mail_alias_equipment"/>-->
+    </record>
+    <record id="step_direction" model="mrp.step.category">
+        <field name="name">指导</field>
+        <field name="direction">请按照指导作业</field>
+        <!--<field name="code">Gun</field>-->
+        <!--<field name="alias_id" ref="maintenance.mail_alias_equipment"/>-->
+    </record>
+</data>
+</odoo>

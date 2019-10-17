@@ -1,0 +1,326 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * mrp_workorder
+# 
+# Translators:
+# Эдуард Манятовский <manyatovskiy@gmail.com>, 2016
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-10-10 09:15+0000\n"
+"PO-Revision-Date: 2016-10-10 09:15+0000\n"
+"Last-Translator: Эдуард Манятовский <manyatovskiy@gmail.com>, 2016\n"
+"Language-Team: Russian (https://www.transifex.com/odoo/teams/41243/ru/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: ru\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#. module: mrp_workorder
+#: model:ir.ui.view,arch_db:mrp_workorder.mrp_workorder_view_form_tablet
+msgid "<span class=\"o_stat_text\">Scraps</span>"
+msgstr "<span class=\"o_stat_text\">Отходы</span>"
+
+#. module: mrp_workorder
+#: model:ir.ui.view,arch_db:mrp_workorder.mrp_workorder_view_form_tablet
+msgid "Block"
+msgstr "Блокировка"
+
+#. module: mrp_workorder
+#: model:ir.actions.act_window,help:mrp_workorder.mrp_workorder_action_tablet
+msgid "Click to start a new work order."
+msgstr "Нажмите, чтобы начать новое производственное задание."
+
+#. module: mrp_workorder
+#: model:ir.ui.view,arch_db:mrp_workorder.mrp_workorder_view_form_tablet
+msgid "Continue Production"
+msgstr "Продолжить производство"
+
+#. module: mrp_workorder
+#: model:ir.model.fields,field_description:mrp_workorder.field_stock_traceability_report_create_uid
+msgid "Created by"
+msgstr "Создал"
+
+#. module: mrp_workorder
+#: model:ir.model.fields,field_description:mrp_workorder.field_stock_traceability_report_create_date
+msgid "Created on"
+msgstr "Создано"
+
+#. module: mrp_workorder
+#: model:ir.ui.view,arch_db:mrp_workorder.mrp_workorder_view_form_tablet
+msgid "Current Production"
+msgstr "Текущее Производство"
+
+#. module: mrp_workorder
+#: model:ir.ui.view,arch_db:mrp_workorder.mrp_workorder_view_form_tablet
+msgid "Current Qty"
+msgstr "Текущее кол-во"
+
+#. module: mrp_workorder
+#: model:ir.model.fields,field_description:mrp_workorder.field_stock_traceability_report_display_name
+msgid "Display Name"
+msgstr "Отображаемое имя"
+
+#. module: mrp_workorder
+#: model:ir.ui.view,arch_db:mrp_workorder.mrp_workorder_view_form_tablet
+msgid "Done"
+msgstr "Выполнено"
+
+#. module: mrp_workorder
+#. openerp-web
+#: code:addons/mrp_workorder/static/src/xml/stock_traceability_report_line.xml:63
+#: model:ir.ui.view,arch_db:mrp_workorder.report_mrp_line
+#, python-format
+msgid "Downstream Traceability"
+msgstr "Вниз сходящая прослеживаемость"
+
+#. module: mrp_workorder
+#. openerp-web
+#: code:addons/mrp_workorder/static/src/xml/stock_traceability_report_backend.xml:14
+#, python-format
+msgid "Error"
+msgstr "Ошибка"
+
+#. module: mrp_workorder
+#: model:ir.ui.view,arch_db:mrp_workorder.mrp_workorder_view_form_tablet
+msgid "Finish Order"
+msgstr "Завершенный Заказ"
+
+#. module: mrp_workorder
+#: model:ir.model.fields,field_description:mrp_workorder.field_stock_traceability_report_id
+msgid "ID"
+msgstr "ID"
+
+#. module: mrp_workorder
+#: model:ir.ui.view,arch_db:mrp_workorder.report_stock_body_print
+#: model:ir.ui.view,arch_db:mrp_workorder.report_stock_inventory
+msgid "LOCATION DESTINATION"
+msgstr "МЕСТО НАЗНАЧЕНИЯ"
+
+#. module: mrp_workorder
+#: model:ir.ui.view,arch_db:mrp_workorder.report_stock_body_print
+#: model:ir.ui.view,arch_db:mrp_workorder.report_stock_inventory
+msgid "LOCATION SOURCE"
+msgstr "ИСТОЧНИК МЕСТОПОЛОЖЕНИЯ"
+
+#. module: mrp_workorder
+#: model:ir.model.fields,field_description:mrp_workorder.field_stock_traceability_report___last_update
+msgid "Last Modified on"
+msgstr "Последний раз изменено"
+
+#. module: mrp_workorder
+#: model:ir.model.fields,field_description:mrp_workorder.field_stock_traceability_report_write_uid
+msgid "Last Updated by"
+msgstr "Последний раз обновил"
+
+#. module: mrp_workorder
+#: model:ir.model.fields,field_description:mrp_workorder.field_stock_traceability_report_write_date
+msgid "Last Updated on"
+msgstr "Последний раз обновлено"
+
+#. module: mrp_workorder
+#: model:ir.model,name:mrp_workorder.model_mrp_production
+msgid "Manufacturing Order"
+msgstr "Производственный заказ"
+
+#. module: mrp_workorder
+#: model:ir.ui.menu,name:mrp_workorder.mrp_production_menu_planning
+#: model:ir.ui.view,arch_db:mrp_workorder.mrp_production_tree_view_planning
+msgid "Manufacturing Orders"
+msgstr "Производственные заказы"
+
+#. module: mrp_workorder
+#: model:ir.ui.view,arch_db:mrp_workorder.report_stock_inventory
+msgid "No operation made on this lot."
+msgstr "Операции, выполненные на этой партии, не выполняются."
+
+#. module: mrp_workorder
+#: model:ir.ui.menu,name:mrp_workorder.menu_mrp_production_plan
+msgid "Orders to Plan"
+msgstr "Заказы на план"
+
+#. module: mrp_workorder
+#. openerp-web
+#: code:addons/mrp_workorder/static/src/xml/stock_traceability_report_backend.xml:6
+#, python-format
+msgid "PRINT"
+msgstr "ПЕЧАТЬ"
+
+#. module: mrp_workorder
+#: model:ir.ui.view,arch_db:mrp_workorder.report_stock_body_print
+#: model:ir.ui.view,arch_db:mrp_workorder.report_stock_inventory
+msgid "PRODUCT"
+msgstr "ПРОДУКТ"
+
+#. module: mrp_workorder
+#: model:ir.ui.view,arch_db:mrp_workorder.mrp_workorder_view_form_tablet
+msgid "Pause"
+msgstr "Приостановить"
+
+#. module: mrp_workorder
+#: model:ir.ui.view,arch_db:mrp_workorder.mrp_production_view_form_inherit_planning
+msgid "Plan"
+msgstr "План"
+
+#. module: mrp_workorder
+#: model:ir.ui.view,arch_db:mrp_workorder.mrp_production_view_form_inherit_planning
+msgid "Planned Date"
+msgstr "Планируемая дата"
+
+#. module: mrp_workorder
+#: model:ir.ui.menu,name:mrp_workorder.mrp_planning_menu_root
+msgid "Planning"
+msgstr "Планирование"
+
+#. module: mrp_workorder
+#: model:ir.ui.menu,name:mrp_workorder.menu_mrp_workorder_production
+msgid "Planning by Production"
+msgstr "Планирование производства"
+
+#. module: mrp_workorder
+#: model:ir.ui.menu,name:mrp_workorder.menu_mrp_workorder_workcenter
+msgid "Planning by Workcenter"
+msgstr "Планирование по участку"
+
+#. module: mrp_workorder
+#: model:ir.ui.view,arch_db:mrp_workorder.mrp_workorder_view_form_tablet
+msgid "Production Workcenter"
+msgstr "Производящий продукт участок"
+
+#. module: mrp_workorder
+#: model:ir.ui.view,arch_db:mrp_workorder.report_stock_body_print
+#: model:ir.ui.view,arch_db:mrp_workorder.report_stock_inventory
+msgid "QUANTITY"
+msgstr "КОЛИЧЕСТВО"
+
+#. module: mrp_workorder
+#: model:ir.ui.view,arch_db:mrp_workorder.mrp_production_tree_view_planning
+msgid "Quantity"
+msgstr "Количество"
+
+#. module: mrp_workorder
+#: model:ir.ui.view,arch_db:mrp_workorder.mrp_workorder_view_form_tablet
+msgid "Quantity Produced"
+msgstr "Произведенное Количество"
+
+#. module: mrp_workorder
+#: model:ir.model.fields,field_description:mrp_workorder.field_mrp_production_date_planned_finished_wo
+msgid "Scheduled End Date"
+msgstr "Запланированная дата окончания"
+
+#. module: mrp_workorder
+#: model:ir.model.fields,field_description:mrp_workorder.field_mrp_production_date_planned_start_wo
+msgid "Scheduled Start Date"
+msgstr "Запланированная дата начала"
+
+#. module: mrp_workorder
+#: model:ir.ui.view,arch_db:mrp_workorder.mrp_workorder_view_form_tablet
+msgid "Scrap"
+msgstr "Брак"
+
+#. module: mrp_workorder
+#: model:ir.ui.view,arch_db:mrp_workorder.mrp_workorder_view_form_tablet
+msgid "Start Working"
+msgstr "Начало работ"
+
+#. module: mrp_workorder
+#: model:ir.ui.view,arch_db:mrp_workorder.mrp_workcenter_view_kanban_inherit_panel
+msgid "Tablet view to process work orders at the work center"
+msgstr ""
+"Табличный вид выполнения производственных заданий по производственным "
+"участкам"
+
+#. module: mrp_workorder
+#: model:ir.ui.view,arch_db:mrp_workorder.mrp_workorder_view_form_tablet
+msgid "To Produce"
+msgstr "К производству"
+
+#. module: mrp_workorder
+#: model:ir.ui.view,arch_db:mrp_workorder.mrp_production_tree_view_planning
+msgid "Total Qty"
+msgstr "Общее кол-во"
+
+#. module: mrp_workorder
+#: model:ir.ui.view,arch_db:mrp_workorder.report_stock_body_print
+msgid "Traceability Report"
+msgstr "Отслеживание отчета"
+
+#. module: mrp_workorder
+#: model:ir.ui.view,arch_db:mrp_workorder.mrp_workorder_view_form_tablet
+msgid "Unblock"
+msgstr "Разблокировать"
+
+#. module: mrp_workorder
+#: model:ir.ui.view,arch_db:mrp_workorder.mrp_production_tree_view_planning
+msgid "Unit of Measure"
+msgstr "Единица Измерения"
+
+#. module: mrp_workorder
+#: model:ir.ui.view,arch_db:mrp_workorder.mrp_production_view_form_inherit_planning
+msgid "Unplan"
+msgstr "Без плана"
+
+#. module: mrp_workorder
+#: model:ir.actions.server,name:mrp_workorder.production_order_unplan_server_action
+msgid "Unplan Orders"
+msgstr "Заказы без плана"
+
+#. module: mrp_workorder
+#: model:ir.ui.view,arch_db:mrp_workorder.mrp_production_form_view_inherit_mrp_workorder
+#: model:ir.ui.view,arch_db:mrp_workorder.view_picking_form_inherit_mrp_workorder
+#: model:ir.ui.view,arch_db:mrp_workorder.view_production_lot_form_inherit_mrp_workorder
+msgid "Up/Down Traceability"
+msgstr "Вверх/Вниз прослеживаемость"
+
+#. module: mrp_workorder
+#. openerp-web
+#: code:addons/mrp_workorder/static/src/xml/stock_traceability_report_line.xml:62
+#: model:ir.actions.client,name:mrp_workorder.action_stock_report
+#: model:ir.ui.view,arch_db:mrp_workorder.report_mrp_line
+#: model:ir.ui.view,arch_db:mrp_workorder.report_stock_inventory
+#, python-format
+msgid "Upstream Traceability"
+msgstr "Восходящая прослеживаемость"
+
+#. module: mrp_workorder
+#: model:ir.ui.menu,name:mrp_workorder.menu_mrp_production_pending
+msgid "Waiting for Material Availability"
+msgstr "Ожидание доступности материала"
+
+#. module: mrp_workorder
+#: model:ir.ui.view,arch_db:mrp_workorder.mrp_workorder_view_form_tablet
+msgid "Work Instruction"
+msgstr "Производственная инструкция"
+
+#. module: mrp_workorder
+#: model:ir.actions.act_window,name:mrp_workorder.mrp_workorder_action_tablet
+#: model:ir.ui.menu,name:mrp_workorder.mrp_workorder_menu_planning
+msgid "Work Orders"
+msgstr "Производственные задания"
+
+#. module: mrp_workorder
+#: model:ir.actions.act_window,help:mrp_workorder.mrp_workorder_action_tablet
+msgid ""
+"Work Orders is the list of operations to be performed for each\n"
+"                manufacturing order. Once you start the first work order of a\n"
+"                manufacturing order, the manufacturing order is automatically\n"
+"                marked as started. Once you finish the latest operation of a\n"
+"                manufacturing order, the MO is automatically done and the related\n"
+"                products are produced."
+msgstr ""
+"Производственные задания — список операций необходимых\n"
+"для каждой производственной заявки. Запуск первого задания\n"
+"заявки отмечает её как начатую. Завершение последней операции\n"
+"задания отмечает заявку исполненной, а продукт готовым."
+
+#. module: mrp_workorder
+#: model:ir.model,name:mrp_workorder.model_stock_traceability_report
+msgid "stock.traceability.report"
+msgstr "stock.traceability.report"
+
+#. module: mrp_workorder
+#: model:ir.ui.view,arch_db:mrp_workorder.mrp_production_view_form_inherit_planning
+msgid "to"
+msgstr "для"

@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="work_assemblyline_1" model="mrp.assemblyline">
+            <field name="name">测试生产线1</field>
+            <field name="code">01</field>
+        </record>
+
+        <record id="work_segment_1" model="mrp.worksection">
+            <field name="name">测试工段1</field>
+            <field name="code">测试工段1</field>
+        </record>
+
+        <record id="hmi_0" model="maintenance.equipment">
+            <field name="name">测试HMI1</field>
+            <field name="serial_no">1122334455667788</field>
+            <field name="category_id" ref="equipment_hmi"/>
+        </record>
+
+        <record id="masterpc_0" model="maintenance.equipment">
+            <field name="name">测试masterpc1</field>
+            <field name="serial_no">1qaz2wsx</field>
+            <field name="category_id" ref="equipment_MasterPC"/>
+        </record>
+
+        <record id="connections_0" model="maintenance.equipment.connection">
+            <field name="name">测试链接1</field>
+            <field name="protocol">http</field>
+            <field name="ip">127.0.0.1</field>
+            <field name="port">4444</field>
+            <field name="equipment_id" ref="masterpc_0"/>
+        </record>
+
+        <record id="controller_0" model="maintenance.equipment">
+            <field name="name">测试控制器1</field>
+            <field name="serial_no">0001</field>
+            <field name="parent_id" ref="masterpc_0"/>
+            <field name="category_id" ref="equipment_screw_controller"/>
+        </record>
+
+        <record id="gun_0" model="maintenance.equipment">
+            <field name="name">测试拧枪1</field>
+            <field name="serial_no">xx0011</field>
+            <field name="parent_id" ref="controller_0"/>
+            <field name="category_id" ref="equipment_Gun"/>
+        </record>
+
+        <record id="gun_1" model="maintenance.equipment">
+            <field name="name">测试拧枪2</field>
+            <field name="serial_no">xx0022</field>
+            <field name="parent_id" ref="controller_0"/>
+            <field name="category_id" ref="equipment_Gun"/>
+        </record>
+
+        <record id="controller_1" model="maintenance.equipment">
+            <field name="name">测试控制器2</field>
+            <field name="serial_no">0002</field>
+            <field name="parent_id" ref="masterpc_0"/>
+            <field name="category_id" ref="equipment_screw_controller"/>
+        </record>
+
+        <record id="gun_2" model="maintenance.equipment">
+            <field name="name">测试拧枪3</field>
+            <field name="serial_no">xx0033</field>
+            <field name="parent_id" ref="controller_1"/>
+            <field name="category_id" ref="equipment_Gun"/>
+        </record>
+
+        <record id="gun_3" model="maintenance.equipment">
+            <field name="name">测试拧枪4</field>
+            <field name="serial_no">xx0044</field>
+            <field name="parent_id" ref="controller_1"/>
+            <field name="category_id" ref="equipment_Gun"/>
+        </record>
+
+        <record id="io_0" model="maintenance.equipment">
+            <field name="name">测试IO0</field>
+            <field name="serial_no">1234567</field>
+            <field name="category_id" ref="equipment_IO"/>
+        </record>
+
+        <record id="io_1" model="maintenance.equipment">
+            <field name="name">测试IO1</field>
+            <field name="serial_no">74678963</field>
+            <field name="category_id" ref="equipment_IO"/>
+        </record>
+
+        <record id="rfid_0" model="maintenance.equipment">
+            <field name="name">测试RFID0</field>
+            <field name="serial_no">975368</field>
+            <field name="category_id" ref="equipment_RFID"/>
+        </record>
+
+        <record id="rfid_1" model="maintenance.equipment">
+            <field name="name">测试RFID1</field>
+            <field name="serial_no">126fe645</field>
+            <field name="category_id" ref="equipment_RFID"/>
+        </record>
+
+        <record id="mrp_workcenter_0" model="mrp.workcenter">
+            <field name="name">测试工位1</field>
+            <field name="capacity">5</field>
+            <field name="time_start">10</field>
+            <field name="time_stop">8</field>
+            <field name="time_efficiency">87</field>
+            <field name="worksegment_id" ref="work_segment_1" />
+            <field name="hmi_id" ref="hmi_0" />
+            <field name="masterpc_id" ref="masterpc_0" />
+            <field name="io_id" ref="io_0" />
+            <field name="rfid_id" ref="rfid_0" />
+            <field name="controller_ids" eval="[(4, ref('sa_base.controller_0'))]"/>
+        </record>
+
+        <record id="hmi_1" model="maintenance.equipment">
+            <field name="name">测试HMI2</field>
+            <field name="serial_no">112233445566778899</field>
+            <field name="category_id" ref="equipment_hmi"/>
+        </record>
+
+        <record id="masterpc_1" model="maintenance.equipment">
+            <field name="name">测试masterpc2</field>
+            <field name="serial_no">1QAZ2wsx</field>
+            <field name="category_id" ref="equipment_MasterPC"/>
+        </record>
+
+        <record id="connections_1" model="maintenance.equipment.connection">
+            <field name="name">测试链接2</field>
+            <field name="protocol">http</field>
+            <field name="ip">127.0.0.1</field>
+            <field name="port">5555</field>
+            <field name="equipment_id" ref="masterpc_1"/>
+        </record>
+
+        <record id="controller_2" model="maintenance.equipment">
+            <field name="name">测试控制器3</field>
+            <field name="serial_no">0003</field>
+            <field name="parent_id" ref="masterpc_1"/>
+            <field name="category_id" ref="equipment_screw_controller"/>
+        </record>
+
+        <record id="gun_5" model="maintenance.equipment">
+            <field name="name">测试拧枪5</field>
+            <field name="serial_no">xx0055</field>
+            <field name="parent_id" ref="controller_2"/>
+            <field name="category_id" ref="equipment_Gun"/>
+        </record>
+
+        <record id="gun_6" model="maintenance.equipment">
+            <field name="name">测试拧枪6</field>
+            <field name="serial_no">xx1166</field>
+            <field name="parent_id" ref="controller_2"/>
+            <field name="category_id" ref="equipment_Gun"/>
+        </record>
+
+        <record id="controller_3" model="maintenance.equipment">
+            <field name="name">测试控制器4</field>
+            <field name="serial_no">0004</field>
+            <field name="parent_id" ref="masterpc_1"/>
+            <field name="category_id" ref="equipment_screw_controller"/>
+        </record>
+
+        <record id="gun_7" model="maintenance.equipment">
+            <field name="name">测试拧枪7</field>
+            <field name="serial_no">xx0777</field>
+            <field name="parent_id" ref="controller_3"/>
+            <field name="category_id" ref="equipment_Gun"/>
+        </record>
+
+        <record id="gun_8" model="maintenance.equipment">
+            <field name="name">测试拧枪8</field>
+            <field name="serial_no">xx186</field>
+            <field name="parent_id" ref="controller_3"/>
+            <field name="category_id" ref="equipment_Gun"/>
+        </record>
+
+        <record id="mrp_workcenter_1" model="mrp.workcenter">
+            <field name="name">测试工位2</field>
+            <field name="capacity">5</field>
+            <field name="time_start">10</field>
+            <field name="time_stop">8</field>
+            <field name="time_efficiency">87</field>
+            <field name="worksegment_id" ref="work_segment_1" />
+            <field name="hmi_id" ref="hmi_1" />
+            <field name="io_id" ref="io_1" />
+            <field name="rfid_id" ref="rfid_1" />
+            <field name="masterpc_id" ref="masterpc_1" />
+            <field name="controller_ids" eval="[(4, ref('sa_base.controller_3'))]" />
+        </record>
+
+        <record id="hmi_2" model="maintenance.equipment">
+            <field name="name">测试HMI3</field>
+            <field name="serial_no">778899</field>
+            <field name="category_id" ref="equipment_hmi"/>
+        </record>
+
+        <record id="mrp_workcenter_2" model="mrp.workcenter">
+            <field name="name">测试工位3</field>
+            <field name="capacity">5</field>
+            <field name="time_start">10</field>
+            <field name="time_stop">8</field>
+            <field name="time_efficiency">87</field>
+            <field name="worksegment_id" ref="work_segment_1" />
+            <field name="hmi_id" ref="hmi_2" />
+            <field name="masterpc_id" ref="masterpc_1" />
+        </record>
+
+        <record id="product_product_0" model="product.product">
+            <field name="name">测试螺栓1</field>
+            <field name="type">product</field>
+            <field name="sa_type">screw</field>
+            <field name="default_code">测试螺栓编号1</field>
+        </record>
+
+        <record id="product_product_1" model="product.product">
+            <field name="name">测试螺栓2</field>
+            <field name="type">product</field>
+            <field name="sa_type">screw</field>
+            <field name="default_code">测试螺栓编号2</field>
+        </record>
+
+        <record id="product_product_2" model="product.product">
+            <field name="name">测试螺栓3</field>
+            <field name="type">product</field>
+            <field name="sa_type">screw</field>
+            <field name="default_code">测试螺栓编号3</field>
+        </record>
+
+        <record id="product_product_3" model="product.product">
+            <field name="name">测试螺栓4</field>
+            <field name="type">product</field>
+            <field name="sa_type">screw</field>
+            <field name="default_code">测试螺栓编号4</field>
+        </record>
+
+        <record id="con_prog_0" model="controller.program">
+            <field name="code">1</field>
+            <field name="strategy">AD</field>
+        </record>
+
+        <record id="con_prog_1" model="controller.program">
+            <field name="code">2</field>
+            <field name="strategy">AW</field>
+        </record>
+
+        <record id="routing_group_0" model="mrp.routing.group">
+            <field name="code">GSP</field>
+        </record>
+
+        <record id="routing_group_1" model="mrp.routing.group">
+            <field name="code">SAB</field>
+        </record>
+
+        <record id="routing_group_2" model="mrp.routing.group">
+            <field name="code">RAD</field>
+        </record>
+
+        <record id="routing_group_3" model="mrp.routing.group">
+            <field name="code">REI</field>
+        </record>
+
+        <record id="routing_group_4" model="mrp.routing.group">
+            <field name="code">BRS</field>
+        </record>
+
+        <record id="routing_group_5" model="mrp.routing.group">
+            <field name="code">GMO</field>
+        </record>
+
+        <record id="routing_group_6" model="mrp.routing.group">
+            <field name="code">EDF</field>
+        </record>
+
+        <record id="routing_group_7" model="mrp.routing.group">
+            <field name="code">AED</field>
+        </record>
+
+        <record id="routing_group_8" model="mrp.routing.group">
+            <field name="code">MOT</field>
+        </record>
+
+        <record id="routing_0" model="mrp.routing">
+            <field name="code">测试路线1</field>
+            <field name="name">测试路线1</field>
+        </record>
+
+        <record id="routing_1" model="mrp.routing">
+            <field name="code">测试路线2</field>
+            <field name="name">测试路线2</field>
+        </record>
+
+        <record id="routing_operation_0" model="mrp.routing.workcenter">
+            <field name="name">G0C</field>
+            <field name="routing_id" ref="routing_0"/>
+            <!--<field name="program_id" ref="con_prog_0" />-->
+            <field name="group_id" ref="routing_group_0" />
+            <field name="workcenter_id" ref="mrp_workcenter_0" />
+            <field name="max_redo_times">3</field>
+            <field name="max_op_time">30</field>
+        </record>
+
+        <record id="routing_operation_20" model="mrp.routing.workcenter">
+            <field name="name">G0C</field>
+            <field name="routing_id" ref="routing_0"/>
+            <!--<field name="program_id" ref="con_prog_0" />-->
+            <field name="group_id" ref="routing_group_0" />
+            <field name="workcenter_id" ref="mrp_workcenter_1" />
+            <field name="max_redo_times">3</field>
+            <field name="max_op_time">30</field>
+        </record>
+
+        <record id="routing_operation_1" model="mrp.routing.workcenter">
+            <field name="name">4X0</field>
+            <field name="routing_id" ref="routing_0"/>
+            <!--<field name="program_id" ref="con_prog_1" />-->
+            <field name="group_id" ref="routing_group_1" />
+            <field name="workcenter_id" ref="mrp_workcenter_1" />
+            <field name="max_redo_times">3</field>
+            <field name="max_op_time">30</field>
+        </record>
+
+        <record id="routing_operation_2" model="mrp.routing.workcenter">
+            <field name="name">C0D</field>
+            <field name="routing_id" ref="routing_0"/>
+            <!--<field name="program_id" ref="con_prog_1" />-->
+            <field name="group_id" ref="routing_group_2" />
+            <field name="workcenter_id" ref="mrp_workcenter_1" />
+            <field name="max_redo_times">3</field>
+            <field name="max_op_time">30</field>
+        </record>
+
+        <record id="routing_operation_3" model="mrp.routing.workcenter">
+            <field name="name">HSS</field>
+            <field name="routing_id" ref="routing_0"/>
+            <!--<field name="program_id" ref="con_prog_1" />-->
+            <field name="group_id" ref="routing_group_3" />
+            <field name="workcenter_id" ref="mrp_workcenter_1" />
+            <field name="max_redo_times">3</field>
+            <field name="max_op_time">30</field>
+        </record>
+
+        <record id="routing_operation_4" model="mrp.routing.workcenter">
+            <field name="name">1AC</field>
+            <field name="routing_id" ref="routing_0"/>
+            <!--<field name="program_id" ref="con_prog_1" />-->
+            <field name="group_id" ref="routing_group_4" />
+            <field name="workcenter_id" ref="mrp_workcenter_1" />
+            <field name="max_redo_times">3</field>
+            <field name="max_op_time">30</field>
+        </record>
+
+        <record id="routing_operation_5" model="mrp.routing.workcenter">
+            <field name="name">TJ5</field>
+            <field name="routing_id" ref="routing_0"/>
+            <!--<field name="program_id" ref="con_prog_1" />-->
+            <field name="group_id" ref="routing_group_5" />
+            <field name="workcenter_id" ref="mrp_workcenter_1" />
+            <field name="max_redo_times">3</field>
+            <field name="max_op_time">30</field>
+        </record>
+
+        <record id="routing_operation_6" model="mrp.routing.workcenter">
+            <field name="name">0ER</field>
+            <field name="routing_id" ref="routing_0"/>
+            <!--<field name="program_id" ref="con_prog_1" />-->
+            <field name="group_id" ref="routing_group_6" />
+            <field name="workcenter_id" ref="mrp_workcenter_1" />
+            <field name="max_redo_times">3</field>
+            <field name="max_op_time">30</field>
+        </record>
+
+        <record id="routing_operation_7" model="mrp.routing.workcenter">
+            <field name="name">7JI</field>
+            <field name="routing_id" ref="routing_0"/>
+            <!--<field name="program_id" ref="con_prog_1" />-->
+            <field name="group_id" ref="routing_group_7" />
+            <field name="workcenter_id" ref="mrp_workcenter_1" />
+            <field name="max_redo_times">3</field>
+            <field name="max_op_time">30</field>
+        </record>
+
+        <record id="routing_operation_8" model="mrp.routing.workcenter">
+            <field name="name">DW5</field>
+            <field name="routing_id" ref="routing_0"/>
+            <!--<field name="program_id" ref="con_prog_1" />-->
+            <field name="group_id" ref="routing_group_8" />
+            <field name="workcenter_id" ref="mrp_workcenter_1" />
+            <field name="max_redo_times">3</field>
+            <field name="max_op_time">30</field>
+        </record>
+
+        <record id="product_template_47" model="product.template">
+            <field name="name">测试车辆2</field>
+            <field name="type">product</field>
+        </record>
+
+
+        <record id="product_product_11" model="product.product">
+            <field name="name">测试车辆2</field>
+            <field name="type">product</field>
+            <field name="sa_type">vehicle</field>
+            <field name="default_code">BR24J3</field>
+            <field name="product_tmpl_id" ref="product_template_47"/>
+        </record>
+
+        <record id="mrp_bom_7" model="mrp.bom">
+            <field name="product_tmpl_id" ref="product_template_47"/>
+            <field name="product_id" ref="product_product_11"/>
+            <field name="routing_id" ref="routing_0"/>
+            <field name="code">测试bom</field>
+        </record>
+
+        <!--<record id="mrp_bom_line_18" model="mrp.bom.line">-->
+            <!--<field name="product_id" ref="product_product_0"/>-->
+            <!--<field name="routing_id" ref="routing_0"/>-->
+            <!--<field name="bom_id" ref="mrp_bom_7"/>-->
+            <!--<field name="product_qty">4</field>-->
+            <!--<field name="operation_id" ref="routing_operation_0"/>-->
+        <!--</record>-->
+
+        <!--<record id="mrp_bom_line_19" model="mrp.bom.line">-->
+            <!--<field name="product_id" ref="product_product_2"/>-->
+            <!--<field name="routing_id" ref="routing_0"/>-->
+            <!--<field name="bom_id" ref="mrp_bom_7"/>-->
+            <!--<field name="product_qty">5</field>-->
+            <!--<field name="operation_id" ref="routing_operation_0"/>-->
+        <!--</record>-->
+
+        <!--<record id="mrp_bom_line_20" model="mrp.bom.line">-->
+            <!--<field name="product_id" ref="product_product_2"/>-->
+            <!--<field name="routing_id" ref="routing_0"/>-->
+            <!--<field name="bom_id" ref="mrp_bom_7"/>-->
+            <!--<field name="product_qty">6</field>-->
+            <!--<field name="operation_id" ref="routing_operation_0"/>-->
+        <!--</record>-->
+
+        <!--<record id="mrp_bom_line_21" model="mrp.bom.line">-->
+            <!--<field name="product_id" ref="product_product_0"/>-->
+            <!--<field name="routing_id" ref="routing_0"/>-->
+            <!--<field name="bom_id" ref="mrp_bom_7"/>-->
+            <!--<field name="product_qty">8</field>-->
+            <!--<field name="operation_id" ref="routing_operation_20"/>-->
+        <!--</record>-->
+
+        <!--<record id="mrp_bom_line_22" model="mrp.bom.line">-->
+            <!--<field name="product_id" ref="product_product_1"/>-->
+            <!--<field name="routing_id" ref="routing_0"/>-->
+            <!--<field name="bom_id" ref="mrp_bom_7"/>-->
+            <!--<field name="product_qty">5</field>-->
+            <!--<field name="operation_id" ref="routing_operation_1"/>-->
+        <!--</record>-->
+
+        <!--<record id="mrp_bom_line_23" model="mrp.bom.line">-->
+            <!--<field name="product_id" ref="product_product_3"/>-->
+            <!--<field name="routing_id" ref="routing_0"/>-->
+            <!--<field name="bom_id" ref="mrp_bom_7"/>-->
+            <!--<field name="product_qty">5</field>-->
+            <!--<field name="operation_id" ref="routing_operation_1"/>-->
+        <!--</record>-->
+
+        <!--<record id="mrp_bom_line_24" model="mrp.bom.line">-->
+            <!--<field name="product_id" ref="product_product_1"/>-->
+            <!--<field name="routing_id" ref="routing_0"/>-->
+            <!--<field name="bom_id" ref="mrp_bom_7"/>-->
+            <!--<field name="product_qty">6</field>-->
+            <!--<field name="operation_id" ref="routing_operation_2"/>-->
+        <!--</record>-->
+
+        <!--<record id="mrp_bom_line_25" model="mrp.bom.line">-->
+            <!--<field name="product_id" ref="product_product_2"/>-->
+            <!--<field name="routing_id" ref="routing_0"/>-->
+            <!--<field name="bom_id" ref="mrp_bom_7"/>-->
+            <!--<field name="product_qty">6</field>-->
+            <!--<field name="operation_id" ref="routing_operation_2"/>-->
+        <!--</record>-->
+
+        <!--<record id="mrp_bom_line_26" model="mrp.bom.line">-->
+            <!--<field name="product_id" ref="product_product_1"/>-->
+            <!--<field name="routing_id" ref="routing_0"/>-->
+            <!--<field name="bom_id" ref="mrp_bom_7"/>-->
+            <!--<field name="product_qty">7</field>-->
+            <!--<field name="operation_id" ref="routing_operation_3"/>-->
+        <!--</record>-->
+
+        <!--<record id="mrp_bom_line_27" model="mrp.bom.line">-->
+            <!--<field name="product_id" ref="product_product_1"/>-->
+            <!--<field name="routing_id" ref="routing_0"/>-->
+            <!--<field name="bom_id" ref="mrp_bom_7"/>-->
+            <!--<field name="product_qty">8</field>-->
+            <!--<field name="operation_id" ref="routing_operation_4"/>-->
+        <!--</record>-->
+
+        <!--<record id="mrp_bom_line_28" model="mrp.bom.line">-->
+            <!--<field name="product_id" ref="product_product_1"/>-->
+            <!--<field name="routing_id" ref="routing_0"/>-->
+            <!--<field name="bom_id" ref="mrp_bom_7"/>-->
+            <!--<field name="product_qty">9</field>-->
+            <!--<field name="operation_id" ref="routing_operation_5"/>-->
+        <!--</record>-->
+
+        <!--<record id="mrp_bom_line_29" model="mrp.bom.line">-->
+            <!--<field name="product_id" ref="product_product_2"/>-->
+            <!--<field name="routing_id" ref="routing_0"/>-->
+            <!--<field name="bom_id" ref="mrp_bom_7"/>-->
+            <!--<field name="product_qty">9</field>-->
+            <!--<field name="operation_id" ref="routing_operation_5"/>-->
+        <!--</record>-->
+
+        <!--<record id="mrp_bom_line_30" model="mrp.bom.line">-->
+            <!--<field name="product_id" ref="product_product_1"/>-->
+            <!--<field name="routing_id" ref="routing_0"/>-->
+            <!--<field name="bom_id" ref="mrp_bom_7"/>-->
+            <!--<field name="product_qty">10</field>-->
+            <!--<field name="operation_id" ref="routing_operation_6"/>-->
+        <!--</record>-->
+
+        <!--<record id="mrp_bom_line_31" model="mrp.bom.line">-->
+            <!--<field name="product_id" ref="product_product_1"/>-->
+            <!--<field name="routing_id" ref="routing_0"/>-->
+            <!--<field name="bom_id" ref="mrp_bom_7"/>-->
+            <!--<field name="product_qty">11</field>-->
+            <!--<field name="operation_id" ref="routing_operation_7"/>-->
+        <!--</record>-->
+
+        <!--<record id="mrp_bom_line_32" model="mrp.bom.line">-->
+            <!--<field name="product_id" ref="product_product_1"/>-->
+            <!--<field name="routing_id" ref="routing_0"/>-->
+            <!--<field name="bom_id" ref="mrp_bom_7"/>-->
+            <!--<field name="product_qty">1</field>-->
+            <!--<field name="operation_id" ref="routing_operation_8"/>-->
+        <!--</record>-->
+
+        <!--<record id="mrp_bom_line_33" model="mrp.bom.line">-->
+            <!--<field name="product_id" ref="product_product_2"/>-->
+            <!--<field name="routing_id" ref="routing_0"/>-->
+            <!--<field name="bom_id" ref="mrp_bom_7"/>-->
+            <!--<field name="product_qty">11</field>-->
+            <!--<field name="operation_id" ref="routing_operation_8"/>-->
+        <!--</record>-->
+        <!--<record id="mrp_bom_line_34" model="mrp.bom.line">-->
+            <!--<field name="product_id" ref="product_product_3"/>-->
+            <!--<field name="routing_id" ref="routing_0"/>-->
+            <!--<field name="bom_id" ref="mrp_bom_7"/>-->
+            <!--<field name="product_qty">10</field>-->
+            <!--<field name="operation_id" ref="routing_operation_8"/>-->
+        <!--</record>-->
+
+    </data>
+</odoo>

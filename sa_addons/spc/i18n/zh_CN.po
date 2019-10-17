@@ -1,0 +1,1115 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* spc
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-10-12 02:07+0000\n"
+"PO-Revision-Date: 2019-10-12 02:07+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: spc
+#: model:ir.ui.view,arch_db:spc.report_result_tighting
+msgid "<strong>Date</strong>"
+msgstr "<strong>日期</strong>"
+
+#. module: spc
+#: model:ir.ui.view,arch_db:spc.report_result_tighting
+msgid "<strong>Track Number(Serial Number/VIN)</strong>"
+msgstr "<strong>追踪号(VIN/序列号)</strong>"
+
+#. module: spc
+#: model:ir.ui.menu,name:spc.menu_aiis_settings
+msgid "AIIS"
+msgstr "AIIS系统"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_aiis_config_settings_aiis_urls
+msgid "AIIS URLs"
+msgstr "AIIS URLs"
+
+#. module: spc
+#: code:addons/spc/models/result.py:105
+#: selection:operation.result,measure_result:0
+#, python-format
+msgid "AK2"
+msgstr "放行(AK2)"
+
+#. module: spc
+#: model:ir.ui.view,arch_db:spc.view_aiis_config_settings
+msgid "Address"
+msgstr "地址"
+
+#. module: spc
+#: model:ir.actions.act_window,name:spc.action_aiis_settings
+msgid "Aiis Settings"
+msgstr "Aiis设置"
+
+#. module: spc
+#: model:ir.ui.menu,name:spc.menu_spc_analyze
+msgid "Analyze"
+msgstr "分析"
+
+#. module: spc
+#: selection:ta.spc.wizard,spc_target:0
+msgid "Angle"
+msgstr "角度"
+
+#. module: spc
+#: selection:operation.result,pset_strategy:0
+msgid "Angle tightening"
+msgstr "角度拧紧(AW)"
+
+#. module: spc
+#: model:ir.ui.view,arch_db:spc.view_aiis_config_settings
+#: model:ir.ui.view,arch_db:spc.view_smart_config_settings
+#: model:ir.ui.view,arch_db:spc.view_spc_config_settings
+msgid "Apply"
+msgstr "应用"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_operation_result_assembly_line_id
+#: model:ir.model.fields,field_description:spc.field_ta_spc_wizard_assembly_line_id
+msgid "Assembly Line"
+msgstr "组装生产线"
+
+#. module: spc
+#: model:ir.ui.view,arch_db:spc.operation_result_view_tree
+msgid "Avg. Degree"
+msgstr "角度(平均)"
+
+#. module: spc
+#: model:ir.ui.view,arch_db:spc.operation_result_view_tree
+msgid "Avg. Operation Duration"
+msgstr "作业时长(平均)"
+
+#. module: spc
+#: model:ir.ui.view,arch_db:spc.operation_result_view_tree
+msgid "Avg. Torque"
+msgstr "扭矩(平均)"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_operation_result_batch
+msgid "Batch"
+msgstr "批次"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_operation_result_bom_line_id
+msgid "Bom line id"
+msgstr "物料清单行"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_ta_spc_wizard_cmk
+msgid "CMK"
+msgstr "CMK"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_ta_spc_wizard_cpk
+msgid "CPK"
+msgstr "CPK"
+
+#. module: spc
+#: model:ir.ui.view,arch_db:spc.view_aiis_config_settings
+#: model:ir.ui.view,arch_db:spc.view_report_tighting_detail
+#: model:ir.ui.view,arch_db:spc.view_smart_config_settings
+#: model:ir.ui.view,arch_db:spc.view_spc_config_settings
+msgid "Cancel"
+msgstr "取消"
+
+#. module: spc
+#: model:ir.ui.view,arch_db:spc.operation_result_view_form
+#: model:ir.ui.view,arch_db:spc.operation_result_view_tree
+msgid "Checked Time"
+msgstr "检测时间"
+
+#. module: spc
+#: model:ir.ui.menu,name:spc.menu_spc_settings
+msgid "Configuration"
+msgstr "配置"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_operation_result_consu_product_id
+msgid "Consu product id"
+msgstr "螺栓"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_operation_result_consu_bom_line_id
+msgid "Consume BOM line"
+msgstr "Consume BOM line"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_operation_result_control_date
+msgid "Control Date"
+msgstr "控制日期"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_aiis_config_settings_create_uid
+#: model:ir.model.fields,field_description:spc.field_spc_config_settings_create_uid
+#: model:ir.model.fields,field_description:spc.field_ta_spc_wizard_create_uid
+#: model:ir.model.fields,field_description:spc.field_tight_result_report_create_uid
+#: model:ir.model.fields,field_description:spc.field_wo_config_settings_create_uid
+msgid "Created by"
+msgstr "创建人"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_aiis_config_settings_create_date
+#: model:ir.model.fields,field_description:spc.field_spc_config_settings_create_date
+#: model:ir.model.fields,field_description:spc.field_ta_spc_wizard_create_date
+#: model:ir.model.fields,field_description:spc.field_tight_result_report_create_date
+#: model:ir.model.fields,field_description:spc.field_wo_config_settings_create_date
+msgid "Created on"
+msgstr "创建时间"
+
+#. module: spc
+#: model:ir.ui.view,arch_db:spc.operation_result_view_search
+msgid "Current Month"
+msgstr "本月"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_operation_result_cur_objects
+msgid "Curve Files"
+msgstr "曲线文件"
+
+#. module: spc
+#: code:addons/spc/models/result.py:109
+#: model:ir.ui.view,arch_db:spc.operation_result_view_search
+#: selection:operation.result,lacking:0
+#, python-format
+msgid "Data Lacking"
+msgstr "数据丢失"
+
+#. module: spc
+#: model:ir.ui.view,arch_db:spc.operation_result_view_search
+msgid "Date Using"
+msgstr "数据可用"
+
+#. module: spc
+#: model:ir.ui.view,arch_db:spc.sa_spc_form_tor_ang
+#: selection:ta.spc.wizard,step:0
+msgid "Day"
+msgstr "日"
+
+#. module: spc
+#: model:ir.ui.view,arch_db:spc.operation_result_view_form
+msgid "Degree"
+msgstr "角度"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_aiis_config_settings_display_name
+#: model:ir.model.fields,field_description:spc.field_report_spc_report_result_tighting_display_name
+#: model:ir.model.fields,field_description:spc.field_result_push_display_name
+#: model:ir.model.fields,field_description:spc.field_result_sync_display_name
+#: model:ir.model.fields,field_description:spc.field_spc_config_settings_display_name
+#: model:ir.model.fields,field_description:spc.field_ta_spc_wizard_display_name
+#: model:ir.model.fields,field_description:spc.field_tight_result_report_display_name
+#: model:ir.model.fields,field_description:spc.field_wo_config_settings_display_name
+#: model:ir.model.fields,field_description:spc.field_workorder_push_display_name
+msgid "Display Name"
+msgstr "显示名称"
+
+#. module: spc
+#: selection:ta.spc.wizard,weibull_dist_method:0
+msgid "Double Weibull"
+msgstr "双韦伯分布"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_tight_result_report_date_to
+msgid "End Date"
+msgstr "结束日期"
+
+#. module: spc
+#: model:ir.model,name:spc.model_maintenance_equipment
+msgid "Equipment"
+msgstr "设备"
+
+#. module: spc
+#: model:ir.ui.view,arch_db:spc.operation_result_view_form
+msgid "Except"
+msgstr "异常"
+
+#. module: spc
+#: selection:operation.result,quality_state:0
+msgid "Exception"
+msgstr "异常"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_operation_result_exception_reason
+msgid "Exception Reason"
+msgstr "异常原因"
+
+#. module: spc
+#: selection:ta.spc.wizard,weibull_dist_method:0
+msgid "Exponential"
+msgstr "指数"
+
+#. module: spc
+#: model:ir.ui.view,arch_db:spc.operation_result_view_form
+msgid "Fail"
+msgstr "失败"
+
+#. module: spc
+#: code:addons/spc/models/result.py:115
+#: code:addons/spc/models/result.py:118
+#: model:ir.ui.view,arch_db:spc.operation_result_view_search
+#: selection:operation.result,final_pass:0
+#: selection:operation.result,one_time_pass:0
+#: selection:operation.result,quality_state:0
+#, python-format
+msgid "Failed"
+msgstr "失败的"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_operation_result_final_pass
+#: model:ir.ui.view,arch_db:spc.operation_result_view_search
+msgid "Final Pass"
+msgstr "最终通过"
+
+#. module: spc
+#: code:addons/spc/models/result.py:117
+#: selection:operation.result,final_pass:0
+#, python-format
+msgid "Final Passed"
+msgstr "最终通过"
+
+#. module: spc
+#: model:ir.ui.view,arch_db:spc.operation_result_view_search
+msgid "Finished Product"
+msgstr "产成品"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_ta_spc_wizard_product_id
+msgid "Finished Product SKU"
+msgstr "产成品SKU号"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_ta_spc_wizard_product_sku_code
+msgid "Finished Product SKU Code(support Fuzzy Search, Case-Insensitive)"
+msgstr "产成品SKU号(support Fuzzy Search, Case-Insensitive)"
+
+#. module: spc
+#: model:ir.actions.act_window,name:spc.action_spc_vehicle_form
+#: model:ir.ui.menu,name:spc.menu_spc_vehicle
+msgid "Finished Product Tightening Analyze"
+msgstr "产成品追踪号"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_operation_result_track_no
+msgid "Finished Product Tracking Number"
+msgstr "产成品追踪号"
+
+#. module: spc
+#: model:ir.ui.view,arch_db:spc.operation_result_view_search
+msgid "Forced Release"
+msgstr "强制放行"
+
+#. module: spc
+#: model:ir.ui.view,arch_db:spc.operation_result_view_search
+msgid "Group By"
+msgstr "分组"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_mrp_workorder_sent
+msgid "Have Sent To Work Center(MasterPC)"
+msgstr "Have Sent To Work Center(MasterPC)"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_operation_result_sent
+msgid "Have sent to aiis"
+msgstr "已被发送给外部系统(FIS)"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_aiis_config_settings_id
+#: model:ir.model.fields,field_description:spc.field_operation_result_id
+#: model:ir.model.fields,field_description:spc.field_report_spc_report_result_tighting_id
+#: model:ir.model.fields,field_description:spc.field_result_push_id
+#: model:ir.model.fields,field_description:spc.field_result_sync_id
+#: model:ir.model.fields,field_description:spc.field_spc_config_settings_id
+#: model:ir.model.fields,field_description:spc.field_ta_spc_wizard_id
+#: model:ir.model.fields,field_description:spc.field_tight_result_report_id
+#: model:ir.model.fields,field_description:spc.field_wo_config_settings_id
+#: model:ir.model.fields,field_description:spc.field_workorder_push_id
+msgid "ID"
+msgstr "ID"
+
+#. module: spc
+#: model:ir.ui.view,arch_db:spc.operation_result_view_search
+msgid "In Progress"
+msgstr "进行中"
+
+#. module: spc
+#: selection:ta.spc.wizard,weibull_dist_method:0
+msgid "Inverted"
+msgstr "反转"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_operation_result_job
+msgid "Job"
+msgstr "程序号(job)"
+
+#. module: spc
+#: code:addons/spc/models/result.py:104
+#: selection:operation.result,measure_result:0
+#, python-format
+msgid "LSN"
+msgstr "松脱(LSN)"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_operation_result_lacking
+msgid "Lacking"
+msgstr "数据丢失"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_aiis_config_settings___last_update
+#: model:ir.model.fields,field_description:spc.field_report_spc_report_result_tighting___last_update
+#: model:ir.model.fields,field_description:spc.field_result_push___last_update
+#: model:ir.model.fields,field_description:spc.field_result_sync___last_update
+#: model:ir.model.fields,field_description:spc.field_spc_config_settings___last_update
+#: model:ir.model.fields,field_description:spc.field_ta_spc_wizard___last_update
+#: model:ir.model.fields,field_description:spc.field_tight_result_report___last_update
+#: model:ir.model.fields,field_description:spc.field_wo_config_settings___last_update
+#: model:ir.model.fields,field_description:spc.field_workorder_push___last_update
+msgid "Last Modified on"
+msgstr "最后修改日"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_aiis_config_settings_write_uid
+#: model:ir.model.fields,field_description:spc.field_spc_config_settings_write_uid
+#: model:ir.model.fields,field_description:spc.field_ta_spc_wizard_write_uid
+#: model:ir.model.fields,field_description:spc.field_tight_result_report_write_uid
+#: model:ir.model.fields,field_description:spc.field_wo_config_settings_write_uid
+msgid "Last Updated by"
+msgstr "最后更新人"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_aiis_config_settings_write_date
+#: model:ir.model.fields,field_description:spc.field_spc_config_settings_write_date
+#: model:ir.model.fields,field_description:spc.field_ta_spc_wizard_write_date
+#: model:ir.model.fields,field_description:spc.field_tight_result_report_write_date
+#: model:ir.model.fields,field_description:spc.field_wo_config_settings_write_date
+msgid "Last Updated on"
+msgstr "最后更新时间"
+
+#. module: spc
+#: model:ir.ui.view,arch_db:spc.operation_result_view_search
+msgid "Last Year"
+msgstr "去年"
+
+#. module: spc
+#: model:ir.ui.view,arch_db:spc.operation_result_view_search
+msgid "Loose"
+msgstr "松脱"
+
+#. module: spc
+#: selection:operation.result,pset_strategy:0
+msgid "Loosening"
+msgstr "松脱(LN)"
+
+#. module: spc
+#: model:res.groups,name:spc.group_spc_manager
+msgid "Manager"
+msgstr "管理员"
+
+#. module: spc
+#: model:ir.ui.view,arch_db:spc.sa_spc_form_tor_ang
+msgid "Manufacture"
+msgstr "制造"
+
+#. module: spc
+#: model:ir.ui.view,arch_db:spc.operation_result_view_form
+msgid "Manufacturing Info"
+msgstr "制造信息"
+
+#. module: spc
+#: model:ir.model,name:spc.model_mrp_production
+msgid "Manufacturing Order"
+msgstr "Manufacturing Order"
+
+#. module: spc
+#: model:ir.ui.view,arch_db:spc.operation_result_view_search
+msgid "Manufacturing Production"
+msgstr "生产订单"
+
+#. module: spc
+#: selection:ta.spc.wizard,weibull_dist_method:0
+msgid "Max Weibull"
+msgstr "最大韦伯分布"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_operation_result_measure_degree
+msgid "Measure Degree(grad)"
+msgstr "测量角度(度)"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_operation_result_measure_result
+msgid "Measure Success"
+msgstr "测量成功"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_operation_result_measure_t_don
+msgid "Measure Time Done(ms)"
+msgstr "作业花费时间(毫秒)"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_operation_result_measure_torque
+msgid "Measure Torque(NM)"
+msgstr "测量扭矩(牛米)"
+
+#. module: spc
+#: selection:ta.spc.wizard,weibull_dist_method:0
+msgid "Min Weibull"
+msgstr "最小韦伯分布"
+
+#. module: spc
+#: model:ir.ui.view,arch_db:spc.sa_spc_form_tor_ang
+#: selection:ta.spc.wizard,step:0
+msgid "Month"
+msgstr "月"
+
+#. module: spc
+#: code:addons/spc/models/result.py:107
+#: model:ir.ui.view,arch_db:spc.operation_result_view_search
+#: selection:operation.result,measure_result:0
+#, python-format
+msgid "NOK"
+msgstr "NOK"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_operation_result_name
+msgid "Name"
+msgstr "名字"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_ta_spc_wizard_need_render
+msgid "Need render"
+msgstr "Need render"
+
+#. module: spc
+#: code:addons/spc/models/result.py:69
+#: code:addons/spc/models/result.py:335
+#: code:addons/spc/models/result.py:336
+#: code:addons/spc/models/result.py:347
+#: code:addons/spc/models/result.py:348
+#, python-format
+msgid "New"
+msgstr "新建"
+
+#. module: spc
+#: code:addons/spc/models/result.py:103
+#: selection:operation.result,measure_result:0
+#, python-format
+msgid "No measure"
+msgstr "未测量"
+
+#. module: spc
+#: code:addons/spc/models/result.py:110
+#: selection:operation.result,lacking:0
+#, python-format
+msgid "Normal"
+msgstr "正常"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_ta_spc_wizard_normal_dist
+#: model:ir.ui.view,arch_db:spc.sa_spc_form_tor_ang
+msgid "Normal Distribution"
+msgstr "正态分布"
+
+#. module: spc
+#: model:ir.ui.view,arch_db:spc.operation_result_view_search
+msgid "Not Send"
+msgstr "未发送"
+
+#. module: spc
+#: selection:operation.result,pset_strategy:0
+msgid "Number of Pulses tightening"
+msgstr "脉冲扭矩(AN)"
+
+#. module: spc
+#: code:addons/spc/models/result.py:106
+#: model:ir.ui.view,arch_db:spc.operation_result_view_search
+#: selection:operation.result,measure_result:0
+#, python-format
+msgid "OK"
+msgstr "OK"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_operation_result_one_time_pass
+#: model:ir.ui.view,arch_db:spc.operation_result_view_search
+msgid "One Time Pass"
+msgstr "一次通过"
+
+#. module: spc
+#: code:addons/spc/models/result.py:114
+#: selection:operation.result,one_time_pass:0
+#, python-format
+msgid "One Time Passed"
+msgstr "一次通过"
+
+#. module: spc
+#: model:ir.ui.view,arch_db:spc.operation_result_view_search
+msgid "Operation"
+msgstr "作业"
+
+#. module: spc
+#: model:ir.actions.act_window,name:spc.operation_result_action_main
+msgid "Operation Result"
+msgstr "作业结果"
+
+#. module: spc
+#: model:ir.actions.act_window,help:spc.operation_result_action_main
+msgid "Operation Result is the execution of a quality control in some point"
+msgstr "作业结果是执行质量控制点的结果"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_mrp_production_result_ids
+#: model:ir.model.fields,field_description:spc.field_mrp_wo_consu_result_ids
+#: model:ir.model.fields,field_description:spc.field_mrp_workorder_result_ids
+#: model:ir.ui.menu,name:spc.menu_operation_result
+msgid "Operation Results"
+msgstr "作业结果"
+
+#. module: spc
+#: model:ir.ui.view,arch_db:spc.operation_result_view_form
+msgid "Order Date"
+msgstr "订购日期"
+
+#. module: spc
+#: model:ir.ui.view,arch_db:spc.operation_result_view_form
+msgid "Pass"
+msgstr "通过"
+
+#. module: spc
+#: model:ir.ui.view,arch_db:spc.operation_result_view_search
+#: selection:operation.result,quality_state:0
+msgid "Passed"
+msgstr "通过的"
+
+#. module: spc
+#: sql_constraint:operation.result:0
+msgid "Per Screw Gun tightening ID  Work Order  must different"
+msgstr "Per Screw Gun tightening ID  Work Order  must different"
+
+#. module: spc
+#: sql_constraint:operation.result:0
+msgid "Per Screw Gun tightening ID Tracking Number must different"
+msgstr "Per Screw Gun tightening ID Tracking Number must different"
+
+#. module: spc
+#: model:ir.ui.view,arch_db:spc.view_report_tighting_detail
+msgid "Print"
+msgstr "打印"
+
+#. module: spc
+#: model:ir.ui.view,arch_db:spc.operation_result_view_form
+#: model:ir.ui.view,arch_db:spc.sa_spc_form_tor_ang
+msgid "Product"
+msgstr "产品"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_operation_result_production_id
+msgid "Production Order"
+msgstr "生产单"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_operation_result_program_id
+msgid "Program id"
+msgstr "程序号(pset)"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_operation_result_pset_strategy
+msgid "Pset strategy"
+msgstr "Pset策略"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_wo_config_settings_push_result_number
+msgid "Push Result Count "
+msgstr "Push Result Count "
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_wo_config_settings_push_wo_number
+msgid "Push WorkOrder Count "
+msgstr "推送工单总数限制 "
+
+#. module: spc
+#: model:ir.ui.view,arch_db:spc.operation_result_view_graph
+#: model:ir.ui.view,arch_db:spc.operation_result_view_pivot
+msgid "Quality Check Analysis"
+msgstr "质量检查分析"
+
+#. module: spc
+#: model:ir.ui.view,arch_db:spc.operation_result_view_search
+msgid "Quality Check Point"
+msgstr "质量控制点"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_operation_result_qcp_id
+msgid "Quality Control Point"
+msgstr "质量控制点"
+
+#. module: spc
+#: model:ir.model,name:spc.model_sa_quality_point
+msgid "Quality Point"
+msgstr "质量点"
+
+#. module: spc
+#: model:ir.ui.view,arch_db:spc.sa_spc_form_tor_ang
+msgid "Quality SPC"
+msgstr "质量控制(SPC)"
+
+#. module: spc
+#: model:ir.ui.view,arch_db:spc.sa_spc_form_tor_ang
+msgid "Query"
+msgstr "查询"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_ta_spc_wizard_query_date_from
+msgid "Query Date From"
+msgstr "从(日期)"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_ta_spc_wizard_query_date_to
+msgid "Query Date to"
+msgstr "至(日期)"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_ta_spc_wizard_limit
+msgid "Query Limit"
+msgstr "返回结果限制"
+
+#. module: spc
+#: model:ir.ui.view,arch_db:spc.sa_spc_form_tor_ang
+msgid "Query Parameters"
+msgstr "查询参数"
+
+#. module: spc
+#: model:ir.actions.act_window,name:spc.action_report_tighting_result
+#: model:ir.actions.report.xml,name:spc.tight_result_report
+#: model:ir.ui.menu,name:spc.menu_report_tighting_result
+#: model:ir.ui.view,arch_db:spc.view_report_tighting_detail
+msgid "Report Tightening Result"
+msgstr "拧紧结果报告"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_operation_result_user_id
+msgid "Responsible"
+msgstr "负责人"
+
+#. module: spc
+#: model:ir.ui.view,arch_db:spc.operation_result_view_form
+#: model:ir.ui.view,arch_db:spc.operation_result_view_search
+msgid "Result"
+msgstr "结果"
+
+#. module: spc
+#: model:ir.actions.act_window,name:spc.quality_check_action_spc
+msgid "Result Checks SPC"
+msgstr "过程控制分析(SPC)"
+
+#. module: spc
+#: model:ir.ui.view,arch_db:spc.sa_spc_form_tor_ang
+msgid "Result SPC"
+msgstr "过程控制分析(SPC)"
+
+#. module: spc
+#: model:ir.model,name:spc.model_ta_spc_wizard
+msgid "Result Statistics Process Control"
+msgstr "过程控制分析(SPC)"
+
+#. module: spc
+#: model:ir.ui.view,arch_db:spc.sa_mrp_workorder_view_form_inherit_mrp
+#: model:ir.ui.view,arch_db:spc.sa_spc_quality_point_form_view
+#: model:ir.ui.view,arch_db:spc.sa_spc_workcenter_form_view
+msgid "Results"
+msgstr "结果"
+
+#. module: spc
+#: model:ir.actions.act_window,name:spc.action_spc_form
+#: model:ir.ui.menu,name:spc.menu_spc
+#: model:ir.ui.menu,name:spc.menu_spc_param_settings
+#: model:ir.ui.menu,name:spc.menu_spc_scope_root
+#: model:ir.ui.view,arch_db:spc.sa_spc_equipment_form_view
+#: model:ir.ui.view,arch_db:spc.sa_spc_quality_point_form_view
+#: model:ir.ui.view,arch_db:spc.sa_spc_workcenter_form_view
+msgid "SPC"
+msgstr "过程控制分析(SPC)"
+
+#. module: spc
+#: model:ir.actions.act_window,name:spc.action_spc_settings
+msgid "SPC Settings"
+msgstr "SPC设置"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_ta_spc_wizard_scatter
+#: model:ir.ui.view,arch_db:spc.sa_spc_form_tor_ang
+msgid "Scatter"
+msgstr "散列图"
+
+#. module: spc
+#: model:ir.ui.view,arch_db:spc.operation_result_view_search
+msgid "Screw"
+msgstr "螺栓"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_ta_spc_wizard_screw_id
+msgid "Screw Type"
+msgstr "螺栓类型"
+
+#. module: spc
+#: model:ir.ui.view,arch_db:spc.operation_result_view_form
+msgid "Send to AIIS"
+msgstr "发送至外部系统"
+
+#. module: spc
+#: model:ir.actions.server,name:spc.operation_result_server_action
+msgid "Sent to FIS"
+msgstr "发送至外部系统(FIS)"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_operation_result_pset_w_max
+msgid "Set Max Angel(grad)"
+msgstr "设置最大角度(度)"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_operation_result_pset_m_max
+msgid "Set Max Torque(NM)"
+msgstr "设置最大扭矩(牛米)"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_operation_result_pset_w_min
+msgid "Set Min Angel(grad)"
+msgstr "设置最小角度(度)"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_operation_result_pset_m_min
+msgid "Set Min Torque(NM)"
+msgstr "设置最小扭矩(牛米)"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_operation_result_pset_w_target
+msgid "Set Target Angel(grad)"
+msgstr "设置目标角度(度)"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_operation_result_pset_m_target
+msgid "Set Target Torque(NM)"
+msgstr "设置目标扭矩(牛米)"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_operation_result_pset_w_threshold
+msgid "Set Threshold Angel(grad)"
+msgstr "设置角度阈值(度)"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_operation_result_pset_m_threshold
+msgid "Set Threshold Torque(NM)"
+msgstr "设置扭矩阈值(牛米)"
+
+#. module: spc
+#: model:ir.ui.view,arch_db:spc.operation_result_view_form
+msgid "Setting Info"
+msgstr "设置信息"
+
+#. module: spc
+#: model:ir.ui.view,arch_db:spc.view_aiis_config_settings
+msgid "Settings AIIS"
+msgstr "设置AIIS"
+
+#. module: spc
+#: model:ir.ui.view,arch_db:spc.view_spc_config_settings
+msgid "Settings SPC"
+msgstr "SPC设置"
+
+#. module: spc
+#: model:ir.ui.view,arch_db:spc.view_smart_config_settings
+msgid "Settings Smart Assembly"
+msgstr "智能装配配置"
+
+#. module: spc
+#: model:ir.ui.menu,name:spc.menu_sa_param_settings
+msgid "Smart Assembly"
+msgstr "智能装配"
+
+#. module: spc
+#: model:ir.actions.act_window,name:spc.action_smart_settings
+msgid "Smart Assembly Settings"
+msgstr "智能装配配置"
+
+#. module: spc
+#: model:ir.ui.view,arch_db:spc.sa_spc_form_tor_ang
+msgid "Standard Setting(规格设定)"
+msgstr "规格设定"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_tight_result_report_date_from
+msgid "Start Date"
+msgstr "开始日期"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_operation_result_quality_state
+msgid "Status"
+msgstr "状态"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_ta_spc_wizard_step
+#: model:ir.ui.view,arch_db:spc.sa_spc_form_tor_ang
+msgid "Step"
+msgstr "步"
+
+#. module: spc
+#: model:ir.ui.view,arch_db:spc.operation_result_view_search
+msgid "This Year"
+msgstr "本年度"
+
+#. module: spc
+#: model:ir.ui.view,arch_db:spc.operation_result_view_search
+msgid "Tightening Date Day"
+msgstr "趋势分析按天(横坐标)"
+
+#. module: spc
+#: model:ir.ui.view,arch_db:spc.operation_result_view_search
+msgid "Tightening Date Month"
+msgstr "趋势分析按月(横坐标)"
+
+#. module: spc
+#: model:ir.ui.view,arch_db:spc.operation_result_view_search
+msgid "Tightening Date Quarter"
+msgstr "趋势分析按季度(横坐标)"
+
+#. module: spc
+#: model:ir.ui.view,arch_db:spc.operation_result_view_search
+msgid "Tightening Date Week"
+msgstr "趋势分析按周(横坐标)"
+
+#. module: spc
+#: model:ir.ui.view,arch_db:spc.operation_result_view_search
+msgid "Tightening Date Year"
+msgstr "趋势分析按年(横坐标)"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_operation_result_operation_point_id
+msgid "Tightening Operation Point"
+msgstr "作业点(拧紧点)"
+
+#. module: spc
+#: model:ir.ui.view,arch_db:spc.operation_result_view_search
+msgid "Tightening Point"
+msgstr "作业点(拧紧点)"
+
+#. module: spc
+#: model:ir.ui.view,arch_db:spc.operation_result_view_search
+msgid "Tightening Tool"
+msgstr "拧紧工具"
+
+#. module: spc
+#: model:ir.actions.act_window,name:spc.action_spc_controller_form
+#: model:ir.ui.menu,name:spc.menu_spc_controller
+msgid "Tightening Tool Analyze"
+msgstr "拧紧工具SPC分析"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_operation_result_tool_id
+#: model:ir.model.fields,field_description:spc.field_ta_spc_wizard_tool_id
+#: model:ir.ui.view,arch_db:spc.operation_result_view_search
+msgid "Tightening Tool(Gun/Wrench)"
+msgstr "拧紧工具(拧紧枪/扳手)"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_operation_result_tightening_id
+msgid "TighteningID"
+msgstr "控制器拧紧ID"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_operation_result_time
+#: model:ir.ui.view,arch_db:spc.sa_spc_form_tor_ang
+msgid "Time"
+msgstr "时间"
+
+#. module: spc
+#: selection:operation.result,pset_strategy:0
+msgid "Time tightening"
+msgstr "时间拧紧(AT)"
+
+#. module: spc
+#: selection:operation.result,quality_state:0
+msgid "To do"
+msgstr "待办"
+
+#. module: spc
+#: model:ir.ui.view,arch_db:spc.operation_result_view_search
+#: model:ir.ui.view,arch_db:spc.sa_spc_form_tor_ang
+msgid "Today"
+msgstr "今日"
+
+#. module: spc
+#: model:ir.ui.view,arch_db:spc.operation_result_view_form
+#: selection:ta.spc.wizard,spc_target:0
+msgid "Torque"
+msgstr "扭矩"
+
+#. module: spc
+#: selection:operation.result,pset_strategy:0
+msgid "Torque tightening"
+msgstr "扭矩拧紧(AD)"
+
+#. module: spc
+#: selection:operation.result,pset_strategy:0
+msgid "Torque/Angle tightening"
+msgstr "扭矩/角度拧紧(ADW)"
+
+#. module: spc
+#: model:ir.ui.view,arch_db:spc.operation_result_view_search
+msgid "Track Number"
+msgstr "追踪号(VIN/序列号)"
+
+#. module: spc
+#: model:ir.ui.view,arch_db:spc.sa_spc_form_tor_ang
+msgid "Type"
+msgstr "类型"
+
+#. module: spc
+#: model:res.groups,name:spc.group_spc_user
+msgid "User"
+msgstr "用户"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_operation_result_product_id
+msgid "Vehicle"
+msgstr "车辆"
+
+#. module: spc
+#: model:ir.ui.view,arch_db:spc.sa_spc_form_tor_ang
+#: selection:ta.spc.wizard,step:0
+msgid "Week"
+msgstr "周"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_ta_spc_wizard_weibull_dist
+#: model:ir.ui.view,arch_db:spc.sa_spc_form_tor_ang
+#: model:ir.ui.view,arch_db:spc.view_spc_config_settings
+msgid "Weibull Distribution"
+msgstr "韦伯分布"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_spc_config_settings_scale_parameter
+msgid "Weibull Distribution Scale Parameter"
+msgstr "韦伯分布scale参数"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_spc_config_settings_shape_parameter
+msgid "Weibull Distribution Shape Parameter"
+msgstr "韦伯分布Shape参数"
+
+#. module: spc
+#: model:ir.model,name:spc.model_mrp_workcenter
+#: model:ir.ui.view,arch_db:spc.operation_result_view_search
+#: model:ir.ui.view,arch_db:spc.sa_spc_workcenter_tree_view
+msgid "Work Center"
+msgstr "工作中心"
+
+#. module: spc
+#: model:ir.model,name:spc.model_mrp_workorder
+#: model:ir.model.fields,field_description:spc.field_operation_result_workorder_id
+#: model:ir.ui.view,arch_db:spc.view_smart_config_settings
+msgid "Work Order"
+msgstr "工单"
+
+#. module: spc
+#: model:ir.ui.view,arch_db:spc.operation_result_view_search
+msgid "WorkCenter"
+msgstr "工作中心"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_operation_result_workcenter_id
+msgid "Workcenter id"
+msgstr "工位ID"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_mrp_workorder_worksheet_img
+msgid "Worksheet"
+msgstr "工作记录表"
+
+#. module: spc
+#: model:ir.model,name:spc.model_aiis_config_settings
+msgid "aiis.config.settings"
+msgstr "aiis.config.settings"
+
+#. module: spc
+#: code:addons/spc/models/result.py:109
+#, python-format
+msgid "lack"
+msgstr "缺失"
+
+#. module: spc
+#: model:ir.model,name:spc.model_mrp_wo_consu
+msgid "mrp.wo.consu"
+msgstr "mrp.wo.consu"
+
+#. module: spc
+#: code:addons/spc/models/result.py:110
+#, python-format
+msgid "normal"
+msgstr "正常"
+
+#. module: spc
+#: model:ir.model,name:spc.model_operation_result
+msgid "operation.result"
+msgstr "operation.result"
+
+#. module: spc
+#: model:ir.ui.view,arch_db:spc.view_aiis_config_settings
+#: model:ir.ui.view,arch_db:spc.view_smart_config_settings
+#: model:ir.ui.view,arch_db:spc.view_spc_config_settings
+msgid "or"
+msgstr "或"
+
+#. module: spc
+#: model:ir.model,name:spc.model_report_spc_report_result_tighting
+msgid "report.spc.report_result_tighting"
+msgstr "report.spc.report_result_tighting"
+
+#. module: spc
+#: model:ir.model,name:spc.model_result_push
+msgid "result.push"
+msgstr "result.push"
+
+#. module: spc
+#: model:ir.model,name:spc.model_result_sync
+msgid "result.sync"
+msgstr "result.sync"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_operation_result_sequence
+msgid "sequence"
+msgstr "序列"
+
+#. module: spc
+#: model:ir.model,name:spc.model_spc_config_settings
+msgid "spc.config.settings"
+msgstr "spc.config.settings"
+
+#. module: spc
+#: model:ir.model,name:spc.model_wo_config_settings
+msgid "wo.config.settings"
+msgstr "wo.config.settings"
+
+#. module: spc
+#: model:ir.model,name:spc.model_workorder_push
+msgid "workorder.push"
+msgstr "workorder.push"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_ta_spc_wizard_usl
+msgid "规格上限(USL)"
+msgstr "规格上限(USL)"
+
+#. module: spc
+#: model:ir.model.fields,field_description:spc.field_ta_spc_wizard_lsl
+msgid "规格下限(LSL)"
+msgstr "规格下限(LSL)"
+

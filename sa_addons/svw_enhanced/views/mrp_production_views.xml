@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="sa_svw_mrp_production_view_search_inherit" model="ir.ui.view">
+        <field name="name">sa_svw_mrp_production_view_search_inherit</field>
+        <field name="model">mrp.production</field>
+        <field name="inherit_id" ref="mrp.view_mrp_production_filter"/>
+        <field name="arch" type="xml">
+            <field name="name" position="before">
+                <field name="knr" string="KNR" filter_domain="[('knr','ilike',self)]"/>
+                <field name="vin" string="VIN" filter_domain="[('vin','ilike',self)]"/>
+            </field>
+            <!--<xpath expr="//group[1]" position="inside">-->
+            <!--<filter string="KNR" name="group_by_knr" domain="[]" context="{'group_by':'knr'}"/>-->
+            <!--</xpath>-->
+        </field>
+    </record>
+    <record model="ir.ui.view" id="sa_svw_mrp_production_form_inherit">
+        <field name="name">sa_svw_mrp_production_form_inherit</field>
+        <field name="model">mrp.production</field>
+        <field name="inherit_id" ref="mrp.mrp_production_form_view"/>
+        <field name="arch" type="xml">
+            <field name="product_id" position="before">
+                <field name="move_raw_ids" invisible="1"/>
+                <field name="availability" invisible="1"/>
+                <field name="equipment_name" required="1"/>
+                <field name="factory_name" required="1"/>
+                <field name="year" required="1"/>
+                <field name="pin" required="1"/>
+                <field name="production_routings" groups="base.group_erp_manager"/>
+                <field name="vin" required="1"/>
+                <field name="pin_check_code" required="1"/>
+                <field name="lnr" required="1"/>
+                <field name="knr"/>
+            </field>
+            <xpath expr="//div[@class='oe_button_box']" position="inside">
+                <button string="SPC" name="action_see_spc_control" type="object" icon="fa-bars" class="oe_stat_button"
+                        groups="spc.group_spc_user, spc.group_spc_manager"/>
+            </xpath>
+            <xpath expr="//notebook[1]" position="replace">
+                <notebook>
+                    <page string="Results">
+                        <field name="result_ids" options="{'reload_on_button': True}">
+                            <tree delete="0" create="0">
+                                <field name="consu_product_id"/>
+                                <field name="workcenter_id"/>
+                                <field name="control_date"/>
+                                <field name="measure_torque"/>
+                                <field name="measure_degree"/>
+                                <field name="measure_result"/>
+                            </tree>
+                        </field>
+                    </page>
+                </notebook>
+            </xpath>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="sa_svw_mrp_production_tree_inherit">
+        <field name="name">sa_svw_mrp_production_tree_inherit</field>
+        <field name="model">mrp.production</field>
+        <field name="inherit_id" ref="mrp.mrp_production_tree_view"/>
+        <field name="arch" type="xml">
+            <field name="name" position="before">
+                <field name="knr"/>
+            </field>
+        </field>
+    </record>
+
+</odoo>

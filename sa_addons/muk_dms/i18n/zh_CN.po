@@ -1,0 +1,643 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* muk_dms
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0+e-20171123\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-04-11 06:27+0000\n"
+"PO-Revision-Date: 2018-04-11 06:27+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: muk_dms
+#: model:ir.ui.view,arch_db:muk_dms.view_dms_directory_form
+#: model:ir.ui.view,arch_db:muk_dms.view_dms_file_form
+msgid "Access Information"
+msgstr "访问信息"
+
+#. module: muk_dms
+#: model:res.groups,name:muk_dms.group_dms_admin
+msgid "Administrator"
+msgstr "管理员"
+
+#. module: muk_dms
+#. openerp-web
+#: code:addons/muk_dms/static/src/js/dms_views_documents.js:137
+#, python-format
+msgid "An error occurred during download!"
+msgstr "下载过程中发生错误!"
+
+#. module: muk_dms
+#: model:ir.model,name:muk_dms.model_muk_dms_data
+msgid "Base Data Model"
+msgstr "基础数据模型"
+
+#. module: muk_dms
+#: code:addons/muk_dms/models/dms_settings.py:89
+#, python-format
+msgid "Changing the settings can cause a heavy migration process."
+msgstr "更改设置可能会导致严重的迁移过程."
+
+#. module: muk_dms
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_access_complete_groups
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_directory_complete_groups
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_file_complete_groups
+msgid "Complete Groups"
+msgstr "完整的组"
+
+#. module: muk_dms
+#: model:ir.ui.menu,name:muk_dms.cat_menu_muk_dms_config
+msgid "Configuration"
+msgstr "配置"
+
+#. module: muk_dms
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_data_database_data
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_file_content
+msgid "Content"
+msgstr "内容"
+
+#. module: muk_dms
+#. openerp-web
+#: code:addons/muk_dms/static/src/js/dms_views_documents.js:150
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_access_perm_create
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_directory_perm_create
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_file_perm_create
+#, python-format
+msgid "Create"
+msgstr "创建"
+
+#. module: muk_dms
+#. openerp-web
+#: code:addons/muk_dms/static/src/xml/dms_views.xml:26
+#, python-format
+msgid "Create Direcotry"
+msgstr "创建目录"
+
+#. module: muk_dms
+#. openerp-web
+#: code:addons/muk_dms/static/src/xml/dms_views.xml:29
+#, python-format
+msgid "Create File"
+msgstr "创建文件"
+
+#. module: muk_dms
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_data_database_create_uid
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_directory_create_uid
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_file_create_uid
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_lock_create_uid
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_settings_create_uid
+msgid "Created by"
+msgstr "创建人"
+
+#. module: muk_dms
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_data_database_create_date
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_directory_create_date
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_file_create_date
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_lock_create_date
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_settings_create_date
+msgid "Created on"
+msgstr "创建时间"
+
+#. module: muk_dms
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_directory_custom_thumbnail
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_file_custom_thumbnail
+msgid "Custom Thumbnail"
+msgstr "自定义缩略图"
+
+#. module: muk_dms
+#: code:addons/muk_dms/models/dms_file.py:70
+#: model:ir.ui.menu,name:muk_dms.cat_menu_muk_dms_models
+#: model:ir.ui.view,arch_db:muk_dms.view_dms_file_form
+#: selection:muk_dms.file,reference:0
+#, python-format
+msgid "Data"
+msgstr "数据"
+
+#. module: muk_dms
+#: model:ir.actions.act_window,name:muk_dms.action_dms_data_database
+msgid "Data Database"
+msgstr "数据库"
+
+#. module: muk_dms
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_file_reference
+msgid "Data Reference"
+msgstr "数据参考"
+
+#. module: muk_dms
+#: model:ir.ui.view,arch_db:muk_dms.view_dms_settings_form
+msgid "Data Settings"
+msgstr "数据设置"
+
+#. module: muk_dms
+#: code:addons/muk_dms/models/dms_settings.py:45
+#: selection:muk_dms.settings,save_type:0
+#, python-format
+msgid "Database"
+msgstr "数据库"
+
+#. module: muk_dms
+#: model:ir.ui.menu,name:muk_dms.menu_dms_data_database
+msgid "Database Data"
+msgstr "数据库数据"
+
+#. module: muk_dms
+#: model:ir.model,name:muk_dms.model_muk_dms_data_database
+msgid "Database Data Model"
+msgstr "数据库数据模型"
+
+#. module: muk_dms
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_access_perm_unlink
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_directory_perm_unlink
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_file_perm_unlink
+msgid "Delete"
+msgstr "删除"
+
+#. module: muk_dms
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_settings_root_directories
+#: model:ir.ui.menu,name:muk_dms.menu_dms_directory
+#: model:ir.ui.view,arch_db:muk_dms.view_dms_directory_tree
+#: model:ir.ui.view,arch_db:muk_dms.view_dms_settings_form
+msgid "Directories"
+msgstr "目录"
+
+#. module: muk_dms
+#. openerp-web
+#: code:addons/muk_dms/static/src/js/dms_views_documents.js:156
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_file_directory
+#: model:ir.ui.view,arch_db:muk_dms.view_dms_directory_form
+#, python-format
+msgid "Directory"
+msgstr "目录"
+
+#. module: muk_dms
+#: model:ir.model,name:muk_dms.model_muk_dms_lock
+msgid "Directory or File Lock"
+msgstr "目录或文件锁定"
+
+#. module: muk_dms
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_access_display_name
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_data_database_display_name
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_data_display_name
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_directory_display_name
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_file_display_name
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_lock_display_name
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_settings_display_name
+msgid "Display Name"
+msgstr "显示名称"
+
+#. module: muk_dms
+#: model:ir.actions.act_window,name:muk_dms.action_dms_directory
+msgid "Document Directories"
+msgstr "文档目录"
+
+#. module: muk_dms
+#: model:ir.actions.act_window,name:muk_dms.action_dms_file
+msgid "Document Files"
+msgstr "文档文件"
+
+#. module: muk_dms
+#: model:ir.ui.menu,name:muk_dms.cat_menu_muk_dms_documents
+msgid "Document Management"
+msgstr "文档管理"
+
+#. module: muk_dms
+#: model:ir.ui.view,arch_db:muk_dms.view_dms_settings_form
+msgid "Document Setting"
+msgstr "文档设置"
+
+#. module: muk_dms
+#: model:ir.actions.act_window,name:muk_dms.action_dms_settings
+#: model:ir.ui.menu,name:muk_dms.menu_dms_settings
+#: model:ir.ui.view,arch_db:muk_dms.view_dms_settings_tree
+msgid "Document Settings"
+msgstr "文档设置"
+
+#. module: muk_dms
+#: model:ir.actions.client,name:muk_dms.action_dms_documents
+msgid "DocumentTreeView"
+msgstr "文档列表视图"
+
+#. module: muk_dms
+#: model:ir.module.category,name:muk_dms.category_dms_security
+#: model:ir.ui.menu,name:muk_dms.main_menu_muk_dms
+#: model:ir.ui.menu,name:muk_dms.menu_dms_tree_view
+msgid "Documents"
+msgstr "文档"
+
+#. module: muk_dms
+#. openerp-web
+#: code:addons/muk_dms/static/src/js/dms_views_documents.js:121
+#, python-format
+msgid "Download"
+msgstr "下载"
+
+#. module: muk_dms
+#. openerp-web
+#: code:addons/muk_dms/static/src/js/dms_views_documents.js:137
+#, python-format
+msgid "Download..."
+msgstr "下载..."
+
+#. module: muk_dms
+#. openerp-web
+#: code:addons/muk_dms/static/src/js/dms_views_documents.js:107
+#: code:addons/muk_dms/static/src/xml/dms_views.xml:23
+#, python-format
+msgid "Edit"
+msgstr "编辑"
+
+#. module: muk_dms
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_access_editor
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_directory_editor
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_file_editor
+msgid "Editor"
+msgstr "编辑人"
+
+#. module: muk_dms
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_file_extension
+msgid "Extension"
+msgstr "扩展"
+
+#. module: muk_dms
+#. openerp-web
+#: code:addons/muk_dms/static/src/js/dms_views_documents.js:167
+#: model:ir.model,name:muk_dms.model_muk_dms_file
+#, python-format
+msgid "File"
+msgstr "文件"
+
+#. module: muk_dms
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_file_name
+msgid "Filename"
+msgstr "文件名称"
+
+#. module: muk_dms
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_directory_count_files
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_directory_files
+#: model:ir.ui.menu,name:muk_dms.menu_dms_file
+#: model:ir.ui.view,arch_db:muk_dms.view_dms_data_database_tree
+#: model:ir.ui.view,arch_db:muk_dms.view_dms_directory_form
+#: model:ir.ui.view,arch_db:muk_dms.view_dms_file_form
+#: model:ir.ui.view,arch_db:muk_dms.view_dms_file_tree
+msgid "Files"
+msgstr "文件"
+
+#. module: muk_dms
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_access_groups
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_directory_groups
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_file_groups
+msgid "Groups"
+msgstr "群组"
+
+#. module: muk_dms
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_access_id
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_data_database_id
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_data_id
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_directory_id
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_file_id
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_lock_id
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_settings_id
+msgid "ID"
+msgstr "ID"
+
+#. module: muk_dms
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_settings_index_files
+msgid "Index Files"
+msgstr "索引文件"
+
+#. module: muk_dms
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_file_index_content
+#: model:ir.ui.view,arch_db:muk_dms.view_dms_file_form
+msgid "Indexed Content"
+msgstr "已索引的内容"
+
+#. module: muk_dms
+#: model:ir.model.fields,help:muk_dms.field_muk_dms_settings_system_locks
+msgid "Indicates if files and directories should be automatically locked while system operations take place."
+msgstr "指示系统操作发生时是否应自动锁定文件和目录."
+
+#. module: muk_dms
+#: model:ir.model.fields,help:muk_dms.field_muk_dms_directory_is_root_directory
+msgid "Indicates if the directory is a root directory. A root directory has a settings object, while a directory with a set parent inherits the settings form its parent."
+msgstr "指示目录是否是根目录。 根目录有一个设置对象，而具有集合父目录的目录继承其父项的设置。"
+
+#. module: muk_dms
+#: model:ir.model.fields,help:muk_dms.field_muk_dms_settings_index_files
+msgid "Indicates if the file data should be indexed to allow faster and better search results."
+msgstr "指示是否应将文件数据编入索引以允许更快，更好的搜索结果。"
+
+#. module: muk_dms
+#: code:addons/muk_dms/models/dms_settings.py:88
+#: model:ir.ui.view,arch_db:muk_dms.view_dms_directory_form
+#, python-format
+msgid "Information"
+msgstr "信息"
+
+#. module: muk_dms
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_access___last_update
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_data___last_update
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_data_database___last_update
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_directory___last_update
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_file___last_update
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_lock___last_update
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_settings___last_update
+msgid "Last Modified on"
+msgstr "最后修改日"
+
+#. module: muk_dms
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_data_database_write_uid
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_directory_write_uid
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_file_write_uid
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_lock_write_uid
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_settings_write_uid
+msgid "Last Updated by"
+msgstr "最后更新人"
+
+#. module: muk_dms
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_data_database_write_date
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_directory_write_date
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_file_write_date
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_lock_write_date
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_settings_write_date
+msgid "Last Updated on"
+msgstr "最后更新时间"
+
+#. module: muk_dms
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_directory_parent_left
+msgid "Left Parent"
+msgstr "左父项"
+
+#. module: muk_dms
+#: model:ir.actions.act_window,name:muk_dms.action_dms_lock
+msgid "Lock"
+msgstr "锁定"
+
+#. module: muk_dms
+#: model:ir.ui.view,arch_db:muk_dms.view_dms_file_form
+msgid "Lock (Edit)"
+msgstr "锁定（编辑）"
+
+#. module: muk_dms
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_access_locked
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_directory_locked
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_file_locked
+msgid "Locked"
+msgstr "已锁定"
+
+#. module: muk_dms
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_file_locked_by
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_lock_locked_by
+msgid "Locked by"
+msgstr "锁定人"
+
+#. module: muk_dms
+#. openerp-web
+#: code:addons/muk_dms/static/src/js/dms_views_file.js:49
+#, python-format
+msgid "Locked!"
+msgstr "已锁定!"
+
+#. module: muk_dms
+#: model:ir.ui.menu,name:muk_dms.cat_menu_muk_dms_locks
+#: model:ir.ui.menu,name:muk_dms.menu_dms_lock
+#: model:ir.ui.view,arch_db:muk_dms.view_dms_lock_tree
+msgid "Locks"
+msgstr "锁定"
+
+#. module: muk_dms
+#: model:res.groups,name:muk_dms.group_dms_manager
+msgid "Manager"
+msgstr "管理员"
+
+#. module: muk_dms
+#: model:ir.ui.view,arch_db:muk_dms.view_dms_directory_form
+#: model:ir.ui.view,arch_db:muk_dms.view_dms_file_form
+#: model:ir.ui.view,arch_db:muk_dms.view_dms_settings_form
+msgid "Meta Information"
+msgstr "元信息"
+
+#. module: muk_dms
+#: model:ir.model,name:muk_dms.model_muk_dms_access
+msgid "MuK Documents Access"
+msgstr "MuK文档访问"
+
+#. module: muk_dms
+#: model:ir.model,name:muk_dms.model_muk_dms_directory
+msgid "MuK Documents Directory"
+msgstr "MuK文档目录"
+
+#. module: muk_dms
+#: model:ir.model,name:muk_dms.model_muk_dms_settings
+msgid "MuK Documents Settings"
+msgstr "MuK文档设置"
+
+#. module: muk_dms
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_directory_name
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_lock_name
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_settings_name
+msgid "Name"
+msgstr "名字"
+
+#. module: muk_dms
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_lock_lock_ref
+msgid "Object Reference"
+msgstr "对象参考"
+
+#. module: muk_dms
+#. openerp-web
+#: code:addons/muk_dms/static/src/js/dms_views_documents.js:93
+#: code:addons/muk_dms/static/src/xml/dms_views.xml:20
+#, python-format
+msgid "Open"
+msgstr "打开"
+
+#. module: muk_dms
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_lock_operation
+msgid "Operation"
+msgstr "作业"
+
+#. module: muk_dms
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_directory_parent_directory
+msgid "Parent Directory"
+msgstr "父目录"
+
+#. module: muk_dms
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_directory_path
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_directory_relational_path
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_file_path
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_file_relational_path
+msgid "Path"
+msgstr "路径"
+
+#. module: muk_dms
+#. openerp-web
+#: code:addons/muk_dms/static/src/xml/dms_widgets.xml:32
+#, python-format
+msgid "Preview this file"
+msgstr "预览此文件"
+
+#. module: muk_dms
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_access_perm_read
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_directory_perm_read
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_file_perm_read
+msgid "Read"
+msgstr "读取"
+
+#. module: muk_dms
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_directory_parent_right
+msgid "Right Parent"
+msgstr "右父项"
+
+#. module: muk_dms
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_directory_is_root_directory
+msgid "Root Directory"
+msgstr "根目录"
+
+#. module: muk_dms
+#: model:ir.ui.view,arch_db:muk_dms.view_dms_settings_form
+msgid "Save Settings"
+msgstr "保存设置"
+
+#. module: muk_dms
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_settings_save_type
+msgid "Save Type"
+msgstr "保存类型"
+
+#. module: muk_dms
+#. openerp-web
+#: code:addons/muk_dms/static/src/xml/dms_views.xml:12
+#, python-format
+msgid "Search..."
+msgstr "搜索..."
+
+#. module: muk_dms
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_directory_settings
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_file_settings
+#: model:ir.ui.view,arch_db:muk_dms.view_dms_directory_form
+#: model:ir.ui.view,arch_db:muk_dms.view_dms_file_form
+msgid "Settings"
+msgstr "设置"
+
+#. module: muk_dms
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_directory_size
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_file_size
+msgid "Size"
+msgstr "尺寸"
+
+#. module: muk_dms
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_directory_child_directories
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_directory_count_directories
+#: model:ir.ui.view,arch_db:muk_dms.view_dms_directory_form
+msgid "Subdirectories"
+msgstr "子目录"
+
+#. module: muk_dms
+#: model:ir.ui.menu,name:muk_dms.cat_menu_muk_dms_files
+msgid "System Data"
+msgstr "系统数据"
+
+#. module: muk_dms
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_settings_system_locks
+msgid "System Locks"
+msgstr "系统锁定"
+
+#. module: muk_dms
+#: model:ir.ui.view,arch_db:muk_dms.view_dms_file_form
+msgid "Technical Information"
+msgstr "技术信息"
+
+#. module: muk_dms
+#: code:addons/muk_dms/models/dms_base.py:233
+#: code:addons/muk_dms/models/dms_base.py:246
+#, python-format
+msgid "The record is already locked by another user. (%s)"
+msgstr "此记录已被另一个用户锁定(%s)"
+
+#. module: muk_dms
+#: code:addons/muk_dms/models/dms_base.py:235
+#: code:addons/muk_dms/models/dms_base.py:248
+#, python-format
+msgid "The record is already locked."
+msgstr "此记录已被锁定."
+
+#. module: muk_dms
+#: code:addons/muk_dms/models/dms_base.py:226
+#, python-format
+msgid "The record is locked by a user, so it can't be changes or deleted."
+msgstr "此记录已被其他用户锁定，你不能修改或删除它."
+
+#. module: muk_dms
+#: code:addons/muk_dms/models/dms_base.py:220
+#, python-format
+msgid "The record is locked, so it can't be changes or deleted."
+msgstr "此记录已锁定，你不能修改或删除它."
+
+#. module: muk_dms
+#: code:addons/muk_dms/models/dms_base.py:172
+#, python-format
+msgid "The record is locked, so it can't be locked again."
+msgstr "此记录已锁定，不允许重复锁定."
+
+#. module: muk_dms
+#: model:ir.model.fields,help:muk_dms.field_muk_dms_settings_save_type
+msgid "The save type is used to determine how a file is saved to the system."
+msgstr "保存类型用于确定文件如何保存到系统."
+
+#. module: muk_dms
+#: code:addons/muk_dms/models/dms_base.py:407
+#, python-format
+msgid "This operation is forbidden!"
+msgstr "此操作是被禁止的!"
+
+#. module: muk_dms
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_directory_thumbnail
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_file_thumbnail
+msgid "Thumbnail"
+msgstr "缩略图"
+
+#. module: muk_dms
+#. openerp-web
+#: code:addons/muk_dms/static/src/xml/dms_views.xml:14
+#, python-format
+msgid "Tip: It is also possible to serach by using regular expressions like ^[a-zA-Z]*.pdf"
+msgstr "提示：也可以使用正则表达式进行搜索，类似 ^[a-zA-Z]*.pdf"
+
+#. module: muk_dms
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_lock_token
+msgid "Token"
+msgstr "凭证"
+
+#. module: muk_dms
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_file_mimetype
+msgid "Type"
+msgstr "类型"
+
+#. module: muk_dms
+#: model:ir.ui.view,arch_db:muk_dms.view_dms_file_form
+msgid "Unlock (Release)"
+msgstr "未锁定（释放）"
+
+#. module: muk_dms
+#: selection:muk_dms.lock,locked_by_ref:0
+#: model:res.groups,name:muk_dms.group_dms_user
+msgid "User"
+msgstr "用户"
+
+#. module: muk_dms
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_lock_locked_by_ref
+msgid "User Reference"
+msgstr "用户参考"
+
+#. module: muk_dms
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_access_perm_write
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_directory_perm_write
+#: model:ir.model.fields,field_description:muk_dms.field_muk_dms_file_perm_write
+msgid "Write"
+msgstr "写入"
+

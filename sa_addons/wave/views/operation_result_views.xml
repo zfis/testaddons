@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="operation_result_show_waveform" model="ir.actions.server">
+        <field name="name">Show Curve</field>
+        <field name="model_id" ref="spc.model_operation_result"/>
+        <field name="state">code</field>
+        <field name="code">
+ret1, ret2 = records.show_waveform()
+if ret1 and ret2:
+    action = {
+        'name': 'Curve Scope',
+        'type': 'ir.actions.act_window',
+        'view_type': 'form',
+        'view_mode': 'form',
+        'res_model': 'wave.compose.wave',
+        'view_id': ret1,
+        'res_id': ret2,
+        'target': 'new',
+        'context': context,
+    }
+        </field>
+    </record>
+
+    <record id="run_operation_result_action" model="ir.values">
+        <field name="model_id" ref="spc.model_operation_result" />
+        <field name="name">Show Curve</field>
+        <field name="key2">client_action_multi</field>
+        <field name="key">action</field>
+        <field name="model">operation.result</field>
+        <field name="value" eval="'ir.actions.server,' + str(ref('operation_result_show_waveform'))" />
+    </record>
+
+</odoo>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_simple_equip_label">
+        <div class="col-xs-6" style="padding:0;">
+            <table style="border-spacing:0;margin-bottom:0;height:600px;" class="table">
+                <thead>
+                    <tr style="width: 3in;">
+                        <td style="border: 2px solid black;width: 2.63in;" colspan="2" class="col-xs-8 danger">
+                            <strong t-field="equipment.name"/>
+                        </td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="width: 1in;">
+                        <td style="border: 2px solid black;text-align: center; vertical-align: middle;" class="col-xs-5">
+                            <img t-if="equipment.external_url" t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('QR', equipment.external_url , 300, 300)" style="width:100%;height:100%;"/>
+                            <span t-field="equipment.external_url"/>
+                        </td>
+                        <!--<td style="border: 2px solid black; text-align: center;" class="col-xs-7">-->
+                            <!--<h4>-->
+                                <!--<strong t-field="equipment.company_id.currency_id.symbol"/>-->
+                                <!--<strong t-field="equipment.list_price"/>-->
+                            <!--</h4>-->
+                        <!--</td>-->
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </template>
+    
+    <template id="report_equipmentlabel">
+        <t t-call="report.html_container">
+            <div class="page">
+                <t t-foreach="docs" t-as="equipment">
+                    <t t-call="sa_base.report_simple_equip_label">
+                        <t t-set="equipment" t-value="equipment"/>
+                    </t>
+                </t>
+            </div>
+        </t>
+    </template>
+</odoo>

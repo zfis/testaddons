@@ -1,0 +1,152 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * quality_mrp
+# 
+# Translators:
+# Erwin van der Ploeg <erwin@odooexperts.nl>, 2016
+# Martin Trigaux <mat@odoo.com>, 2016
+# Yenthe Van Ginneken <yenthespam@gmail.com>, 2016
+# Cas Vissers <casvissers@brahoo.nl>, 2016
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-09-07 09:57+0000\n"
+"PO-Revision-Date: 2016-09-07 09:57+0000\n"
+"Last-Translator: Cas Vissers <casvissers@brahoo.nl>, 2016\n"
+"Language-Team: Dutch (https://www.transifex.com/odoo/teams/41243/nl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: quality_mrp
+#: model:ir.ui.view,arch_db:quality_mrp.mrp_production_view_form_inherit_quality
+#: model:ir.ui.view,arch_db:quality_mrp.mrp_workorder_view_form_inherit_quality
+msgid "<span class=\"o_stat_text\">Quality Alert</span>"
+msgstr "<span class=\"o_stat_text\">Kwaliteit melding</span>"
+
+#. module: quality_mrp
+#: model:ir.model.fields,field_description:quality_mrp.field_mrp_production_alert_count
+#: model:ir.model.fields,field_description:quality_mrp.field_mrp_workorder_alert_count
+msgid "Alert count"
+msgstr "Aantal waarschuwingen"
+
+#. module: quality_mrp
+#: model:ir.model.fields,field_description:quality_mrp.field_mrp_production_alert_ids
+msgid "Alerts"
+msgstr "Waarschuwingen"
+
+#. module: quality_mrp
+#: model:ir.model.fields,field_description:quality_mrp.field_mrp_workorder_check_ids
+msgid "Check ids"
+msgstr "Controle ids"
+
+#. module: quality_mrp
+#: model:ir.model.fields,field_description:quality_mrp.field_mrp_production_check_todo
+#: model:ir.model.fields,field_description:quality_mrp.field_mrp_workorder_check_todo
+msgid "Check todo"
+msgstr "Controleer taken"
+
+#. module: quality_mrp
+#: model:ir.model.fields,field_description:quality_mrp.field_mrp_production_check_ids
+msgid "Checks"
+msgstr "Controles"
+
+#. module: quality_mrp
+#: model:ir.ui.view,arch_db:quality_mrp.quality_alert_view_form_inherit_mrp
+msgid "Create Production Message"
+msgstr "Maak een productiebericht aan"
+
+#. module: quality_mrp
+#: model:ir.ui.view,arch_db:quality_mrp.mrp_workorder_tablet_view_form_inherit_quality
+#: model:ir.ui.view,arch_db:quality_mrp.mrp_workorder_view_form_inherit_quality
+msgid "Done"
+msgstr "Verwerkt"
+
+#. module: quality_mrp
+#: model:ir.model,name:quality_mrp.model_mrp_production
+msgid "Manufacturing Order"
+msgstr "Productieorder"
+
+#. module: quality_mrp
+#: model:ir.model.fields,field_description:quality_mrp.field_quality_alert_operation_id
+#: model:ir.model.fields,field_description:quality_mrp.field_quality_check_workorder_id
+msgid "Operation"
+msgstr "Handeling"
+
+#. module: quality_mrp
+#: model:ir.model.fields,field_description:quality_mrp.field_quality_alert_production_id
+#: model:ir.model.fields,field_description:quality_mrp.field_quality_check_production_id
+msgid "Production Order"
+msgstr "Productieorder"
+
+#. module: quality_mrp
+#: model:ir.model,name:quality_mrp.model_quality_alert
+#: model:ir.ui.view,arch_db:quality_mrp.mrp_production_view_form_inherit_quality
+#: model:ir.ui.view,arch_db:quality_mrp.mrp_workcenter_view_kanban_inherit_quality_mrp
+#: model:ir.ui.view,arch_db:quality_mrp.mrp_workorder_tablet_view_form_inherit_quality
+#: model:ir.ui.view,arch_db:quality_mrp.mrp_workorder_view_form_inherit_quality
+msgid "Quality Alert"
+msgstr "Kwaliteitswaarschuwing"
+
+#. module: quality_mrp
+#: code:addons/quality_mrp/models/mrp_production.py:38
+#: code:addons/quality_mrp/models/mrp_workorder.py:36
+#, python-format
+msgid "Quality Alerts"
+msgstr "Kwaliteitswaarschuwingen"
+
+#. module: quality_mrp
+#: model:ir.model,name:quality_mrp.model_quality_check
+msgid "Quality Check"
+msgstr "Kwaliteitscontrole"
+
+#. module: quality_mrp
+#: model:ir.actions.act_window,name:quality_mrp.quality_check_action_mo
+#: model:ir.actions.act_window,name:quality_mrp.quality_check_action_wo
+#: model:ir.ui.view,arch_db:quality_mrp.mrp_production_view_form_inherit_quality
+#: model:ir.ui.view,arch_db:quality_mrp.mrp_workorder_tablet_view_form_inherit_quality
+#: model:ir.ui.view,arch_db:quality_mrp.mrp_workorder_view_form_inherit_quality
+msgid "Quality Checks"
+msgstr "Kwaliteitcontroles"
+
+#. module: quality_mrp
+#: model:ir.model,name:quality_mrp.model_quality_point
+msgid "Quality Point"
+msgstr "Kwaliteit controlepunt"
+
+#. module: quality_mrp
+#: model:ir.model.fields,field_description:quality_mrp.field_quality_point_code
+msgid "Type of Operation"
+msgstr "Soort bewerking"
+
+#. module: quality_mrp
+#: model:ir.model.fields,field_description:quality_mrp.field_quality_alert_workcenter_id
+#: model:ir.model.fields,field_description:quality_mrp.field_quality_check_workcenter_id
+msgid "Work Center"
+msgstr "Productieplaats"
+
+#. module: quality_mrp
+#: model:ir.model,name:quality_mrp.model_mrp_workorder
+msgid "Work Order"
+msgstr "Werkorders"
+
+#. module: quality_mrp
+#: model:ir.model.fields,field_description:quality_mrp.field_quality_point_workcenter_id
+msgid "Workcenter"
+msgstr "Werkplaats"
+
+#. module: quality_mrp
+#: code:addons/quality_mrp/models/quality.py:25
+#, python-format
+msgid "Workorder Messages"
+msgstr "Werkorder berichten"
+
+#. module: quality_mrp
+#: code:addons/quality_mrp/models/mrp_production.py:91
+#: code:addons/quality_mrp/models/mrp_workorder.py:81
+#, python-format
+msgid "You still need to do the quality checks!"
+msgstr "U moet de kwaliteitscontroles nog steeds doen!"

@@ -1,0 +1,326 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * mrp_workorder
+# 
+# Translators:
+# Martin Trigaux <mat@odoo.com>, 2016
+# Yenthe Van Ginneken <yenthespam@gmail.com>, 2016
+# Erwin van der Ploeg <erwin@odooexperts.nl>, 2016
+# Eric Geens <ericgeens@yahoo.com>, 2016
+# Cas Vissers <casvissers@brahoo.nl>, 2016
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-10-10 09:15+0000\n"
+"PO-Revision-Date: 2016-10-10 09:15+0000\n"
+"Last-Translator: Cas Vissers <casvissers@brahoo.nl>, 2016\n"
+"Language-Team: Dutch (https://www.transifex.com/odoo/teams/41243/nl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: mrp_workorder
+#: model:ir.ui.view,arch_db:mrp_workorder.mrp_workorder_view_form_tablet
+msgid "<span class=\"o_stat_text\">Scraps</span>"
+msgstr "<span class=\"o_stat_text\">Rest</span>"
+
+#. module: mrp_workorder
+#: model:ir.ui.view,arch_db:mrp_workorder.mrp_workorder_view_form_tablet
+msgid "Block"
+msgstr "Blokkeer"
+
+#. module: mrp_workorder
+#: model:ir.actions.act_window,help:mrp_workorder.mrp_workorder_action_tablet
+msgid "Click to start a new work order."
+msgstr "Klik om een nieuw werkorder aan te maken."
+
+#. module: mrp_workorder
+#: model:ir.ui.view,arch_db:mrp_workorder.mrp_workorder_view_form_tablet
+msgid "Continue Production"
+msgstr "Productie hervatten"
+
+#. module: mrp_workorder
+#: model:ir.model.fields,field_description:mrp_workorder.field_stock_traceability_report_create_uid
+msgid "Created by"
+msgstr "Aangemaakt door"
+
+#. module: mrp_workorder
+#: model:ir.model.fields,field_description:mrp_workorder.field_stock_traceability_report_create_date
+msgid "Created on"
+msgstr "Aangemaakt op"
+
+#. module: mrp_workorder
+#: model:ir.ui.view,arch_db:mrp_workorder.mrp_workorder_view_form_tablet
+msgid "Current Production"
+msgstr "Huidige productie"
+
+#. module: mrp_workorder
+#: model:ir.ui.view,arch_db:mrp_workorder.mrp_workorder_view_form_tablet
+msgid "Current Qty"
+msgstr "Huidige hoeveelheid"
+
+#. module: mrp_workorder
+#: model:ir.model.fields,field_description:mrp_workorder.field_stock_traceability_report_display_name
+msgid "Display Name"
+msgstr "Weergave naam"
+
+#. module: mrp_workorder
+#: model:ir.ui.view,arch_db:mrp_workorder.mrp_workorder_view_form_tablet
+msgid "Done"
+msgstr "Gereed"
+
+#. module: mrp_workorder
+#. openerp-web
+#: code:addons/mrp_workorder/static/src/xml/stock_traceability_report_line.xml:63
+#: model:ir.ui.view,arch_db:mrp_workorder.report_mrp_line
+#, python-format
+msgid "Downstream Traceability"
+msgstr "Terug traceren"
+
+#. module: mrp_workorder
+#. openerp-web
+#: code:addons/mrp_workorder/static/src/xml/stock_traceability_report_backend.xml:14
+#, python-format
+msgid "Error"
+msgstr "Fout"
+
+#. module: mrp_workorder
+#: model:ir.ui.view,arch_db:mrp_workorder.mrp_workorder_view_form_tablet
+msgid "Finish Order"
+msgstr "Order afronden"
+
+#. module: mrp_workorder
+#: model:ir.model.fields,field_description:mrp_workorder.field_stock_traceability_report_id
+msgid "ID"
+msgstr "ID"
+
+#. module: mrp_workorder
+#: model:ir.ui.view,arch_db:mrp_workorder.report_stock_body_print
+#: model:ir.ui.view,arch_db:mrp_workorder.report_stock_inventory
+msgid "LOCATION DESTINATION"
+msgstr "BESTEMMING LOCATIE"
+
+#. module: mrp_workorder
+#: model:ir.ui.view,arch_db:mrp_workorder.report_stock_body_print
+#: model:ir.ui.view,arch_db:mrp_workorder.report_stock_inventory
+msgid "LOCATION SOURCE"
+msgstr "BRON LOCATIE"
+
+#. module: mrp_workorder
+#: model:ir.model.fields,field_description:mrp_workorder.field_stock_traceability_report___last_update
+msgid "Last Modified on"
+msgstr "Laatst gewijzigd op"
+
+#. module: mrp_workorder
+#: model:ir.model.fields,field_description:mrp_workorder.field_stock_traceability_report_write_uid
+msgid "Last Updated by"
+msgstr "Laatst bijgewerkt door"
+
+#. module: mrp_workorder
+#: model:ir.model.fields,field_description:mrp_workorder.field_stock_traceability_report_write_date
+msgid "Last Updated on"
+msgstr "Laatst bijgewerkt op"
+
+#. module: mrp_workorder
+#: model:ir.model,name:mrp_workorder.model_mrp_production
+msgid "Manufacturing Order"
+msgstr "Productieorder"
+
+#. module: mrp_workorder
+#: model:ir.ui.menu,name:mrp_workorder.mrp_production_menu_planning
+#: model:ir.ui.view,arch_db:mrp_workorder.mrp_production_tree_view_planning
+msgid "Manufacturing Orders"
+msgstr "Productieorders"
+
+#. module: mrp_workorder
+#: model:ir.ui.view,arch_db:mrp_workorder.report_stock_inventory
+msgid "No operation made on this lot."
+msgstr "Geen bewerkingen op deze partij."
+
+#. module: mrp_workorder
+#: model:ir.ui.menu,name:mrp_workorder.menu_mrp_production_plan
+msgid "Orders to Plan"
+msgstr "Orders te plannen"
+
+#. module: mrp_workorder
+#. openerp-web
+#: code:addons/mrp_workorder/static/src/xml/stock_traceability_report_backend.xml:6
+#, python-format
+msgid "PRINT"
+msgstr "AFDRUKKEN"
+
+#. module: mrp_workorder
+#: model:ir.ui.view,arch_db:mrp_workorder.report_stock_body_print
+#: model:ir.ui.view,arch_db:mrp_workorder.report_stock_inventory
+msgid "PRODUCT"
+msgstr "PRODUCT"
+
+#. module: mrp_workorder
+#: model:ir.ui.view,arch_db:mrp_workorder.mrp_workorder_view_form_tablet
+msgid "Pause"
+msgstr "Pauze"
+
+#. module: mrp_workorder
+#: model:ir.ui.view,arch_db:mrp_workorder.mrp_production_view_form_inherit_planning
+msgid "Plan"
+msgstr "Plan"
+
+#. module: mrp_workorder
+#: model:ir.ui.view,arch_db:mrp_workorder.mrp_production_view_form_inherit_planning
+msgid "Planned Date"
+msgstr "Datum gepland"
+
+#. module: mrp_workorder
+#: model:ir.ui.menu,name:mrp_workorder.mrp_planning_menu_root
+msgid "Planning"
+msgstr "Planning"
+
+#. module: mrp_workorder
+#: model:ir.ui.menu,name:mrp_workorder.menu_mrp_workorder_production
+msgid "Planning by Production"
+msgstr "Planning per productieorder"
+
+#. module: mrp_workorder
+#: model:ir.ui.menu,name:mrp_workorder.menu_mrp_workorder_workcenter
+msgid "Planning by Workcenter"
+msgstr "Planning per werkplek"
+
+#. module: mrp_workorder
+#: model:ir.ui.view,arch_db:mrp_workorder.mrp_workorder_view_form_tablet
+msgid "Production Workcenter"
+msgstr "Productie werkplek"
+
+#. module: mrp_workorder
+#: model:ir.ui.view,arch_db:mrp_workorder.report_stock_body_print
+#: model:ir.ui.view,arch_db:mrp_workorder.report_stock_inventory
+msgid "QUANTITY"
+msgstr "HOEVEELHEID"
+
+#. module: mrp_workorder
+#: model:ir.ui.view,arch_db:mrp_workorder.mrp_production_tree_view_planning
+msgid "Quantity"
+msgstr "Hoeveelheid"
+
+#. module: mrp_workorder
+#: model:ir.ui.view,arch_db:mrp_workorder.mrp_workorder_view_form_tablet
+msgid "Quantity Produced"
+msgstr "Hoeveelheid geproduceerd"
+
+#. module: mrp_workorder
+#: model:ir.model.fields,field_description:mrp_workorder.field_mrp_production_date_planned_finished_wo
+msgid "Scheduled End Date"
+msgstr "Ingeplande einddatum"
+
+#. module: mrp_workorder
+#: model:ir.model.fields,field_description:mrp_workorder.field_mrp_production_date_planned_start_wo
+msgid "Scheduled Start Date"
+msgstr "Geplande starttdatum"
+
+#. module: mrp_workorder
+#: model:ir.ui.view,arch_db:mrp_workorder.mrp_workorder_view_form_tablet
+msgid "Scrap"
+msgstr "Afkeuren"
+
+#. module: mrp_workorder
+#: model:ir.ui.view,arch_db:mrp_workorder.mrp_workorder_view_form_tablet
+msgid "Start Working"
+msgstr "Start met werken"
+
+#. module: mrp_workorder
+#: model:ir.ui.view,arch_db:mrp_workorder.mrp_workcenter_view_kanban_inherit_panel
+msgid "Tablet view to process work orders at the work center"
+msgstr "Tablet weergave om de werkplekken bij werkorders te verwerken"
+
+#. module: mrp_workorder
+#: model:ir.ui.view,arch_db:mrp_workorder.mrp_workorder_view_form_tablet
+msgid "To Produce"
+msgstr "Te produceren"
+
+#. module: mrp_workorder
+#: model:ir.ui.view,arch_db:mrp_workorder.mrp_production_tree_view_planning
+msgid "Total Qty"
+msgstr "Totale hvh"
+
+#. module: mrp_workorder
+#: model:ir.ui.view,arch_db:mrp_workorder.report_stock_body_print
+msgid "Traceability Report"
+msgstr "Traceability rapport"
+
+#. module: mrp_workorder
+#: model:ir.ui.view,arch_db:mrp_workorder.mrp_workorder_view_form_tablet
+msgid "Unblock"
+msgstr "Deblokkeer"
+
+#. module: mrp_workorder
+#: model:ir.ui.view,arch_db:mrp_workorder.mrp_production_tree_view_planning
+msgid "Unit of Measure"
+msgstr "Maateenheid"
+
+#. module: mrp_workorder
+#: model:ir.ui.view,arch_db:mrp_workorder.mrp_production_view_form_inherit_planning
+msgid "Unplan"
+msgstr "Planning ongedaan maken"
+
+#. module: mrp_workorder
+#: model:ir.actions.server,name:mrp_workorder.production_order_unplan_server_action
+msgid "Unplan Orders"
+msgstr "Planning orders ongedaan maken"
+
+#. module: mrp_workorder
+#: model:ir.ui.view,arch_db:mrp_workorder.mrp_production_form_view_inherit_mrp_workorder
+#: model:ir.ui.view,arch_db:mrp_workorder.view_picking_form_inherit_mrp_workorder
+#: model:ir.ui.view,arch_db:mrp_workorder.view_production_lot_form_inherit_mrp_workorder
+msgid "Up/Down Traceability"
+msgstr "Vooruit en terug traceren"
+
+#. module: mrp_workorder
+#. openerp-web
+#: code:addons/mrp_workorder/static/src/xml/stock_traceability_report_line.xml:62
+#: model:ir.actions.client,name:mrp_workorder.action_stock_report
+#: model:ir.ui.view,arch_db:mrp_workorder.report_mrp_line
+#: model:ir.ui.view,arch_db:mrp_workorder.report_stock_inventory
+#, python-format
+msgid "Upstream Traceability"
+msgstr "Terug traceren"
+
+#. module: mrp_workorder
+#: model:ir.ui.menu,name:mrp_workorder.menu_mrp_production_pending
+msgid "Waiting for Material Availability"
+msgstr "Wachtend op materiaal beschikbaarheid"
+
+#. module: mrp_workorder
+#: model:ir.ui.view,arch_db:mrp_workorder.mrp_workorder_view_form_tablet
+msgid "Work Instruction"
+msgstr "Werk instructies"
+
+#. module: mrp_workorder
+#: model:ir.actions.act_window,name:mrp_workorder.mrp_workorder_action_tablet
+#: model:ir.ui.menu,name:mrp_workorder.mrp_workorder_menu_planning
+msgid "Work Orders"
+msgstr "Werkorders"
+
+#. module: mrp_workorder
+#: model:ir.actions.act_window,help:mrp_workorder.mrp_workorder_action_tablet
+msgid ""
+"Work Orders is the list of operations to be performed for each\n"
+"                manufacturing order. Once you start the first work order of a\n"
+"                manufacturing order, the manufacturing order is automatically\n"
+"                marked as started. Once you finish the latest operation of a\n"
+"                manufacturing order, the MO is automatically done and the related\n"
+"                products are produced."
+msgstr ""
+"Een werkorder is de lijst van verwerkingen welke moeten worden uitgevoerd voor\n"
+"elke productieorder. Wanneer de eerste werkorder wordt gestart, dan wordt de productieorder automatisch gemarkeerd als gestart. Wanneer je de laatste verwerking van een productieorder afrondt, dan is de productieorder automatisch gereed en zijn de gerelateerde producten geproduceerd."
+
+#. module: mrp_workorder
+#: model:ir.model,name:mrp_workorder.model_stock_traceability_report
+msgid "stock.traceability.report"
+msgstr "stock.traceability.report"
+
+#. module: mrp_workorder
+#: model:ir.ui.view,arch_db:mrp_workorder.mrp_production_view_form_inherit_planning
+msgid "to"
+msgstr "tot"

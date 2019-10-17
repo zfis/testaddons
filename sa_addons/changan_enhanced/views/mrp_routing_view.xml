@@ -1,0 +1,40 @@
+<odoo>
+  <data>
+    <record model="ir.ui.view" id="sa_changan_mrp_routing_workcenter_form_view_inherit">
+        <field name="name">sa_changan_mrp_routing_workcenter_form_view_inherit</field>
+        <field name="model">mrp.routing.workcenter</field>
+        <field name="inherit_id" ref="sa_base.sa_mrp_routing_workcenter_form_view"/>
+        <field name="arch" type="xml">
+          <field name="op_job_id" position="attributes">
+              <attribute name="required">1</attribute>
+          </field>
+          <field name="op_job_id" position="after">
+              <field name="gun_id" required="1" options="{'no_edit': True, 'no_create': True}"/>
+          </field>
+          <xpath expr="//sheet/group/group/field[@name='group_id']" position="replace">
+          </xpath>
+          <xpath expr="//page/field[@name='operation_point_ids']/tree/field[@name='program_id']" position="replace">
+          </xpath>
+        </field>
+    </record>
+
+      <record model="ir.ui.view" id="sa_changan_sa_mrp_routing_workcenter_tree_view_inherit">
+        <field name="name">sa_changan_sa_mrp_routing_workcenter_tree_view_inherit</field>
+        <field name="model">mrp.routing.workcenter</field>
+        <field name="inherit_id" ref="sa_base.sa_mrp_routing_workcenter_tree_view"/>
+        <field name="arch" type="xml">
+          <field name="group_id" position="replace">
+          </field>
+        </field>
+      </record>
+      <record model="ir.ui.view" id="sa_changan_sa_mrp_routing_form_view_inherit">
+        <field name="name">sa_changan_sa_mrp_routing_form_view_inherit</field>
+        <field name="model">mrp.routing</field>
+        <field name="inherit_id" ref="sa_base.sa_mrp_routing_form_view"/>
+        <field name="arch" type="xml">
+          <xpath expr="//page/field[@name='operation_ids']/tree/field[@name='group_id']" position="replace">
+          </xpath>
+        </field>
+      </record>
+  </data>
+</odoo>

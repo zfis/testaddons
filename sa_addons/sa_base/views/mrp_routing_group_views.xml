@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="sa_mrp_routing_group_tree_view" model="ir.ui.view">
+            <field name="name">sa_mrp_routing_group_tree_view</field>
+            <field name="model">mrp.routing.group</field>
+            <field name="arch" type="xml">
+                <tree string="Routing Group">
+                    <field name="name"/>
+                    <field name="code"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="sa_mrp_routing_group_action" model="ir.actions.act_window">
+            <field name="name">Routing Groups</field>
+            <field name="res_model">mrp.routing.group</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_mrp_routing_group_action"
+            action="sa_mrp_routing_group_action"
+            parent="menu_mrp_sa_setting"
+            sequence="10"/>
+    </data>
+</odoo>
+

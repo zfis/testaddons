@@ -1,0 +1,14 @@
+<odoo>
+  <data>
+      <record id="local_sense_equipment_view_form_inherit" model="ir.ui.view">
+            <field name="name">local_sense_equipment_view_form_inherit</field>
+            <field name="model">maintenance.equipment</field>
+            <field name="inherit_id" ref="maintenance.hr_equipment_view_form"/>
+            <field name="arch" type="xml">
+                <field name="serial_no" position="after">
+                    <field name="location_tag" required="1" />
+                </field>
+            </field>
+      </record>
+  </data>
+</odoo>

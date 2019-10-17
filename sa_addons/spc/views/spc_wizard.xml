@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--<record id="sa_spc_form" model="ir.ui.view">-->
+    <!--<field name="name">sa_spc_form</field>-->
+    <!--<field name="model">operation.result.wizard</field>-->
+    <!--<field name="arch" type="xml">-->
+    <!--<form string="Scope">-->
+    <!--<header>-->
+    <!--<button string="Query" type="object" name="button_query" class="oe_highlight"/>-->
+    <!--</header>-->
+    <!--<div>-->
+    <!--<group string="Query Parameters">-->
+    <!--<group string="Time">-->
+    <!--<field name="query_date_from" required="1"/>-->
+    <!--<field name="query_date_to"/>-->
+    <!--</group>-->
+    <!--<group string="Product">-->
+    <!--<field name="vehicle_id" options="-->
+    <!--{'no_create_edit': True}"/>-->
+    <!--<field name="screw_id" options="-->
+    <!--{'no_create_edit': True}"/>-->
+    <!--</group>-->
+    <!--<group string="Manufacture">-->
+    <!--<field name="segment_id" options="-->
+    <!--{'no_create_edit': True}"/>-->
+    <!--<field name="knr_code" />-->
+    <!--<field name="vin_code" />-->
+    <!--<field name="assembly_line_id" options="-->
+    <!--{'no_create_edit': True}"/>-->
+    <!--<field name="segment_id" options="-->
+    <!--{'no_create_edit': True}"/>-->
+    <!--</group>-->
+    <!--<group>-->
+    <!--<field name="limit" required="1"/>-->
+    <!--</group>-->
+    <!--</group>-->
+
+    <!--</div>-->
+    <!--<div>-->
+    <!--<group string="Waves">-->
+    <!--<field name="success_analyze" widget="echart"/>-->
+    <!--</group>-->
+    <!--</div>-->
+
+    <!--</form>-->
+    <!--</field>-->
+    <!--</record>-->
+
+    <!--<record id="sa_vehicle_spc_form" model="ir.ui.view">-->
+    <!--<field name="name">sa_vehicle_spc_form</field>-->
+    <!--<field name="model">operation.result.wizard</field>-->
+    <!--<field name="arch" type="xml">-->
+    <!--<form string="Scope">-->
+    <!--<header>-->
+    <!--<button string="Query" type="object" name="button_query_vehicle" class="oe_highlight"/>-->
+    <!--</header>-->
+    <!--<div>-->
+    <!--<group string="Query Parameters">-->
+    <!--<group string="Time">-->
+    <!--<field name="query_date_from" required="1"/>-->
+    <!--<field name="query_date_to"/>-->
+    <!--</group>-->
+    <!--&lt;!&ndash;<group string="Product">&ndash;&gt;-->
+    <!--&lt;!&ndash;<field name="vehicle_id" options="&ndash;&gt;-->
+    <!--&lt;!&ndash;{'no_create_edit': True}"/>&ndash;&gt;-->
+    <!--&lt;!&ndash;</group>&ndash;&gt;-->
+    <!--<group string="Manufacture">-->
+    <!--<field name="knr_code" />-->
+    <!--<field name="vin_code" />-->
+    <!--</group>-->
+    <!--</group>-->
+    <!--<div>-->
+    <!--<group string="合格率">-->
+    <!--<field name="success_analyze" widget="echart"/>-->
+    <!--</group>-->
+    <!--</div>-->
+    <!--</div>-->
+
+    <!--</form>-->
+    <!--</field>-->
+    <!--</record>-->
+
+    <!--<record id="sa_controller_spc_form" model="ir.ui.view">-->
+    <!--<field name="name">sa_controller_spc_form</field>-->
+    <!--<field name="model">operation.result.wizard</field>-->
+    <!--<field name="arch" type="xml">-->
+    <!--<form string="Scope">-->
+    <!--<header>-->
+    <!--<button string="Query" type="object" name="button_query_controller" class="oe_highlight"/>-->
+    <!--</header>-->
+    <!--<sheet>-->
+    <!--<group string="Query Parameters">-->
+    <!--<group string="Time">-->
+    <!--<field name="query_date_from" required="1"/>-->
+    <!--<field name="query_date_to"/>-->
+    <!--</group>-->
+    <!--<group string="Controller">-->
+    <!--<field name="controller_ids" options="{'no_create_edit': True}" widget="many2many_tags" required="1"/>-->
+    <!--</group>-->
+    <!--<group string="Manufacture">-->
+    <!--<field name="knr_code" />-->
+    <!--<field name="vin_code" />-->
+    <!--</group>-->
+    <!--</group>-->
+    <!--</sheet>-->
+    <!--<notebook>-->
+    <!--<page string="合格率">-->
+    <!--<field name="success_controller_analyze" widget="echart"/>-->
+    <!--</page>-->
+    <!--<page string="合格率列表">-->
+    <!--<field name="success_controller_analyze" widget="echart"/>-->
+    <!--</page>-->
+    <!--</notebook>-->
+    <!--<div class="oe_chatter"/>-->
+    <!--</form>-->
+    <!--</field>-->
+    <!--</record>-->
+
+
+    <record id="sa_spc_form_tor_ang" model="ir.ui.view">
+        <field name="name">sa_spc_form_tor_ang</field>
+        <field name="model">ta.spc.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Result SPC">
+                <field name="need_render" invisible="1"/>
+                <div class="o_calendar_buttons">
+                    <button type="object" name="button_forward" class="o_calendar_button_prev btn btn-sm btn-primary">
+                        <span class="fa fa-arrow-left"/>
+                    </button>
+                    <button type="object" string="Today" name="button_today"
+                            class="o_calendar_button_today btn btn-sm btn-primary"/>
+                    <button type="object" name="button_backend" class="o_calendar_button_next btn btn-sm btn-primary">
+                        <span class="fa fa-arrow-right"/>
+                    </button>
+
+                    <div class="btn-group btn-group-sm">
+                        <button type="object" string="Day" name="button_step_day"
+                                class="o_calendar_button_day btn btn-sm btn-default"/>
+                        <button type="object" string="Week" name="button_step_week"
+                                class="o_calendar_button_week btn btn-sm btn-default"/>
+                        <button type="object" string="Month" name="button_step_month"
+                                class="o_calendar_button_month btn btn-sm btn-default"/>
+                    </div>
+                    <button string="Query" type="object" name="button_query" class="oe_highlight oe_right"
+                            context="{'no_render': True}"/>
+                </div>
+                <sheet>
+                    <group string="Query Parameters">
+                        <group string="Type">
+                            <field name="spc_target" widget="radio"/>
+                        </group>
+                        <group string="Time">
+                            <field name="query_date_from" required="1"/>
+                            <field name="query_date_to"/>
+                        </group>
+                        <group string="Product">
+                            <field name="screw_id" widget="selection" required="1"/>
+                            <field name="product_sku_code" attrs="{'invisible': [('product_id','!=', False)]}"/>
+                            <field name="product_id" widget="selection"
+                                   attrs="{'invisible': [('product_sku_code','!=', False)]}"/>
+                            <field name="tool_id" widget="selection"/>
+                        </group>
+                        <group string="Manufacture">
+                            <field name="assembly_line_id" widget="selection"/>
+                        </group>
+                        <group>
+                            <field name="limit" required="1"/>
+                        </group>
+                        <group>
+                            <field name="step" string="Step" readonly="1"/>
+                        </group>
+                        <group string="Standard Setting(规格设定)">
+                            <field name="usl" required="1"/>
+                            <field name="lsl" required="1"/>
+                        </group>
+                        <group string="Quality SPC">
+                            <field name="cmk" readonly="1"/>
+                            <field name="cpk" readonly="1"/>
+                        </group>
+                    </group>
+
+                </sheet>
+                <notebook>
+                    <page string="Normal Distribution">
+                        <field name="normal_dist" widget="echart"/>
+                    </page>
+                    <page string="Weibull Distribution">
+                        <group>
+                            <group>
+                                <field name="weibull_dist_method" widget="radio"/>
+                            </group>
+                            <group>
+                                <field name="weibull_dist" widget="echart"/>
+                            </group>
+                        </group>
+
+                    </page>
+                    <page string="Scatter">
+                        <field name="scatter" widget="echart"/>
+                    </page>
+                </notebook>
+                <div class="oe_chatter"/>
+            </form>
+        </field>
+    </record>
+
+    <record id="sa_spc_workcenter_form_view" model="ir.ui.view">
+        <field name="name">sa_spc_workcenter_form_view</field>
+        <field name="model">mrp.workcenter</field>
+        <field name="inherit_id" ref="sa_base.sa_mrp_workcenter_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@class='oe_button_box']" position="inside">
+                <button string="SPC" name="action_see_spc_control" type="object" icon="fa-bars" class="oe_stat_button"
+                        attrs="{'invisible': [('type', '=', 'rework')]}"
+                        groups="spc.group_spc_user, spc.group_spc_manager"/>
+                <button string="Results" name="action_see_result" type="object" icon="fa-table" class="oe_stat_button"
+                        attrs="{'invisible': [('type', '=', 'rework')]}"
+                        groups="spc.group_spc_user, spc.group_spc_manager"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="sa_spc_quality_point_form_view" model="ir.ui.view">
+        <field name="name">sa_spc_quality_point_form_view</field>
+        <field name="model">sa.quality.point</field>
+        <field name="inherit_id" ref="quality.quality_point_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='action_see_quality_checks']" position="replace">
+                <button string="Results" name="action_see_result" type="object" icon="fa-table" class="oe_stat_button"
+                        groups="spc.group_spc_user, spc.group_spc_manager"/>
+            </xpath>
+            <xpath expr="//button[@name='action_see_spc_control']" position="replace">
+                <button string="SPC" name="action_see_spc_control" type="object" icon="fa-bars" class="oe_stat_button"
+                        groups="spc.group_spc_user, spc.group_spc_manager"/>
+            </xpath>
+        </field>
+    </record>
+
+
+    <record id="sa_spc_workcenter_tree_view" model="ir.ui.view">
+        <field name="name">sa_spc_workcenter_tree_view</field>
+        <field name="model">mrp.workcenter</field>
+        <field name="arch" type="xml">
+            <tree string="Work Center" create="0" delete="0">
+                <field name="controller_ids"/>
+                <field name="code"/>
+                <field name="name"/>
+                <field name="worksegment_id"/>
+                <field name="resource_type" invisible="1"/>
+                <field name="company_id" groups="base.group_multi_company"/>
+                <field name="active" invisible="1"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_spc_form" model="ir.actions.act_window">
+        <field name="name">SPC</field>
+        <field name="res_model">mrp.production</field>
+        <field name="view_mode">form</field>
+        <field name="target">inline</field>
+    </record>
+
+    <record id="action_spc_vehicle_form" model="ir.actions.act_window">
+        <field name="name">Finished Product Tightening Analyze</field>
+        <field name="res_model">mrp.production</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref="mrp.view_mrp_production_filter"/>
+        <!--<field name="context">{'search_default_group_by_knr': 1}</field>-->
+        <field name="view_ids"
+               eval="[(5, 0, 0),
+                          (0, 0, {'view_mode': 'tree', 'view_id': ref('mrp.mrp_production_tree_view')}),
+                          (0, 0, {'view_mode': 'form', 'view_id': ref('mrp.mrp_production_form_view')})]"/>
+        <!--<field name="target">inline</field>-->
+    </record>
+
+    <record id="sa_spc_equipment_form_view" model="ir.ui.view">
+        <field name="name">sa_spc_equipment_form_view</field>
+        <field name="model">maintenance.equipment</field>
+        <field name="inherit_id" ref="sa_base.sa_maintenance_equipment_view_form_inherit"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@class='oe_button_box']" position="inside">
+                <button string="SPC" name="action_see_spc_control" type="object"
+                        icon="fa-bars" class="oe_stat_button" groups="spc.group_spc_user, spc.group_spc_manager"
+                        attrs="{'invisible': [('category_name','!=','Gun')]}"/>
+            </xpath>
+            <xpath expr="//form" position="attributes">
+                <attribute name="create">0</attribute>
+                <attribute name="edit">0</attribute>
+            </xpath>
+        </field>
+    </record>
+
+
+    <record id="sa_hr_equipment_view_tree_inherit" model="ir.ui.view">
+        <field name="name">sa_hr_equipment_view_tree_inherit</field>
+        <field name="model">maintenance.equipment</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_view_tree"/>
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="category_name"/>
+            </field>
+            <xpath expr="//tree" position="attributes">
+                <attribute name="create">0</attribute>
+                <attribute name="edit">0</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="action_spc_controller_form" model="ir.actions.act_window">
+        <field name="name">Tightening Tool Analyze</field>
+        <field name="res_model">maintenance.equipment</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref="sa_base.sa_maintenance_equipment_view_search_inherit"/>
+        <field name="context">{'search_default_is_gun': 1}</field>
+        <field name="view_ids"
+               eval="[(5, 0, 0),
+                          (0, 0, {'view_mode': 'tree', 'view_id': ref('sa_hr_equipment_view_tree_inherit')}),
+                          (0, 0, {'view_mode': 'form', 'view_id': ref('sa_spc_equipment_form_view')})]"/>
+        <!--<field name="target">inline</field>-->
+
+    </record>
+
+    <record id="action_spc_form" model="ir.actions.act_window">
+        <field name="name">SPC</field>
+        <field name="res_model">ta.spc.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="view_ids"
+               eval="[(5, 0, 0),
+                          (0, 0, {'view_mode': 'form', 'view_id': ref('sa_spc_form_tor_ang')})]"/>
+        <field name="target">inline</field>
+    </record>
+
+    <menuitem id="menu_spc_vehicle" name="Finished Product Tightening Analyze" action="action_spc_vehicle_form"
+              parent="menu_spc_analyze" sequence="10"/>
+
+    <menuitem id="menu_spc_controller" name="Tightening Tool Analyze" action="action_spc_controller_form"
+              parent="menu_spc_analyze" sequence="20"/>
+
+    <menuitem id="menu_spc" name="SPC" action="action_spc_form" parent="menu_spc_analyze" sequence="30"/>
+
+</odoo>

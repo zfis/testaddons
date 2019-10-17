@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <report
+            id="report_workcenter_labels"
+            string="Work Center Labels"
+            model="mrp.workcenter"
+            report_type="qweb-pdf"
+            name="sa_base.report_workcenterlabel"
+            file="sa_base.report_workcenterlabel"/>
+
+        <report
+            id="report_equipment_labels"
+            string="Equipment Labels"
+            model="maintenance.equipment"
+            report_type="qweb-pdf"
+            name="sa_base.report_equipmentlabel"
+            file="sa_base.report_equipmentlabel"/>
+
+        <report
+            id="report_vehicle_labels"
+            string="Vehicle Labels"
+            model="product.product"
+            report_type="qweb-pdf"
+            name="sa_base.report_productlabel"
+            file="sa_base.report_productlabel"/>
+
+    </data>
+</odoo>

@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_operation_result_user,operation.result,model_operation_result,spc.group_spc_user,1,0,0,0
+access_operation_result_manager,operation.result,model_operation_result,spc.group_spc_manager,1,0,0,0
+access_operation_result_admin,operation.result,model_operation_result,base.group_erp_manager,1,1,1,1

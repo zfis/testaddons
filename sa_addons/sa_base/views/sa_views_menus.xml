@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Top menu item -->
+        <menuitem id="menu_sa_base_root"
+            name="Configuration"
+            groups="mrp.group_mrp_manager"
+            icon="fa-cog"
+            web_icon="mrp_repair,static/description/icon.png"
+            sequence="50"/>
+
+        <menuitem
+                id="menu_product_form"
+                name="Products"
+                parent="menu_sa_base_root"
+                groups="mrp.group_mrp_manager"
+                sequence="20"/>
+
+        <menuitem
+            id="menu_bom_form"
+            name="Bill of materials"
+            parent="menu_sa_base_root"
+            groups="mrp.group_mrp_manager"
+            sequence="30"/>
+
+        <menuitem
+            id="menu_mrp_worksite_form"
+            name="Work Site"
+            parent="menu_sa_base_root"
+            groups="base.group_system,base.group_no_one"
+            sequence="40"/>
+
+        <menuitem
+            id="menu_mrp_sa_setting"
+            name="Setting"
+            parent="menu_sa_base_root"
+            groups="base.group_system,base.group_no_one"
+            sequence="50"/>
+    </data>
+</odoo>

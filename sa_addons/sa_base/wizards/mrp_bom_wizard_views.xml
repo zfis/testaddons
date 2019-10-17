@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="mrp_bom_operation_wizard_from">
+            <field name="name">mrp_bom_operation_wizard_from</field>
+            <field name="model">mrp.routing.wc.form</field>
+            <field name="groups_id" eval="[(4,ref('base.group_user'))]"/>
+            <field name="arch" type="xml">
+                <form string="Operation Setting Wizard">
+                    <group>
+                        <field name="routing_id" options="{'no_create': True, 'no_open':True}"/>
+                    </group>
+                    <group col="4">
+                        <field name="operation_ids" widget="many2many_tags" domain="[('routing_id', '=', routing_id)]" options="{'no_create': True, 'no_open':True}"/>
+                    </group>
+                    <footer>
+                        <button string="Submit" name="submit" type="object" class="btn-primary"/>
+                        <button string="Cancel" class="btn-default" special="cancel" />
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_mrp_bom_operation_wizard_from" model="ir.actions.act_window">
+            <field name="name">Operation Setting Wizard</field>
+            <field name="res_model">mrp.routing.wc.form</field>
+            <field name="type">ir.actions.act_windowm</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+    </data>
+</odoo>

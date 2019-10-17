@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="sa_quality_point_view_tree_inherit" model="ir.ui.view">
+            <field name="name">sa_quality_point_view_tree_inherit</field>
+            <field name="model">sa.quality.point</field>
+            <field name="inherit_id" ref="quality.quality_point_view_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//tree" position="attributes">
+                    <attribute name="groups">base.group_no_one,base.group_erp_manager</attribute>
+                </xpath>
+                <field name="picking_type_id" position="replace">
+                    <field name="operation_id" />
+                    <field name="bom_line_id" groups="base.group_no_one"/>
+                    <field name="tolerance_min" string="Torque(Min)"/>
+                    <field name="tolerance_max" string="Torque(Max)"/>
+                    <field name="tolerance_min_degree" string="Degree(Min)"/>
+                    <field name="tolerance_max_degree" string="Degree(Max)"/>
+                </field>
+            </field>
+        </record>
+
+
+        <record id="sa_quality_point_view_form_inherit_mrp" model="ir.ui.view">
+            <field name="name">sa_quality_point_view_form_inherit_mrp</field>
+            <field name="model">sa.quality.point</field>
+            <field name="inherit_id" ref="quality.quality_point_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form" position="attributes">
+                    <attribute name="groups">base.group_no_one,base.group_erp_manager</attribute>
+                </xpath>
+                <xpath expr="//label[@for='tolerance_min']" position="attributes">
+                    <attribute name="string">Torque Tolerance</attribute>
+                </xpath>
+                <field name="workcenter_id" position="after">
+                    <field name="operation_id_domain" invisible="1"/>
+                    <field name="operation_id" domain="operation_id_domain" attrs="{'invisible': [('workcenter_id', '=', False)],'required': [('workcenter_id', '!=', False)]}"/>
+                    <field name="max_redo_times" attrs="{'invisible': [('workcenter_id', '=', False)],'required': [('workcenter_id', '!=', False)]}"/>
+                </field>
+                <field name="product_id" position="attributes">
+                    <attribute name="required">1</attribute>
+                </field>
+                <field name="tolerance_min" position="attributes">
+                    <attribute name="string">Torque Tolerance</attribute>
+                </field>
+                <xpath expr="//div[@class='o_row'][last()]" position="after">
+                    <label for="tolerance_min_degree" string="Degree Tolerance" attrs="{'invisible': [('test_type', '!=', 'measure')]}"/>
+                    <div attrs="{'invisible': [('test_type', '!=', 'measure')]}" class="o_row">
+                        <span>from </span> <field name="tolerance_min_degree"/>
+                        <span>to </span> <field name="tolerance_max_degree"/>
+                    </div>
+                </xpath>
+                <field name="norm" position="replace">
+
+                </field>
+                <field name="norm_unit" position="replace">
+
+                </field>
+                <field name="picking_type_id" position="attributes">
+                    <attribute name="domain">[('code', '=', 'mrp_operation')]</attribute>
+                    <attribute name="options">{'no_create': True, 'no_open': True}</attribute>
+                </field>
+                <xpath expr="//notebook/page[1]" position="before">
+                    <page string="Tightening Points" name="qcp_tightening_point" attrs="{'invisible': [('test_type','!=','tightening')]}">
+                        <group name="qcp_tightening_point">
+                            <field name="operation_point_ids" nolabel="1" widget="one2many_list" context="{'default_parent_qcp_id': active_id }">
+                                <tree string="Tightening Operation Points" editable="bottom" delete="false">
+                                    <field name="sequence" widget="handle"/>
+                                    <field name="sequence" readonly="1"/>
+                                    <field name="id" readonly="1" groups="base.group_no_one"/>
+                                    <field name="name" string="Description" readonly="1"/>
+                                    <field name="product_id" required="1" options="{'no_create_edit': True,'no_open': True}"/>
+                                    <field name="product_qty"/>
+                                    <field name="program_id" options="{'no_create_edit': True,'no_open': True}"/>
+                                    <field name="max_redo_times" />
+                                    <field name="x_offset"/>
+                                    <field name="y_offset"/>
+                                    <field name="active" invisible="1"/>
+                                    <field name="is_key"/>
+                                    <field name="group_id" domain="[('operation_id', 'in', context.get('search_operation_ids', []))]" options="{'no_create_edit': True,'no_open': True}"/>
+                                    <field name="group_sequence" groups="base.group_no_one"/>
+                                </tree>
+                                <form string="Tightening Operation Points">
+                                    <group>
+                                        <field name="sequence" readonly="1"/>
+                                        <field name="product_id"/>
+                                        <field name="product_qty"/>
+                                        <field name="max_redo_times" />
+                                        <field name="program_id" />
+                                        <field name="x_offset"/>
+                                        <field name="y_offset"/>
+                                    </group>
+                                </form>
+                            </field>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="sa_quality_check_view_form_small_inherit" model="ir.ui.view">
+            <field name="name">sa_quality_check_view_form_small_inherit</field>
+            <field name="model">sa.quality.check</field>
+            <field name="inherit_id" ref="quality.quality_check_view_form_small"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@class='o_row'][last()]" position="replace">
+                    <div attrs="{'invisible': [('test_type', '!=', 'measure')]}" class="o_row">
+                        <field name="measure" string="Torque Measure" attrs="{'required': [('test_type', '=', 'measure')]}"/><span>NM</span>
+                    </div>
+                    <label for="measure_degree" attrs="{'invisible': [('test_type', '!=', 'measure')]}"/>
+                    <div attrs="{'invisible': [('test_type', '!=', 'measure')]}" class="o_row">
+                        <field name="measure_degree" string="Degree Measure" attrs="{'required': [('test_type', '=', 'measure')]}"/><span>Deg</span>
+                    </div>
+                    <field name="assembly_line_id" />
+                </xpath>
+            </field>
+        </record>
+
+        <record id="sa_quality_point_view_search_inherit" model="ir.ui.view">
+            <field name="name">sa_quality_point_view_search_inherit</field>
+            <field name="model">sa.quality.point</field>
+            <field name="inherit_id" ref="quality.quality_point_view_search"/>
+            <field name="arch" type="xml">
+                <xpath expr="//search[1]" position="replace">
+                    <search string="Quality Point">
+                        <field name="product_id" string="Product"/>
+                        <filter string="Archived" name="inactive" domain="[('active','=',False)]"/>
+                    </search>
+                </xpath>
+            </field>
+        </record>
+
+
+        <record id="sa_quality_check_view_search_inherit" model="ir.ui.view">
+            <field name="name">sa_quality_check_view_search_inherit</field>
+            <field name="model">sa.quality.check</field>
+            <field name="inherit_id" ref="quality.quality_check_view_search"/>
+            <field name="arch" type="xml">
+                <xpath expr="//search[1]" position="inside">
+                    <field name="assembly_line_id" />
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

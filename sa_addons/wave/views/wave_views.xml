@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <record id="sa_view_wave_form" model="ir.ui.view">
+            <field name="name">sa_view_wave_form</field>
+            <field name="model">wave.wave</field>
+            <field name="arch" type="xml">
+                <form string="Scope">
+                    <header>
+                        <button string="Query" type="object" name="button_query"  class="oe_highlight"/>
+                        <button string="Show Curve" type="object" name="button_show" class="oe_highlight"/>
+                    </header>
+                    <sheet>
+                        <group string="Query Parameters">
+                            <group string="Time">
+                                <field name="query_date_from" required="1"/>
+                                <field name="query_date_to"/>
+                            </group>
+                            <group string="Product">
+                                <field name="vehicle_id" />
+                                <field name="screw_id" />
+                            </group>
+                            <group string="Manufacture">
+                                <field name="segment_id" />
+                                <field name="knr_code" />
+                                <field name="vin_code" />
+                                <field name="assembly_line_id" />
+                                <!--<field name="segment_id" />-->
+                            </group>
+                            <group>
+                                <field name="limit" required="1"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <notebook>
+                        <page string="Results Information">
+                            <field name="result_line_ids">
+                                <tree string="Result Lines" create="0" delete="0" editable="top">
+                                    <field name="selected" widget="checkbox"/>
+                                    <field name="product_id"/>
+                                    <field name="consu_product_id" />
+                                    <field name="control_date" string="Checked Time"/>
+                                    <field name="measure_torque"/>
+                                    <field name="measure_degree"/>
+                                    <field name="measure_t_don" />
+                                    <field name="measure_result" />
+                                </tree>
+                            </field>
+
+                        </page>
+                        <page string="Curve">
+                            <label for="wave" string="Curve"/>
+                            <div>
+                                <field name="wave" widget="echart"/>
+                            </div>
+                        </page>
+                    </notebook>
+                    <div class="oe_chatter"/>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_wave_form" model="ir.actions.act_window">
+            <field name="name">Curve</field>
+            <field name="res_model">wave.wave</field>
+            <field name="view_mode">form</field>
+            <field name="target">inline</field>
+        </record>
+
+</odoo>

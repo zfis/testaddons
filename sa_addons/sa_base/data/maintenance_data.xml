@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data noupdate="1">
+
+    <!-- Equipment categories -->
+    <record id="equipment_hmi" model="maintenance.equipment.category">
+        <field name="name">HMI</field>
+        <field name="technical_name">HMI</field>
+        <!--<field name="alias_id" ref="maintenance.mail_alias_equipment"/>-->
+    </record>
+    <record id="equipment_screw_controller" model="maintenance.equipment.category">
+        <field name="name">Controller</field>
+        <field name="technical_name">Controller</field>
+        <!--<field name="alias_id" ref="maintenance.mail_alias_equipment"/>-->
+    </record>
+    <record id="equipment_MasterPC" model="maintenance.equipment.category">
+        <field name="name">MasterPC</field>
+        <field name="technical_name">MasterPC</field>
+        <!--<field name="alias_id" ref="maintenance.mail_alias_equipment"/>-->
+    </record>
+    <record id="equipment_Gun" model="maintenance.equipment.category">
+        <field name="name">Tightening Gun</field>
+        <field name="technical_name">Gun</field>
+        <!--<field name="alias_id" ref="maintenance.mail_alias_equipment"/>-->
+    </record>
+
+    <record id="equipment_Wrench" model="maintenance.equipment.category">
+        <field name="name">Tightening Wrench</field>
+        <field name="technical_name">wrench</field>
+        <!--<field name="alias_id" ref="maintenance.mail_alias_equipment"/>-->
+    </record>
+
+    <record id="equipment_IO" model="maintenance.equipment.category">
+        <field name="name">IO</field>
+        <field name="technical_name">IO</field>
+        <!--<field name="alias_id" ref="maintenance.mail_alias_equipment"/>-->
+    </record>
+
+    <record id="equipment_RFID" model="maintenance.equipment.category">
+        <field name="name">RFID</field>
+        <field name="technical_name">RFID</field>
+        <!--<field name="alias_id" ref="maintenance.mail_alias_equipment"/>-->
+    </record>
+
+</data>
+</odoo>

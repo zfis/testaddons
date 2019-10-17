@@ -1,0 +1,18 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="sa_svw_sa_spc_form_tor_ang_inherit">
+            <field name="name">sa_svw_sa_spc_form_tor_ang_inherit</field>
+            <field name="model">ta.spc.wizard</field>
+            <field name="inherit_id" ref="spc.sa_spc_form_tor_ang"/>
+            <field name="arch" type="xml">
+                <field name="product_id" position="attributes">
+                    <attribute name="domain">[('sa_type', '=', 'vehicle')]</attribute>
+                    <attribute name="string">Vehicle</attribute>
+                </field>
+                <field name="product_sku_code" position="attributes">
+                    <attribute name="string">Vehicle Type Code</attribute>
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>

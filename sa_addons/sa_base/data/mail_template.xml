@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="mt_op_point_max_redo_time" model="mail.message.subtype">
+            <field name="name">作业点最大重试次数修改</field>
+            <field name="res_model">operation.point</field>
+            <field name="default" eval="False"/>
+            <field name="hidden" eval="True"/>
+            <field name="description">作业点最大重试次数修改</field>
+        </record>
+        <record id="mt_op_program_id" model="mail.message.subtype">
+            <field name="name">作业点程序号修改</field>
+            <field name="res_model">operation.point</field>
+            <field name="default" eval="False"/>
+            <field name="hidden" eval="True"/>
+            <field name="description">作业点程序号修改</field>
+        </record>
+
+        <record id="mt_operation_op_program_id" model="mail.message.subtype">
+            <field name="name">作业点程序号修改</field>
+            <field name="sequence">22</field>
+            <field name="res_model">mrp.routing.workcenter</field>
+            <field name="parent_id" eval="ref('sa_base.mt_op_program_id')"/>
+            <field name="relation_field">operation_id</field>
+        </record>
+
+        <record id="mt_operation_op_point_max_redo_time" model="mail.message.subtype">
+            <field name="name">作业点最大重试次数修改</field>
+            <field name="sequence">10</field>
+            <field name="res_model">mrp.routing.workcenter</field>
+            <field name="parent_id" eval="ref('sa_base.mt_op_point_max_redo_time')"/>
+            <field name="relation_field">operation_id</field>
+        </record>
+    </data>
+</odoo>

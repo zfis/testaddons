@@ -1,0 +1,5 @@
+<odoo>
+  <data>
+      <delete model="ir.ui.menu" id="sa_base.sa_menu_job_action" />
+  </data>
+</odoo>

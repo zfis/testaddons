@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <record id="view_aiis_config_settings" model="ir.ui.view">
+            <field name="name">view_aiis_config_settings</field>
+            <field name="model">aiis.config.settings</field>
+            <field name="groups_id" eval="[(4, ref('base.group_system'))]"/>
+            <field name="arch" type="xml">
+                <form string="Settings AIIS" class="oe_form_configuration">
+                    <header>
+                        <button string="Apply" type="object" name="execute" class="oe_highlight"/>
+                        or
+                        <button string="Cancel" type="object" name="cancel" class="oe_link"/>
+                    </header>
+                    <div>
+                        <group>
+                            <group string="Address">
+                                <field name="aiis_urls"/>
+                            </group>
+                        </group>
+                    </div>
+
+                </form>
+            </field>
+        </record>
+
+        <record id="view_spc_config_settings" model="ir.ui.view">
+                <field name="name">view_spc_config_settings</field>
+                <field name="model">spc.config.settings</field>
+                <field name="arch" type="xml">
+                    <form string="Settings SPC" class="oe_form_configuration">
+                        <header>
+                            <button string="Apply" type="object" name="execute" class="oe_highlight"/>
+                            or
+                            <button string="Cancel" type="object" name="cancel" class="oe_link"/>
+                        </header>
+                        <div>
+                            <group>
+                                <group string="Weibull Distribution">
+                                    <field name="scale_parameter"/>
+                                    <field name="shape_parameter"/>
+                                </group>
+                            </group>
+                        </div>
+
+                    </form>
+                </field>
+            </record>
+
+
+            <record id="view_smart_config_settings" model="ir.ui.view">
+                <field name="name">view_smart_config_settings</field>
+                <field name="model">wo.config.settings</field>
+                <field name="arch" type="xml">
+                    <form string="Settings Smart Assembly" class="oe_form_configuration">
+                        <header>
+                            <button string="Apply" type="object" name="execute" class="oe_highlight"/>
+                            or
+                            <button string="Cancel" type="object" name="cancel" class="oe_link"/>
+                        </header>
+                        <div>
+                            <group>
+                                <group string="Work Order">
+                                    <field name="push_wo_number"/>
+                                </group>
+                            </group>
+                        </div>
+
+                    </form>
+                </field>
+            </record>
+
+            <record id="action_spc_settings" model="ir.actions.act_window">
+                <field name="name">SPC Settings</field>
+                <field name="res_model">spc.config.settings</field>
+                <field name="view_mode">form</field>
+                <field name="target">inline</field>
+            </record>
+
+
+
+         <record id="action_aiis_settings" model="ir.actions.act_window">
+            <field name="name">Aiis Settings</field>
+            <field name="res_model">aiis.config.settings</field>
+            <field name="view_mode">form</field>
+            <field name="target">inline</field>
+        </record>
+
+        <record id="action_smart_settings" model="ir.actions.act_window">
+            <field name="name">Smart Assembly Settings</field>
+            <field name="res_model">wo.config.settings</field>
+            <field name="view_mode">form</field>
+            <field name="target">inline</field>
+        </record>
+
+
+        <menuitem id="menu_spc_settings"
+              name="Configuration"
+              groups="base.group_system"
+              parent="menu_spc_scope_root" sequence="50"/>
+
+
+        <menuitem id="menu_spc_param_settings"
+              name="SPC"
+              groups="spc.group_spc_user"
+              parent="menu_spc_settings" action="action_spc_settings" sequence="50"/>
+
+
+        <menuitem id="menu_sa_param_settings"
+              name="Smart Assembly"
+              groups="spc.group_spc_user"
+              parent="menu_spc_settings" action="action_smart_settings" sequence="60"/>
+
+
+        <menuitem id="menu_aiis_settings"
+              name="AIIS"
+              groups="base.group_system"
+              parent="menu_spc_settings" action="action_aiis_settings" sequence="10"/>
+
+
+</odoo>

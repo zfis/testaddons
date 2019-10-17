@@ -1,0 +1,39 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="sa_svw_operation_result_view_form_inherit">
+            <field name="name">sa_svw_operation_result_view_form_inherit</field>
+            <field name="model">operation.result</field>
+            <field name="inherit_id" ref="spc.operation_result_view_form"/>
+            <field name="arch" type="xml">
+                <field name="track_no" position="replace">
+                </field>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="sa_svw_operation_result_view_tree_inherit">
+            <field name="name">sa_svw_operation_result_view_tree_inherit</field>
+            <field name="model">operation.result</field>
+            <field name="inherit_id" ref="spc.operation_result_view_tree"/>
+            <field name="arch" type="xml">
+                <field name="track_no" position="replace">
+                </field>
+                <field name="job" position="replace">
+                </field>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="sa_svw_operation_result_view_search_inherit">
+            <field name="name">sa_svw_operation_result_view_search_inherit</field>
+            <field name="model">operation.result</field>
+            <field name="inherit_id" ref="spc.operation_result_view_search"/>
+            <field name="arch" type="xml">
+                <field name="name" position="replace">
+                    <field name="name" string="KNR/VIN" filter_domain="['|','|', ('track_no','ilike',self),('production_id.knr','ilike',self),('production_id.vin','ilike',self)]"/>
+                </field>
+                <xpath expr="//filter[@name='group_by_finished_product']" position="attributes">
+                    <attribute name="string">Vehicle</attribute>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

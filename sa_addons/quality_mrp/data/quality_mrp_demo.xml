@@ -1,0 +1,19 @@
+<odoo>
+    <!-- Quality Control From Manufacturing -->
+
+    <!-- For [FURN001] Computer Desk-->
+    <record id="quality_point3" model="sa.quality.point">
+        <field name="product_id" ref="mrp.product_product_computer_desk"/>
+        <field name="product_tmpl_id" ref="mrp.product_product_computer_desk_product_template"/>
+        <field name="picking_type_id" ref="mrp.picking_type_manufacturing"/>
+    </record>
+
+    <!-- Quality Control From WorkOrder -->
+    <!-- For [PCSC234] Computer SC234 -->
+    <record id="quality_point4" model="sa.quality.point">
+        <field name="product_id" ref="product.product_product_3"/>
+        <field name="product_tmpl_id" ref="product.product_product_3_product_template"/>
+        <field name="workcenter_id" ref="mrp.mrp_workcenter_0"/>
+        <field name="picking_type_id" ref="mrp.picking_type_manufacturing"/>
+    </record>
+</odoo>

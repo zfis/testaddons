@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="report_result_tighting">
+            <t t-call="report.html_container">
+                <t t-call="report.external_layout">
+                    <div class="page">
+                        <h2>
+                        拧紧结果报告
+                        </h2>
+                        <table class="table table-condensed">
+                        <thead>
+                            <tr>
+                                <th><strong>Date</strong></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span t-esc="get_day"/>
+                                </td>
+                            </tr>
+                        </tbody>
+                        </table>
+                        <table class="table table-condensed"  >
+                            <thead>
+                                <tr>
+                                    <th><strong>Track Number(Serial Number/VIN)</strong></th>
+                                </tr>
+                            </thead>
+                            <tr t-foreach="docs" t-as="line">
+                                <td  t-if="line">
+                                    <span t-esc="line[0]"/>
+                                </td>
+                                <td t-if="line">
+                                    <table class="table table-condensed" t-if="line[1]">
+                                        <thead>
+                                            <tr>
+                                                <th><strong>拧紧时间</strong></th>
+                                                <th><strong>程序号</strong></th>
+                                                <th><strong>结果</strong></th>
+                                            </tr>
+                                        </thead>
+                                        <tr t-foreach="line[1]" t-as="result">
+                                            <td><span t-esc="result[0]"/></td>
+                                            <td><span t-esc="result[1]"/></td>
+                                            <td><span t-esc="result[2]"/></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                            </tr>
+                        </table>
+                        <!--<t t-if="o.filter == 'product' and o.product_id">-->
+                          <!--<div class="row">-->
+                            <!--<div class="col-xs-4 pull-right">-->
+                                 <!--<table class="table table-condensed">-->
+                                    <!--<tr class="border-black">-->
+                                        <!--<td><strong>Total Quantity</strong></td>-->
+                                        <!--<td class="text-right">-->
+                                            <!--<span t-field="o.total_qty"/> <span t-field="o.product_id.uom_id"/>-->
+                                        <!--</td>-->
+                                    <!--</tr>-->
+                                <!--</table>-->
+                            <!--</div>-->
+                          <!--</div>-->
+                        <!--</t>-->
+                    </div>
+                </t>
+             </t>
+        </template>
+
+
+
+    </data>
+</odoo>

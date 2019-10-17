@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <!-- Routings Workcenter -->
+        <record id="sa_mrp_routing_workcenter_tree_view" model="ir.ui.view">
+            <field name="name">sa_mrp_routing_workcenter_tree_view</field>
+            <field name="model">mrp.routing.workcenter</field>
+            <field name="arch" type="xml">
+                <tree string="Routing Work Centers">
+                    <field name="sequence" widget="handle"/>
+                    <field name="name"/>
+                    <!--<field name="workcenter_id"/>-->
+                    <field name="max_redo_times" />
+                    <field name="routing_id" />
+                    <field name="group_id"/>
+                    <!--<field name="op_job_id"/>-->
+                </tree>
+            </field>
+        </record>
+
+        <record id="operation_download_action" model="ir.actions.server">
+            <field name="name">Download Operation</field>
+            <field name="model_id" ref="mrp.model_mrp_routing_workcenter"/>
+            <field name="state">code</field>
+            <field name="code">records.button_send_mrp_routing_workcenter()</field>
+        </record>
+
+        <record id="run_operation_download_action" model="ir.values">
+            <field name="model_id" ref="mrp.model_mrp_routing_workcenter"/>
+            <field name="name">Download Operation</field>
+            <field name="key2">client_action_multi</field>
+            <field name="key">action</field>
+            <field name="model">mrp.routing.workcenter</field>
+            <field name="value" eval="'ir.actions.server,' + str(ref('operation_download_action'))" />
+        </record>
+
+        <record id="sa_mrp_routing_workcenter_form_view" model="ir.ui.view">
+            <field name="name">sa_mrp_routing_workcenter_form_view</field>
+            <field name="model">mrp.routing.workcenter</field>
+            <field name="arch" type="xml">
+                <form string="Routing Work Centers">
+                    <header>
+                        <button string="ReSequence" type="object" name="button_resequence"  class="oe_highlight"/>
+                        <button string="Download Operation" type="object" name="button_send_mrp_routing_workcenter"  class="oe_highlight"/>
+                    </header>
+                    <sheet>
+                          <div class="oe_button_box" name="button_box" groups="base.group_user">
+                            <button class="oe_stat_button" type="object" name="action_sa_view_routing_tracking" icon="fa-table">
+                                <field string="工艺修改记录" name="routing_tracking_count" widget="statinfo"/>
+                            </button>
+                          </div>
+                        <group>
+                            <group name="description">
+                                <field name="name"/>
+                                <field name="sa_routing_ids" readonly="1" widget="many2many_tags" groups="base.group_no_one"/>
+
+                                <field name="workcenter_ids" readonly="1" widget="many2many_tags" groups="base.group_no_one"/>
+                                <!--<field name="group_id"  options="{'no_edit': True, 'no_create': True}" />-->
+                                <!--<field name="workcenter_id" options="{'no_edit': True, 'no_create': True}"/>-->
+                                <field name="workcenter_group" options="{'no_edit': True, 'no_create': True}"/>
+                                <field name="company_id" options="{'no_edit': True, 'no_create': True}" groups="base.group_multi_company"/>
+                            </group>
+                            <group name="parameters">
+                                <!--<field name="op_job_id"/>-->
+                                <field name="max_redo_times" required="1"/>
+                                <field name="max_op_time" required="1"/>
+                            </group>
+                        </group>
+                        <group>
+                            <group name="description">
+                              <field name="sa_step_ids" widget="many2many_tags" domain="[('up_step_id', '=', False)]" options="{'no_create': True, 'no_open':True}"/>
+                            </group>
+                         </group>
+                        <notebook>
+                            <page string="工艺路线图片">
+                                <field name="worksheet_img" widget="imageEditor" required="1"/>
+                            </page>
+                            <page string="工艺文件">
+                                <field name="worksheet" widget="pdf_viewer"/>
+                            </page>
+                            <!--<page string="Operation Points">-->
+                                 <!--<field name="operation_point_ids" widget="one2many_list" colspan="4" nolabel="1" mode="tree" context="{'default_operation_id':active_id, 'search_operation_ids': [active_id]}">-->
+                                    <!--<tree string="Operation Points" editable="bottom" delete="false">-->
+                                        <!--<field name="sequence" widget="handle"/>-->
+                                        <!--<field name="sequence" readonly="1"/>-->
+                                        <!--<field name="id" readonly="1" groups="base.group_no_one"/>-->
+                                        <!--<field name="name" string="Description" />-->
+                                        <!--<field name="product_id" required="1" context="{'default_type': 'product'}" domain="[('sa_type', '=', 'screw')]" options="{'no_create_edit': True,'no_open': True}"/>-->
+                                        <!--<field name="product_qty"/>-->
+                                        <!--<field name="program_id" options="{'no_create_edit': True,'no_open': True}"/>-->
+                                        <!--<field name="max_redo_times" />-->
+                                        <!--<field name="x_offset"/>-->
+                                        <!--<field name="y_offset"/>-->
+                                        <!--<field name="active" invisible="1"/>-->
+                                        <!--<field name="is_key"/>-->
+                                        <!--<field name="group_id" domain="[('operation_id', 'in', context.get('search_operation_ids', []))]" options="{'no_create_edit': True,'no_open': True}"/>-->
+                                        <!--<field name="group_sequence" groups="base.group_no_one"/>-->
+                                    <!--</tree>-->
+                                    <!--<form string="Operation Points">-->
+                                        <!--<group>-->
+                                            <!--<field name="sequence" readonly="1"/>-->
+                                            <!--<field name="product_id"/>-->
+                                            <!--<field name="product_qty"/>-->
+                                            <!--<field name="max_redo_times" />-->
+                                            <!--<field name="program_id" />-->
+                                            <!--<field name="x_offset"/>-->
+                                            <!--<field name="y_offset"/>-->
+                                        <!--</group>-->
+                                    <!--</form>-->
+                                <!--</field>-->
+                            <!--</page>-->
+                             <!--<page string="Operation Points Group(multi-spindle)">-->
+                                <!--<field name="operation_point_group_ids" widget="one2many_list" colspan="4" nolabel="1" mode="tree" context="{'default_operation_id':active_id, 'search_operation_ids': [active_id]}">-->
+                                    <!--<tree string="Operation Points Group(multi-spindle)" editable="bottom" delete="true">-->
+                                        <!--<field name="sequence" widget="handle"/>-->
+                                        <!--<field name="name" />-->
+                                        <!--<field name="key_num" />-->
+                                        <!--&lt;!&ndash;<field name="name" domain="[('operation_id', 'in', context.get('search_operation_ids', []))]" options="{'no_create_edit': True,'no_open': True}" widget="many2many_tags"/>&ndash;&gt;-->
+                                    <!--</tree>-->
+                                    <!--<form string="Operation Points Group(multi-spindle)">-->
+                                        <!--<group>-->
+                                            <!--<field name="sequence" readonly="1"/>-->
+                                            <!--<field name="name" />-->
+                                        <!--</group>-->
+                                    <!--</form>-->
+                                <!--</field>-->
+                            <!--</page>-->
+                            <page string="Description">
+                                <field name="note"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+    <record id="sa_mrp_routing_workcenter_action" model="ir.actions.act_window">
+        <field name="name">Routing Work Centers</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">mrp.routing.workcenter</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_ids"
+               eval="[(5, 0, 0),
+                      (0, 0, {'view_mode': 'tree', 'view_id': ref('sa_mrp_routing_workcenter_tree_view')}),
+                      (0, 0, {'view_mode': 'form', 'view_id': ref('sa_mrp_routing_workcenter_form_view')})]"/>
+    </record>
+
+    <record id="sa_mrp_routing_form_view" model="ir.ui.view">
+            <field name="name">sa_mrp_routing_form_view</field>
+            <field name="model">mrp.routing</field>
+            <field name="arch" type="xml">
+                <form string="Routing">
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button class="oe_stat_button" name="action_sa_view_operation" type="object" icon="fa-list-alt">
+                                <field string="Operation" name="operation_count" widget="statinfo" />
+                            </button>
+                            <button class="oe_stat_button" name="toggle_active" type="object" icon="fa-archive" groups="base.group_system">
+                                <field name="active" widget="boolean_button"
+                                    options='{"terminology": "archive"}'/>
+                            </button>
+                        </div>
+                        <div class="oe_title">
+                            <h1>
+                                <field name="code" required="1" readonly="False" string="Routing Code"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="name" string="Routing Name"/>
+                            </group>
+                            <group>
+                                <field name="location_id" groups="stock.group_adv_location"/>
+                           </group>
+                        </group>
+                        <group>
+                        <field name="sa_operation_ids" widget="many2many_tags" options="{'no_create': True, 'no_open':True}"/>
+                        </group>
+                        <notebook>
+                            <!--<page string="Work Center Operations">-->
+                                <!--<field name="operation_ids" mode="tree">-->
+                                    <!--<tree string="Operation Items" edit="false" create="false" delete="false">-->
+                                        <!--<field name="sequence" widget="handle"/>-->
+                                        <!--<field name="name"/>-->
+                                        <!--<field name="workcenter_id" />-->
+                                        <!--<field name="group_id" />-->
+                                        <!--<field name="op_job_id"/>-->
+                                    <!--</tree>-->
+                                <!--</field>-->
+                            <!--</page>-->
+                            <page string="Notes">
+                                <field name="note"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+    <record id="sa_mrp_routing_tree_view" model="ir.ui.view">
+        <field name="name">sa_mrp_routing_tree_view</field>
+        <field name="model">mrp.routing</field>
+        <field name="arch" type="xml">
+            <tree string="Routing">
+                <field name="code"/>
+                <field name="name"/>
+                <field name="active" invisible="1"/>
+                <field name="location_id" groups="stock.group_adv_location"/>
+                <field name="company_id" groups="base.group_multi_company"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="sa_mrp_routing_search_view" model="ir.ui.view">
+        <field name="name">mrp.routing.search</field>
+        <field name="model">mrp.routing</field>
+        <field name="arch" type="xml">
+            <search string="Routing">
+                <field name="name" string="Routing" filter_domain="['|',('name','ilike',self),('code','ilike',self)]"/>
+                <filter string="Archived" name="inactive" domain="[('active','=',False)]"/>
+                <field name="company_id" groups="base.group_multi_company"/>
+                <group expand="0" string="Group By...">
+                    <filter string="Production Location" domain="[]" context="{'group_by':'location_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="sa_mrp_routing_action" model="ir.actions.act_window">
+        <field name="name">Routings</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">mrp.routing</field>
+        <field name="view_mode">tree,form,kanban</field>
+        <field name="search_view_id" ref="sa_mrp_routing_search_view"/>
+        <field name="context">{'default_type':'product','default_sa_type':'screw','search_default_screw': 1}</field>
+        <field name="view_ids"
+               eval="[(5, 0, 0),
+                      (0, 0, {'view_mode': 'tree', 'view_id': ref('sa_mrp_routing_tree_view')}),
+                      (0, 0, {'view_mode': 'form', 'view_id': ref('sa_mrp_routing_form_view')}),
+                      (0, 0, {'view_mode': 'kanban'})]"/>
+        <field name="help" type="html">
+          <p class="oe_view_nocontent_create">
+            Click to create a new routing.
+          </p><p>
+            Routings allow you to create and manage the manufacturing
+            operations that should be followed within your work centers in
+            order to produce a product.  They are attached to bills of
+            materials that will define the required raw materials.
+          </p>
+        </field>
+    </record>
+
+
+
+    <menuitem id="menu_mrp_routing_form_action"
+            action="sa_mrp_routing_action"
+            parent="menu_bom_form"
+            sequence="20"/>
+
+    <menuitem id="menu_mrp_routing_workcenter_action"
+            action="sa_mrp_routing_workcenter_action"
+            parent="menu_bom_form"
+            sequence="30"/>
+</odoo>

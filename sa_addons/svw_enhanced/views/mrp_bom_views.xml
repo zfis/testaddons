@@ -1,0 +1,30 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="sa_svw_mrp_bom_form_view_inherit">
+            <field name="name">sa_svw_mrp_bom_form_view_inherit</field>
+            <field name="model">mrp.bom</field>
+            <field name="inherit_id" ref="sa_base.sa_mrp_bom_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page/field[@name='bom_line_ids']/tree/field[@name='controller_id']"
+                       position="attributes">
+                    <attribute name="required">1</attribute>
+                </xpath>
+                <xpath expr="//page/field[@name='bom_line_ids']/tree/field[@name='gun_id']" position="attributes">
+                    <attribute name="required">1</attribute>
+                </xpath>
+                <xpath expr="//page/field[@name='bom_line_ids']/tree/field[@name='product_id']" position="attributes">
+                    <attribute name="required">1</attribute>
+                </xpath>
+                <field name="operation_id" position="after">
+                    <field name="program_id" required="1"/>
+                    <field name="masterpc_id" readonly="1"/>
+                    <!-- todo: 未来pset号以及控制器只有在排产后才能获取 -->
+                    <field name="controller_id" domain="controller_id_domain" options="{'no_quick_create':True,'no_create_edit':True}"/>
+                    <field name="gun_id" domain="gun_id_domain" options="{'no_quick_create':True,'no_create_edit':True}"/>
+                </field>
+                <xpath expr="//page/field[@name='bom_line_ids']/tree/field[@name='op_job_id']" position="replace">
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

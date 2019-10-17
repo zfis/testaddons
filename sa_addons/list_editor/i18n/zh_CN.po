@@ -1,0 +1,131 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* list_editor
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0+e-20171123\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-06-18 02:50+0000\n"
+"PO-Revision-Date: 2018-06-18 02:50+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: list_editor
+#: selection:list.editor,editable:0
+msgid "Bottom"
+msgstr "底部"
+
+#. module: list_editor
+#: model:ir.ui.view,arch_db:list_editor.list_editor_form
+msgid "Cancel"
+msgstr "取消"
+
+#. module: list_editor
+#: model:ir.ui.view,arch_db:list_editor.list_editor_form
+msgid "Change"
+msgstr "更改"
+
+#. module: list_editor
+#: model:ir.model.fields,field_description:list_editor.field_list_editor_create_uid
+msgid "Created by"
+msgstr "创建人"
+
+#. module: list_editor
+#: model:ir.model.fields,field_description:list_editor.field_list_editor_create_date
+msgid "Created on"
+msgstr "创建时间"
+
+#. module: list_editor
+#: model:ir.model.fields,field_description:list_editor.field_list_editor_default_visible_columns
+msgid "Default visible columns"
+msgstr "默认显示列"
+
+#. module: list_editor
+#. openerp-web
+#: code:addons/list_editor/static/src/xml/debug.xml:6
+#, python-format
+msgid "Disable List Editor"
+msgstr "关闭列视图编辑器"
+
+#. module: list_editor
+#: model:ir.model.fields,field_description:list_editor.field_list_editor_display_name
+msgid "Display Name"
+msgstr "显示名称"
+
+#. module: list_editor
+#: model:ir.model.fields,field_description:list_editor.field_list_editor_editable
+msgid "Editable"
+msgstr "可编辑"
+
+#. module: list_editor
+#. openerp-web
+#: code:addons/list_editor/static/src/xml/debug.xml:9
+#, python-format
+msgid "Enable List Editor"
+msgstr "启动列视图编辑器"
+
+#. module: list_editor
+#: model:ir.model,name:list_editor.model_ir_model_fields
+#: model:ir.model.fields,field_description:list_editor.field_list_editor_visible_fields
+msgid "Fields"
+msgstr "字段"
+
+#. module: list_editor
+#: model:ir.model.fields,field_description:list_editor.field_list_editor_fields_sequence
+msgid "Fields sequence"
+msgstr "字段顺序"
+
+#. module: list_editor
+#: model:ir.model.fields,field_description:list_editor.field_list_editor_full_key
+msgid "Full key"
+msgstr "全部"
+
+#. module: list_editor
+#: model:ir.model.fields,field_description:list_editor.field_list_editor_id
+msgid "ID"
+msgstr "ID"
+
+#. module: list_editor
+#: model:ir.model.fields,field_description:list_editor.field_list_editor___last_update
+msgid "Last Modified on"
+msgstr "最后修改日"
+
+#. module: list_editor
+#: model:ir.model.fields,field_description:list_editor.field_list_editor_write_uid
+msgid "Last Updated by"
+msgstr "最后更新人"
+
+#. module: list_editor
+#: model:ir.model.fields,field_description:list_editor.field_list_editor_write_date
+msgid "Last Updated on"
+msgstr "最后更新时间"
+
+#. module: list_editor
+#: model:ir.ui.view,arch_db:list_editor.list_editor_form
+msgid "List Editor"
+msgstr "列视图编辑器"
+
+#. module: list_editor
+#: model:ir.model.fields,field_description:list_editor.field_list_editor_model_id
+msgid "Model"
+msgstr "模型"
+
+#. module: list_editor
+#: model:ir.ui.view,arch_db:list_editor.list_editor_form
+msgid "Restore"
+msgstr "还原"
+
+#. module: list_editor
+#: selection:list.editor,editable:0
+msgid "Top"
+msgstr "顶部"
+
+#. module: list_editor
+#: model:ir.model,name:list_editor.model_list_editor
+msgid "list.editor"
+msgstr "list.editor"

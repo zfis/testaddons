@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_sa_config" model="ir.ui.view">
+            <field name="name">Smart settings</field>
+            <field name="model">sa.config.settings</field>
+            <field name="arch" type="xml">
+                <form string="Configure" class= "oe_form_configuration">
+                    <header>
+                        <button string="Apply" type="object" name="execute" class="oe_highlight"/>
+                        <button string="Cancel" type="object" name="cancel" class="oe_link" special="cancel"/>
+                    </header>
+                    <group string="Manufacturing Order">
+                        <field name="generate_result_sequence" widget="radio"/>
+                        <field name="auto_operation_inherit" widget="radio"/>
+                        <field name="auto_operation_point_inherit" widget="radio"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+        <record id="action_sa_config_configuration" model="ir.actions.act_window">
+            <field name="name">Configure</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">sa.config.settings</field>
+            <field name="view_mode">form</field>
+            <field name="target">inline</field>
+        </record>
+
+        <menuitem id="menu_sa_config_configuration" name="Settings" parent="menu_mrp_sa_setting"
+            sequence="30" action="action_sa_config_configuration" groups="base.group_system"/>
+    </data>
+</odoo>

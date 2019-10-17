@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <report
+            auto="False"
+            id="tight_result_report"
+            model="tight.result.report"
+            name="spc.report_result_tighting"
+            file="spc.report_result_tighting"
+            report_type="qweb-pdf"
+            string="Report Tightening Result" />
+
+        <record id="view_report_tighting_detail" model="ir.ui.view">
+            <field name="name">Report Tightening Result</field>
+            <field name="model">tight.result.report</field>
+            <field name="arch" type="xml">
+            <form string="Report Tightening Result">
+                <footer>
+                    <button name="print_report" string="Print" type="object" class="btn-primary"/>
+                    <button string="Cancel" class="btn-default" special="cancel" />
+                </footer>
+                <group>
+                    <field name="date_from"/>
+                    <field name="date_to"/>
+                </group>
+            </form>
+            </field>
+        </record>
+
+        <record id="action_report_tighting_result" model="ir.actions.act_window">
+            <field name="name">Report Tightening Result</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">tight.result.report</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem
+        name="Report Tightening Result"
+        parent="menu_spc_scope_root"
+        action="action_report_tighting_result"
+        sequence="100"
+        id="menu_report_tighting_result"
+       />
+    </data>
+</odoo>

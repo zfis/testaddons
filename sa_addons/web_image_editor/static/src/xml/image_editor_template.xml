@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    Copyright 2016-2017 LasLabs Inc.
+    License LGPL-3 or later (http://www.gnu.org/licenses/lgpl.html).
+-->
+
+<templates id="template">
+    <t t-name="ImageEditor">
+        <div id="tui-image-editor-container">
+            <button type="button" class="btn btn-primary js_padding_normal js_add_mask">Add New Mark</button>
+            <button type="button" class="btn btn-warning js_padding_normal js_remove_mask">Remove Mark</button>
+            <button type="button" class="btn btn-danger js_padding_normal js_remove_all_mask">Remove All Mark</button>
+            <button type="button" class="btn btn-primary btn-sm o_form_button_save js_padding_normal js_save">Save</button>
+            <div id="img_block" class="img-block">
+            </div>
+        </div>
+    </t>
+
+</templates>

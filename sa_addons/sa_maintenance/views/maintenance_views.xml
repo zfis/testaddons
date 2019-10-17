@@ -1,0 +1,101 @@
+<odoo>
+  <data>
+
+    <record id="sa_maintenance_request_view_form_inherit_hr" model="ir.ui.view">
+        <field name="name">sa_maintenance_request_view_form_inherit_hr</field>
+        <field name="model">maintenance.request</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_request_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header/button[@name='archive_equipment_request']" position="before">
+                <button name="assign_ticket_to_self" string="I take it" type="object" class="oe_highlight"/>
+                <button name="post_maintenance_req" string="发送维护请求到用户界面" type="object" class="oe_highlight"/>
+            </xpath>
+          <xpath expr="//field[@name='production_id']" position="replace">
+              <field name="production_id" invisible="1"/>
+              <field name="action_times" required="1" />
+          </xpath>
+          <xpath expr="//field[@name='workorder_id']" position="replace">
+              <field name="workorder_id" invisible="1"/>
+          </xpath>
+          <xpath expr="//field[@name='description']" position="replace">
+            <notebook colspan="4">
+                <page string="Description" >
+                  <field name="description" placeholder="Add an internal note..." />
+                </page>
+                <page string="Check List" >
+                  <field name="check_point_action_ids" nolabel="1" widget="one2many_list" mode="tree" context="{'default_request_id': active_id}">
+                    <tree string="Check Point Action Lines" editable="bottom" decoration-success="measure_success == 'pass'" decoration-danger="measure_success == 'fail'">
+                        <field name="category_id" required="1"/>
+                        <field name="test_type" />
+                        <field name="description" />
+                        <field name="norm" />
+                        <field name="tolerance_min" />
+                        <field name="tolerance_max" />
+                        <field name="measure" />
+                        <field name="measure_success" attrs="{'readonly': [('test_type', '=', 'measure')]}" />
+                    </tree>
+                </field>
+                </page>
+            </notebook>
+          </xpath>
+        </field>
+    </record>
+
+      <record id="sa_maintenance_equipment_view_form_inherit" model="ir.ui.view">
+        <field name="name">sa_maintenance_equipment_view_form_inherit</field>
+        <field name="model">maintenance.equipment</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_view_form"/>
+        <field name="arch" type="xml">
+            <!--<xpath expr="//group[@name='statistisc']" position="inside">-->
+                <!--<label for="mttf" string="Mean Time To Failure"/>-->
+                <!--<div class="o_row">-->
+                    <!--<field name="mttf" class="oe_read_only"/> days-->
+                <!--</div>-->
+            <!--</xpath>-->
+            <xpath expr="//group[@name='maintenance']" position="inside">
+                <field name="next_action_times" class="oe_read_only" string="Next Preventive Maintenance Tightening Times"/>
+                <label for="maintenance_lead_time" string="Maintenance Lead Time"/>
+                <div class="o_row">
+                    <field name="maintenance_lead_time" /> days
+                </div>
+                <field name="times" string="Before Preventive Times"/>
+                <field name="times_margin" required="1" />
+            </xpath>
+            <xpath expr="//group[@name='maintenance']" position="after">
+                <group name="calibration" string="Calibration">
+                    <field name="next_calibration_action_times" class="oe_read_only" string="Next Calibration Maintenance Tightening Times"/>
+                    <field name="next_calibration_action_date" class="oe_read_only" string="Next Calibration Maintenance"/>
+                    <field name="calibration_times" string="Before Calibration Times"/>
+                    <label for="calibration_period" string="Calibration Maintenance Frequency"/>
+                    <div class="o_row">
+                        <field name="calibration_period"/> days
+                    </div>
+                </group>
+            </xpath>
+        </field>
+      </record>
+
+      <record id="sa_maintenance_equipment_view_kanban_inherit_hr" model="ir.ui.view">
+        <field name="name">sa_maintenance_equipment_view_kanban_inherit_hr</field>
+        <field name="model">maintenance.equipment</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_view_kanban"/>
+        <field name="arch" type="xml">
+            <xpath expr="//kanban" position="attributes">
+                <attribute name="js_class">equipment_kanban</attribute>
+            </xpath>
+            <field name="name" position="after">
+                <field name="healthz_url"/>
+            </field>
+            <xpath expr="//div[@class='oe_kanban_bottom_right']" position="inside">
+                <div class="pull-left">
+                    <span class="oe_kanban_equpiment_status"/>
+                </div>
+            </xpath>
+            <xpath expr="//div[@class='oe_kanban_footer_left mt4 label label-danger']" position="after">
+                <div class="oe_kanban_footer_left mt4 label equip_status"/>
+            </xpath>
+        </field>
+      </record>
+
+  </data>
+</odoo>

@@ -1,0 +1,13 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_maintenacne_connection_user,sa_maintenance.connection.user,model_maintenance_equipment_connection,base.group_user,1,0,0,0
+access_maintenacne_connection_manager,sa_maintenance.connection.manager,model_maintenance_equipment_connection,maintenance.group_equipment_manager,1,1,1,1
+access_mrp_assemblyline_user,sa_mrp_assemblyline.user,model_mrp_assemblyline,base.group_user,1,0,0,0
+access_mrp_assemblyline_manager,sa_mrp_assemblyline.manager,model_mrp_assemblyline,maintenance.group_equipment_manager,1,1,1,1
+access_controller_job_user,sa_controller_job.user,model_controller_job,base.group_user,1,0,0,0
+access_controller_job_manager,sa_controller_job.manager,model_controller_job,maintenance.group_equipment_manager,1,1,1,1
+access_operation_point_group_user,sa_operation_point_group.user,model_operation_point_group,base.group_user,1,0,0,0
+access_operation_point_group_manager,sa_operation_point_group.manager,model_operation_point_group,maintenance.group_equipment_manager,1,1,1,1
+access_operation_point_user,sa_operation_point.user,model_operation_point,base.group_user,1,0,0,0
+access_operation_point_manager,sa_operation_point.manager,model_operation_point,maintenance.group_equipment_manager,1,1,1,1
+access_mrp_worksection_user,sa_mrp_worksection.user,model_mrp_worksection,base.group_user,1,0,0,0
+access_operation_point_manager,sa_mrp_worksection.manager,model_mrp_worksection,maintenance.group_equipment_manager,1,1,1,1

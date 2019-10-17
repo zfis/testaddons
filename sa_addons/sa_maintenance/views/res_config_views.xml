@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_sa_maintenance_config" model="ir.ui.view">
+            <field name="name">Maintenance Configure</field>
+            <field name="model">sa.maintenance.settings</field>
+            <field name="arch" type="xml">
+                <form string="Configure" class= "oe_form_configuration">
+                    <header>
+                        <button string="Apply" type="object" name="execute" class="oe_highlight"/>
+                        <button string="Cancel" type="object" name="cancel" class="oe_link" special="cancel"/>
+                    </header>
+                    <group string="Result Related Field">
+                        <field name="res_field"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="action_sa_maintenance_configuration" model="ir.actions.act_window">
+            <field name="name">Maintenance Configure</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">sa.maintenance.settings</field>
+            <field name="view_mode">form</field>
+            <field name="target">inline</field>
+        </record>
+
+        <menuitem id="menu_sa_maintenance_configuration" name="Maintenance Configure" parent="sa_base.menu_mrp_sa_setting"
+            sequence="100" action="action_sa_maintenance_configuration" groups="base.group_system"/>
+    </data>
+</odoo>

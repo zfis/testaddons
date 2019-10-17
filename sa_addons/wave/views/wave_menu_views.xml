@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+    <menuitem id="menu_wave_scope_root"
+            name="Curve Scope"
+            icon="fa-area-chart"
+            web_icon="wave,static/description/icon.png"
+            sequence="120"/>
+
+    <menuitem id="menu_wave_form"
+              name="Curve"
+              parent="menu_wave_scope_root" action="action_wave_form" sequence="10"/>
+
+
+    <menuitem id="menu_minio_settings"
+              name="Configuration"
+              groups="base.group_system"
+              parent="menu_wave_scope_root" action="action_minio_settings" sequence="20"/>
+
+  </data>
+</odoo>
