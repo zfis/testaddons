@@ -195,7 +195,7 @@ setup(
         'PyYAML == 3.12',
         'scipy == 1.0.1',
         'six == 1.10.0',
-        'urllib3 == 1.22',
+        'urllib3 == 1.24.2',
         'validators == 0.12.1',
         'Werkzeug == 0.11.11',
         'XlsxWriter == 0.9.3',
